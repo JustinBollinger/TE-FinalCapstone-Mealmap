@@ -12,7 +12,7 @@
         role="alert"
         v-if="this.$route.query.registration"
       >Thank you for registering, please sign in.</div>
-      <label for="username" class="sr-only">Username</label>
+      <label for="username" class="sr-only">Username </label>
       <input
         type="text"
         id="username"
@@ -31,9 +31,15 @@
         v-model="user.password"
         required
       />
-      <router-link to="/" tag="button">Sign in</router-link>
-      <router-link :to="{ name: 'register' }">Need an account?</router-link>
+      <router-link v-bind:to="{name: 'home'}" tag="button" class="btn btn-lg btn-primary btn-block">Sign in 1</router-link>
+        <button class="btn btn-lg btn-primary btn-block" v-on:click="login(user.id)">Sign in 2</button>
       
+      <router-link v-bind:to="{ name: 'register' }">Need an account?</router-link>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+
+      <!-- <router-link :to="{name: 'EditMessage', params: {topicId: $store.state.activeTopic.id, messageId: message.id} }" tag="button" class="btnEditMessage">Edit</router-link>
+      <button class="btnDeleteMessage" v-on:click="deleteMessage(message.id)">Delete</button> -->
+
     </form>
   </div>
 </template>
