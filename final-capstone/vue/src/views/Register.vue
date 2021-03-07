@@ -1,12 +1,15 @@
 <template>
   <div id="register" class="text-center">
+    
     <form class="form-register" @submit.prevent="register">
+
       <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
-      <div class="alert alert-danger" role="alert" v-if="registrationErrors">
-        {{ registrationErrorMsg }}
-      </div>
+
+      <div class="alert alert-danger" role="alert" v-if="registrationErrors"> {{ registrationErrorMsg }} </div>
+      <div class="alert alert" role="alert" v-if="registration">{ registration: 'success' }</div>
+      
       <label for="username" class="sr-only">Username</label>
-      <input
+      <input 
         type="text"
         id="username"
         class="form-control"
@@ -33,10 +36,9 @@
         required
       />
       <router-link :to="{ name: 'login' }">Have an account?</router-link>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
-        Create Account
-      </button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
     </form>
+
   </div>
 </template>
 
