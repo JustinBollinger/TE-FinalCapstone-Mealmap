@@ -1,7 +1,8 @@
 <template>
   <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
-      <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Welcome to MealMap!</h1>
+      <h2>Please sign-in to access your account.</h2>
       <div
         class="alert alert-danger"
         role="alert"
@@ -31,14 +32,10 @@
         v-model="user.password"
         required
       />
-      <router-link v-bind:to="{name: 'home'}" tag="button" class="btn btn-lg btn-primary btn-block">Sign in 1</router-link>
-        <button class="btn btn-lg btn-primary btn-block" v-on:click="login(user.id)">Sign in 2</button>
+      <button class="btn btn-lg btn-primary btn-block" v-on:click="login(user.id)">Sign in</button>
       
       <router-link v-bind:to="{ name: 'register' }">Need an account?</router-link>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
-
-      <!-- <router-link :to="{name: 'EditMessage', params: {topicId: $store.state.activeTopic.id, messageId: message.id} }" tag="button" class="btnEditMessage">Edit</router-link>
-      <button class="btnDeleteMessage" v-on:click="deleteMessage(message.id)">Delete</button> -->
 
     </form>
   </div>
