@@ -4,7 +4,7 @@
   <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
       <h1 class="h3 mb-3 font-weight-normal">Welcome to MealMap!</h1>
-      <img src="C:\Users\Student\workspace\final-capstone-meal-planner\final-capstone\vue\public\Artboard 4.png" alt="Meal Map logo"/>
+      <img src="img/public\Artboard_4.png" alt="Meal Map logo"/>
       <h2>Please sign-in to access your account.</h2>
       <div
         class="alert alert-danger"
