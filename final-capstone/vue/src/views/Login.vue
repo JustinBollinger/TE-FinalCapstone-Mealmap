@@ -34,8 +34,8 @@
       />
       <button class="btn btn-lg btn-primary btn-block" v-on:click="login(user.id)">Sign in</button>
       
-      <router-link v-bind:to="{ name: 'register' }">Need an account?</router-link>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+      <router-link class="btn btn-lg btn-primary btn-block" v-bind:to="{ name: 'register' }">Need an account?</router-link>
+        
 
     </form>
   </div>
