@@ -39,9 +39,12 @@ public class RecipeSqlDAO implements RecipeDAO
 	private Recipe mapRowToRecipe(SqlRowSet rowSet)
 	{
 		Recipe recipe = new Recipe();
-		
-		// still need to set up 
-		
+		recipe.setId(rowSet.getInt("recipe_id"));
+		recipe.setRecipeName(rowSet.getString("recipe_name"));
+		recipe.setDirections(rowSet.getString("directions"));
+		recipe.setServingSize(rowSet.getInt("serving_size"));
+		recipe.setRecipeCategoryId(rowSet.getInt("recipe_category_id"));
+		recipe.setRestrictionId(rowSet.getInt("dietary_restriction_id"));
 		return recipe;
 	}
 	

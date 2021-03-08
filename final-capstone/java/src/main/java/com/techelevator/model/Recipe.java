@@ -24,5 +24,77 @@ public class Recipe
 		this.dietRestrictId = restrictionId;
 	}
 	
+	public int getId()
+	{
+		return id;
+	}
+	
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+	
+	public String getRecipeName()
+	{
+		return recipeName;
+	}
+	
+	public void setRecipeName(String recipeName)
+	{
+		this.recipeName = recipeName;
+	}
+	
+	public String getDirections()
+	{
+		return directions;
+	}
+	
+	public void setDirections(String directions)
+	{
+		this.directions = directions;
+	}
+	
+	public int getServingSize()
+	{
+		return servingSize;
+	}
+	
+	public void setServingSize(int servingSize)
+	{
+		this.servingSize = servingSize;
+	}
+	
+	public int getRecipeCategoryId()
+	{
+		return recipeCategoryId;
+	}
+	
+	public void setRecipeCategoryId(int recipeCategoryId)
+	{
+		this.recipeCategoryId = recipeCategoryId;
+	}
+	
+	public int getRestrictionId()
+	{
+		return dietRestrictId;
+	}
+	
+	public void setRestrictionId(int dietRestrictId)
+	{
+		this.dietRestrictId = dietRestrictId;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Recipe{" +
+						"id = " + id +
+						", recipeName = " + recipeName +
+						", directions = " + directions +
+						", servingSize = " + servingSize +
+						", recipeCategoryId = " + recipeCategoryId +
+						", dietRestrictId = " + dietRestrictId +
+						"}";
+	}
 	
 }
