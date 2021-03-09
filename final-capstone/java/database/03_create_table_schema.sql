@@ -4,7 +4,8 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS recipes;
 DROP TABLE IF EXISTS ingredients;
-DROP TABLE IF EXISTS measurement;
+DROP TABLE IF EXISTS measurement_unit;
+DROP TABLE IF EXISTS measurement_quantity;
 
 -- drop sequences
 DROP SEQUENCE IF EXISTS seq_user_id;
@@ -33,7 +34,7 @@ CREATE TABLE recipes
 	directions varchar(500) NOT NULL,
 	serving_size INT NOT NULL,
 	recipe_category_id INT,
-	diestary_restriction_id INT
+	dietary_restriction_id INT
 
 );
 
@@ -43,17 +44,21 @@ CREATE TABLE ingredients
 	ingredient_id INT NOT NULL,
 	ingredient_name varchar(50) NOT NULL,
 	category_id INT,
-	measurement_id INT PRIMARY KEY
-
+	measurement_unit_id INT,
+	measurement_quantity_id INT
 );
 
-CREATE TABLE measurement
+CREATE TABLE measurement_unit
 (
-	measurement_id INT NOT NULL,
-	measurement_description VARCHAR(100) NOT NULL,
+	measurement_unit_id INT NOT NULL PRIMARY KEY,
+	measurement_description VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE measurement_quantity
+(
+	measurement_quantity_id INT NOT NULL PRIMARY KEY,
 	measurement_amount INT NOT NULL
 );
-
 
 -- create foreign key constraints
 
@@ -62,10 +67,19 @@ ADD CONSTRAINT fk_recipe_id
 FOREIGN KEY (recipe_id)
 REFERENCES recipes (recipe_id);
 
-ALTER TABLE measurement
-ADD CONSTRAINT fk_measurement_id
-FOREIGN KEY (measurement_id)
-REFERENCES ingredients (measurement_id);
+ALTER TABLE ingredients
+ADD CONSTRAINT fk_measurement_unit_id
+FOREIGN KEY (measurement_unit_id)
+REFERENCES measurement_unit(measurement_unit_id);
+
+ALTER TABLE ingredients
+ADD CONSTRAINT fk_measurement_quantity_id
+FOREIGN KEY (measurement_quantity_id)
+REFERENCES measurement_quantity(measurement_quantity_id);
+
+
+
+
 
 
 
