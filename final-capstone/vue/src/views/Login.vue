@@ -141,7 +141,7 @@ body{
   display: flex;
   flex-direction: row;
   /*background-image: url("/src/assets/Berlin.png");*/
-  background-color: #1d2124;
+  /* background-color: #1d2124; */
 }
 
 img {

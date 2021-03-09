@@ -16,6 +16,7 @@
 #nav {
   display: flex;
   justify-content: space-between;
+  border-bottom: solid 2px #2c3e50;
 }
 
 #navitem{
