@@ -127,4 +127,8 @@ img {
   align-content: center;
   max-width: 25rem;
 }
+
+button {
+  padding-right: 10rem;
+}
 </style>
