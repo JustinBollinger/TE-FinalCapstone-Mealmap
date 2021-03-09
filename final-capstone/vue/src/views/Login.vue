@@ -132,6 +132,8 @@ menu{
 
 #btnsignin{
   flex-grow: 1;
+  margin-right: 5rem;
+
   /*background-color: #1d2124;*/
 }
 .lead{
@@ -150,7 +152,4 @@ img {
   max-width: 25rem;
 }
 
-button {
-  padding-right: 10rem;
-}
 </style>
