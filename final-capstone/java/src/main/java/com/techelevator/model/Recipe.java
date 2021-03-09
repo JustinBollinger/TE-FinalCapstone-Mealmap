@@ -64,25 +64,25 @@ public class Recipe
 		this.servingSize = servingSize;
 	}
 	
-	public int getRecipeCategoryId()
-	{
-		return recipeCategoryId;
-	}
-	
-	public void setRecipeCategoryId(int recipeCategoryId)
-	{
-		this.recipeCategoryId = recipeCategoryId;
-	}
-	
-	public int getRestrictionId()
-	{
-		return dietRestrictId;
-	}
-	
-	public void setRestrictionId(int dietRestrictId)
-	{
-		this.dietRestrictId = dietRestrictId;
-	}
+//	public int getRecipeCategoryId()
+//	{
+//		return recipeCategoryId;
+//	}
+//	
+//	public void setRecipeCategoryId(int recipeCategoryId)
+//	{
+//		this.recipeCategoryId = recipeCategoryId;
+//	}
+//	
+//	public int getRestrictionId()
+//	{
+//		return dietRestrictId;
+//	}
+//	
+//	public void setRestrictionId(int dietRestrictId)
+//	{
+//		this.dietRestrictId = dietRestrictId;
+//	}
 	
 	@Override
 	public String toString()
@@ -92,8 +92,8 @@ public class Recipe
 						", recipeName = " + recipeName +
 						", directions = " + directions +
 						", servingSize = " + servingSize +
-						", recipeCategoryId = " + recipeCategoryId +
-						", dietRestrictId = " + dietRestrictId +
+//						", recipeCategoryId = " + recipeCategoryId +
+//						", dietRestrictId = " + dietRestrictId +
 						"}";
 	}
 	
