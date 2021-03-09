@@ -12,7 +12,7 @@ import com.techelevator.dao.RecipeDAO;
 import com.techelevator.model.Recipe;
 
 @RestController
-@PreAuthorize("isAuthenticated()")
+//@PreAuthorize("isAuthenticated()")
 public class RecipeController
 {
 	@Autowired
