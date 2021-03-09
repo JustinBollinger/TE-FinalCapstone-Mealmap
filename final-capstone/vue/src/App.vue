@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link v-bind:to="{ name: 'home' }">Home</router-link>&nbsp;|&nbsp;
-      <router-link v-bind:to="{ name: 'ingredient-list'}">Ingredients</router-link>&nbsp;|&nbsp;
-      <router-link v-bind:to="{ name: 'recipes' }">Recipes</router-link>&nbsp;|&nbsp;
-      <router-link v-bind:to="{ name: 'meal-plan' }">Meal Plans</router-link>&nbsp;|&nbsp;
-      <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
+      <router-link class="btn" v-bind:to="{ name: 'home' }">Home</router-link>
+      <router-link class="btn" v-bind:to="{ name: 'ingredient-list'}">Ingredients</router-link>
+      <router-link class="btn" v-bind:to="{ name: 'recipes' }">Recipes</router-link>
+      <router-link class="btn" v-bind:to="{ name: 'meal-plan' }">Meal Plans</router-link>
+      <router-link class="btn" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
     </div>
     <router-view />
   </div>
@@ -13,8 +13,20 @@
 
 <style>
 
-#app {
+#nav {
+  display: flex;
+  justify-content: space-between;
+}
 
+#navitem{
+  flex-grow: 1;
+}
+
+/*template{*/
+/*  display: flex;*/
+/*}*/
+
+#app {
   font-family: 'Fira Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;

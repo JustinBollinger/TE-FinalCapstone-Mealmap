@@ -32,10 +32,12 @@
         v-model="user.password"
         required
       />
-      <button class="btn btn-primary btn-lg" v-on:click="login(user.id)">Sign in</button>
+
+      <menu>
+      <button id="btnsignin" class="btn btn-primary btn-lg" v-on:click="login(user.id)">Sign in</button>
       
-      <router-link class="btn btn-primary btn-lg" v-bind:to="{ name: 'register' }">Need an account?</router-link>
-        
+      <router-link id="btnsignin"  class="btn btn-primary btn-lg" v-bind:to="{ name: 'register' }">Need an account?</router-link>
+      </menu>
 
     </form>
  </div>
@@ -123,7 +125,27 @@ export default {
 
 <style>
 
+menu{
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+#btnsignin{
+  flex-grow: 1;
+  /*background-color: #1d2124;*/
+}
+.lead{
+  justify-content: center;
+}
+body{
+  display: flex;
+  flex-direction: row;
+  /*background-image: url("/src/assets/Berlin.png");*/
+  background-color: #1d2124;
+}
+
 img {
+  justify-content: center;
   align-content: center;
   max-width: 25rem;
 }
