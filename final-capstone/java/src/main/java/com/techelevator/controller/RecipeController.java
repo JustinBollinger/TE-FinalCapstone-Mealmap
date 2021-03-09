@@ -24,8 +24,7 @@ public class RecipeController
 	}
 	
 	
-	// temporary path, depends on db design
-	@RequestMapping(path = "/recipes/{id}", method = RequestMethod.GET)
+	@RequestMapping(path = "/recipeList", method = RequestMethod.GET)
 	public List <Recipe> listRecipes()
 	{
 		List <Recipe> recipes = recipeDAO.getAll();

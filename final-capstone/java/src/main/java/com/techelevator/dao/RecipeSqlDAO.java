@@ -24,8 +24,7 @@ public class RecipeSqlDAO implements RecipeDAO
 	{
 		List<Recipe> recipes = new ArrayList<>();
 		
-		// !!! still need to get SQL statement for GET request !!!
-		String sql = "";
+		String sql = "SELECT * FROM recipes;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while(results.next())
@@ -43,8 +42,8 @@ public class RecipeSqlDAO implements RecipeDAO
 		recipe.setRecipeName(rowSet.getString("recipe_name"));
 		recipe.setDirections(rowSet.getString("directions"));
 		recipe.setServingSize(rowSet.getInt("serving_size"));
-		recipe.setRecipeCategoryId(rowSet.getInt("recipe_category_id"));
-		recipe.setRestrictionId(rowSet.getInt("dietary_restriction_id"));
+//		recipe.setRecipeCategoryId(rowSet.getInt("recipe_category_id"));
+//		recipe.setRestrictionId(rowSet.getInt("dietary_restriction_id"));
 		return recipe;
 	}
 	
