@@ -33,7 +33,7 @@ public class RecipeSqlDAO implements RecipeDAO
 				", dietary_restriction_id" + 
 				", cooking_time" + 
 				", difficulty" + 
-				"FROM recipes;";
+				" FROM recipes;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while(results.next())
@@ -47,15 +47,15 @@ public class RecipeSqlDAO implements RecipeDAO
 	private Recipe mapRowToRecipe(SqlRowSet rowSet)
 	{
 		Recipe recipe = new Recipe();
-		recipe.setUserId(rowSet.getInt("recipe_id"));
-		recipe.setRecipeId(rowSet.getInt("recipe_name"));
+		recipe.setUserId(rowSet.getInt("user_id"));
+		recipe.setRecipeId(rowSet.getInt("recipe_id"));
 		recipe.setRecipeName(rowSet.getString("recipe_name"));
 		recipe.setDirections(rowSet.getString("directions"));
 		recipe.setNumberOfServings(rowSet.getInt("number_of_servings"));
 		recipe.setRecipeCategoryId(rowSet.getInt("recipe_category_id"));
 		recipe.setRestrictionId(rowSet.getInt("dietary_restriction_id"));
 		recipe.setCookingTime(rowSet.getInt("cooking_time"));
-		recipe.setDifficulty(rowSet.getInt("difficulty"));
+		recipe.setDifficulty(rowSet.getString("difficulty"));
 		return recipe;
 	}
 	
