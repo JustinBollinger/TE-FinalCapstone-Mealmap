@@ -5,7 +5,7 @@ public class Recipe
 	private int id;
 	private String recipeName;
 	private String directions;
-	private int servingSize;
+	private int numberOfServings;
 	private int recipeCategoryId;
 	private int dietRestrictId;
 	
@@ -14,12 +14,12 @@ public class Recipe
 		
 	}
 	
-	public Recipe(int id, String recipeName, String directions, int servingSize, int categoryId, int restrictionId)
+	public Recipe(int id, String recipeName, String directions, int numServings, int categoryId, int restrictionId)
 	{
 		this.id = id;
 		this.recipeName = recipeName;
 		this.directions = directions;
-		this.servingSize = servingSize;
+		this.numberOfServings = numServings;
 		this.recipeCategoryId = categoryId;
 		this.dietRestrictId = restrictionId;
 	}
@@ -54,14 +54,14 @@ public class Recipe
 		this.directions = directions;
 	}
 	
-	public int getServingSize()
+	public int getNumberOfServings()
 	{
-		return servingSize;
+		return numberOfServings;
 	}
 	
-	public void setServingSize(int servingSize)
+	public void setServingSize(int numServings)
 	{
-		this.servingSize = servingSize;
+		this.numberOfServings = numServings;
 	}
 	
 //	public int getRecipeCategoryId()
@@ -91,7 +91,7 @@ public class Recipe
 						"id = " + id +
 						", recipeName = " + recipeName +
 						", directions = " + directions +
-						", servingSize = " + servingSize +
+						", number_of_servings = " + numberOfServings +
 //						", recipeCategoryId = " + recipeCategoryId +
 //						", dietRestrictId = " + dietRestrictId +
 						"}";

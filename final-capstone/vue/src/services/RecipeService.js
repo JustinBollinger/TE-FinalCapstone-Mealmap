@@ -2,12 +2,12 @@ import axios from 'axios';
 
 export default {
 
-  login(user) {
-    return axios.post('/login', user)
+  listRecipes() {
+    return axios.get('/recipeList')
   },
 
-  register(user) {
-    return axios.post('/register', user)
-  }
+//   getRecipe(recipeId) {
+//     return axios.get(`/recipeList/${id}`)
+//   }
 
 }
