@@ -7,7 +7,7 @@ import com.techelevator.model.Recipe;
 public interface RecipeDAO
 {
 	List<Recipe> getAll();
-	
-	Recipe create(Recipe recipe);
+	Recipe getRecipeById(int id);
+	Recipe createRecipe(Recipe recipe);
 
 }

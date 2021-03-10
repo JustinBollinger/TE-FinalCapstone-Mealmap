@@ -34,10 +34,16 @@ public class RecipeController
 		return recipes;
 	}
 	
-	@RequestMapping(path = "/recipeList", method = RequestMethod.POST)
-	public Recipe create(@RequestBody Recipe recipe)
+	public Recipe getRecipeById(int id)
 	{
-		return recipeDAO.create(recipe);
+		
+	}
+	
+	
+	@RequestMapping(path = "/recipeList", method = RequestMethod.POST)
+	public Recipe createRecipe(@RequestBody Recipe recipe)
+	{
+		return recipeDAO.createRecipe(recipe);
 	}
 	
 }
