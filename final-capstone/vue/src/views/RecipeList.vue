@@ -13,6 +13,7 @@
           <!-- {{recipe.dietaryRestriction-id}}&<nbsp>|</nbsp> -->
         </li>
       </ul>
+      <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe</router-link>
     </div>
   </div>
 
