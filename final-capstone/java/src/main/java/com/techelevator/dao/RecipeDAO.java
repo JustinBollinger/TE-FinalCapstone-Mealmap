@@ -8,5 +8,6 @@ public interface RecipeDAO
 {
 	List<Recipe> getAll();
 	
+	Recipe create(Recipe recipe);
 
 }
