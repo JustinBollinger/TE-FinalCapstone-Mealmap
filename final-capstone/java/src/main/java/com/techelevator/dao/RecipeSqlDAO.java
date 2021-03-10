@@ -44,6 +44,19 @@ public class RecipeSqlDAO implements RecipeDAO
 		return recipes;
 	}
 	
+	public Recipe create(Recipe recipe)
+	{
+		
+		
+		Recipe newRecipe = new Recipe();
+		
+		// come up with SQL statement
+		String sql = "";
+		
+		
+		return newRecipe;
+	}
+	
 	private Recipe mapRowToRecipe(SqlRowSet rowSet)
 	{
 		Recipe recipe = new Recipe();
