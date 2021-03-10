@@ -2,6 +2,9 @@ BEGIN TRANSACTION;
 
 -- drop tables
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS recipes;
+DROP TABLE IF EXISTS ingredients;
+DROP TABLE IF EXISTS recipes_ingredients;
 
 -- drop sequences
 DROP SEQUENCE IF EXISTS seq_user_id;
@@ -23,8 +26,55 @@ CREATE TABLE users (
 	CONSTRAINT PK_user PRIMARY KEY (user_id)
 );
 
+CREATE TABLE recipes
+(	
+	user_id INT NOT NULL,
+	recipe_id INT NOT NULL PRIMARY KEY,
+	recipe_name varchar(200) NOT NULL,
+	directions TEXT NOT NULL,
+	number_of_servings INT NOT NULL,
+	recipe_category_id INT,
+	dietary_restriction_id INT,
+	cooking_time INT,
+	difficulty VARCHAR(50)
+
+);
+
+CREATE TABLE ingredients
+(
+	recipe_id INT NOT NULL,
+	ingredient_id SERIAL NOT NULL PRIMARY KEY,
+	ingredient_name varchar(50) NOT NULL,
+	category_id INT
+);
+
+CREATE TABLE recipes_ingredients
+(
+	recipe_id INT,
+	ingredient_id INT,
+	measurement_unit VARCHAR(100),
+	measurement_quantity INT
+);
+
 
 -- create foreign key constraints
+
+ALTER TABLE recipes_ingredients
+ADD CONSTRAINT fk_recipe_id
+FOREIGN KEY (recipe_id)
+REFERENCES recipes (recipe_id);
+
+ALTER TABLE recipes_ingredients
+ADD CONSTRAINT fk_ingredient_id
+FOREIGN KEY (ingredient_id)
+REFERENCES ingredients(ingredient_id);
+
+
+
+
+
+
+
 
 
 COMMIT TRANSACTION;

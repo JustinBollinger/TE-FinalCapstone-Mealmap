@@ -1,7 +1,10 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
-    <p>You must be authenticated to see this</p>
+    <p><small><em>You must be authenticated to see this</em></small></p>
+    <h1>Welcome to Your Meal Planner</h1>
+
+    <img src="../assets/Artboard 5.png" alt="full bag of groceries">
+    
   </div>
 </template>
 
@@ -16,4 +19,12 @@ export default {
 
 <style>
 
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+}
+img {
+  /* justify-content: center; */
+  /* align-content: center; */
+  max-width: 25rem;
+}
 </style>
