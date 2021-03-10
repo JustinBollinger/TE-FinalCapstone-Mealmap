@@ -3,6 +3,7 @@ package com.techelevator.model;
 public class Recipe
 {
 	private int userId;
+	private int recipeId;
 	private String recipeName;
 	private String directions;
 	private int numberOfServings;
@@ -16,10 +17,10 @@ public class Recipe
 		
 	}
 	
-	public Recipe(int userId, String recipeName, String directions, int numServings, int categoryId, int restrictionId, int cookingTime, int difficulty)
+	public Recipe(int userId, int recipeId, String recipeName, String directions, int numServings, int categoryId, int restrictionId, int cookingTime, int difficulty)
 	{
 		this.userId = userId;
-		// recipe id
+		this.recipeId = recipeId;
 		this.recipeName = recipeName;
 		this.directions = directions;
 		this.numberOfServings = numServings;
@@ -37,6 +38,16 @@ public class Recipe
 	public void setUserId(int userId)
 	{
 		this.userId = userId;
+	}
+	
+	public int getRecipeId()
+	{
+		return recipeId;
+	}
+	
+	public void setRecipeId(int recipeId)
+	{
+		this.recipeId = recipeId;
 	}
 	
 	public String getRecipeName()
@@ -114,6 +125,7 @@ public class Recipe
 	{
 		return "Recipe{" +
 						"userId = " + userId +
+						", recipeId = " + recipeId +
 						", recipeName = " + recipeName +
 						", directions = " + directions +
 						", number_of_servings = " + numberOfServings +
