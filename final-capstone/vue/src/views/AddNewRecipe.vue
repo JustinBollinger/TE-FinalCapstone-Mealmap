@@ -1,24 +1,13 @@
 <template>
-    <form>
+  <form>
   <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group row">
-      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
-      </div>
+    <legend>Add New Recipe</legend>
+    <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Recipe Name</label>
+        <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
+      <label for="exampleSelect1">Number of Servings</label>
       <select class="form-control" id="exampleSelect1">
         <option>1</option>
         <option>2</option>
@@ -27,6 +16,20 @@
         <option>5</option>
       </select>
     </div>
+    <legend>Select Recipe Category</legend>
+    <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="" checked="">
+          Appetizers
+          Mains
+        </label>
+      </div>
+    <div class="form-group">
+      <label for="exampleTextarea">Directions</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+    </fieldset>
+    </form>
    <!-- <div class="add-new-recipe">
    <h1>Add New Recipe</h1>
         <form v-on:submit.prevent>
