@@ -8,5 +8,16 @@ export default {
     return axios.get('/recipeList')
   },
 
+  create(recipe) {
+    return axios.post(`/recipeList/`, recipe);
+  },
+
+//   update(id, recipe) {
+//     return axios.put(`/recipeList/${id}`, recipe);
+//   },
+
+//   delete(id) {
+//     return axios.delete(`/recipeList/${id}`);
+//   }
 
 }
