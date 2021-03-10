@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.techelevator.dao.RecipeDAO;
 import com.techelevator.model.Recipe;
 
+@CrossOrigin
 @RestController
 @PreAuthorize("isAuthenticated()")
-@CrossOrigin
 public class RecipeController
 {
 	@Autowired
