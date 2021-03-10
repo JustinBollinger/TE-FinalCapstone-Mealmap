@@ -4,8 +4,7 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS recipes;
 DROP TABLE IF EXISTS ingredients;
-DROP TABLE IF EXISTS measurement_unit;
-DROP TABLE IF EXISTS measurement_quantity;
+DROP TABLE IF EXISTS recipes_ingredients;
 
 -- drop sequences
 DROP SEQUENCE IF EXISTS seq_user_id;
@@ -29,53 +28,48 @@ CREATE TABLE users (
 
 CREATE TABLE recipes
 (	
+	user_id INT NOT NULL,
 	recipe_id INT NOT NULL PRIMARY KEY,
-	recipe_name varchar(100) NOT NULL,
-	directions varchar(500) NOT NULL,
-	serving_size INT NOT NULL,
+	recipe_name varchar(200) NOT NULL,
+	directions TEXT NOT NULL,
+	number_of_servings INT NOT NULL,
 	recipe_category_id INT,
-	dietary_restriction_id INT
+	dietary_restriction_id INT,
+	cooking_time INT,
+	difficulty VARCHAR(50)
 
 );
 
 CREATE TABLE ingredients
 (
 	recipe_id INT NOT NULL,
-	ingredient_id INT NOT NULL,
+	ingredient_id SERIAL NOT NULL PRIMARY KEY,
 	ingredient_name varchar(50) NOT NULL,
-	category_id INT,
-	measurement_unit_id INT,
-	measurement_quantity_id INT
+	category_id INT
 );
 
-CREATE TABLE measurement_unit
+CREATE TABLE recipes_ingredients
 (
-	measurement_unit_id INT NOT NULL PRIMARY KEY,
-	measurement_description VARCHAR(100) NOT NULL
+	recipe_id INT,
+	ingredient_id INT,
+	measurement_unit VARCHAR(100),
+	measurement_quantity INT
 );
 
-CREATE TABLE measurement_quantity
-(
-	measurement_quantity_id INT NOT NULL PRIMARY KEY,
-	measurement_amount INT NOT NULL
-);
 
 -- create foreign key constraints
 
-ALTER TABLE ingredients
+ALTER TABLE recipes_ingredients
 ADD CONSTRAINT fk_recipe_id
 FOREIGN KEY (recipe_id)
 REFERENCES recipes (recipe_id);
 
-ALTER TABLE ingredients
-ADD CONSTRAINT fk_measurement_unit_id
-FOREIGN KEY (measurement_unit_id)
-REFERENCES measurement_unit(measurement_unit_id);
+ALTER TABLE recipes_ingredients
+ADD CONSTRAINT fk_ingredient_id
+FOREIGN KEY (ingredient_id)
+REFERENCES ingredients(ingredient_id);
 
-ALTER TABLE ingredients
-ADD CONSTRAINT fk_measurement_quantity_id
-FOREIGN KEY (measurement_quantity_id)
-REFERENCES measurement_quantity(measurement_quantity_id);
+
 
 
 
