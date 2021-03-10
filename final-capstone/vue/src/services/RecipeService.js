@@ -6,8 +6,8 @@ export default {
     return axios.get('/recipeList')
   },
 
-  getRecipe(recipeId) {
-    return axios.get(`/recipeList/${id}`)
-  }
+//   getRecipe(recipeId) {
+//     return axios.get(`/recipeList/${id}`)
+//   }
 
 }

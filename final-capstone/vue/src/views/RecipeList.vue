@@ -7,6 +7,44 @@
         <router-link v-bind:to="{name: 'RecipeList', params:{id: recipe.id}}"> {{ recipe.name }} </router-link>
       </div>
   </div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Recipe Name</th>
+      <th scope="col">Total Cook Time</th>
+      <th scope="col">Level of Difficulty</th>
+      <th scope="col">Dietary Restrictions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">placeholder</th>
+      <td>placeholder</td>
+      <td>placeholder</td>
+      <td>placeholder</td>
+    </tr>
+    <tr class="table-primary">
+      <th scope="row">placeholder</th>
+      <td>placeholder</td>
+      <td>placeholder</td>
+      <td>placeholder</td>
+    </tr>
+    <tr>
+      <th scope="row">placeholder</th>
+      <td>placeholder</td>
+      <td>placeholder</td>
+      <td>placeholder</td>
+    </tr>
+    <tr class="table-primary">
+      <th scope="row">placeholder</th>
+      <td>placeholder</td>
+      <td>placeholder</td>
+      <td>placeholder</td>
+    </tr>
+  </tbody>
+</table>
+
   </div>
 </template>
 
