@@ -44,25 +44,56 @@ public class RecipeSqlDAO implements RecipeDAO
 		return recipes;
 	}
 	
-	public Recipe createRecipe(Recipe recipe)
+	public Recipe getById(int id)
 	{
+		String sql = "SELECT user_id" + 
+				", recipe_id" + 
+				", recipe_name" + 
+				", directions" + 
+				", number_of_servings" + 
+				", cooking_time" + 
+				", difficulty" + 
+				" FROM recipes" + 
+				" WHERE recipe_id = ?;";
 		
-				
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
+		if (results.next())
+		{
+			return mapRowToRecipe(results);
+		}
+		return null;
+	}
+	
+	public Recipe create(Recipe newRecipe)
+	{		
 		// come up with SQL statement
-		String sql = "";
+		String sql = "INSERT INTO recipes" + 
+					"(" + 
+					"user_id" + 
+					", recipe_id" + 
+					", recipe_name" + 
+					", directions" + 
+					", number_of_servings" + 
+					", cooking_time" + 
+					", difficulty" + 
+					")" + 
+					" VALUES" + 
+					"(?, ?, ?, ?, ?, ?, ?) " +
+					"RETURNING recipe_id;";
 		
-		SqlRowSet results = jdbcTemplate.queryForObject(sql, Recipe.class, );
+		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
+												newRecipe.getUserId(),
+												newRecipe.getRecipeId(),
+												newRecipe.getRecipeName(),
+												newRecipe.getDirections(),
+												newRecipe.getNumberOfServings(),
+												newRecipe.getCookingTime(),
+												newRecipe.getDifficulty());
 	
-		
-		
-		return getRecipeById(id);
+		return getById(id);
 	}
 	
-	@Override
-	public Recipe getRecipeById(int id)
-	{
-		
-	}
+	
 	
 	private Recipe mapRowToRecipe(SqlRowSet rowSet)
 	{
