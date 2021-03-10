@@ -24,8 +24,16 @@ public class RecipeSqlDAO implements RecipeDAO
 	{
 		List<Recipe> recipes = new ArrayList<>();
 		
-		//change SQL statement
-		String sql = "SELECT * FROM recipes;";
+		String sql = "SELECT user_id" + 
+				", recipe_id" + 
+				", recipe_name" + 
+				", directions" + 
+				", number_of_servings" + 
+				", recipe_category_id" + 
+				", dietary_restriction_id" + 
+				", cooking_time" + 
+				", difficulty" + 
+				"FROM recipes;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while(results.next())
@@ -40,7 +48,7 @@ public class RecipeSqlDAO implements RecipeDAO
 	{
 		Recipe recipe = new Recipe();
 		recipe.setUserId(rowSet.getInt("recipe_id"));
-		// recipe.setRecipeId(rowSet.getInt("recipe_name"));
+		recipe.setRecipeId(rowSet.getInt("recipe_name"));
 		recipe.setRecipeName(rowSet.getString("recipe_name"));
 		recipe.setDirections(rowSet.getString("directions"));
 		recipe.setNumberOfServings(rowSet.getInt("number_of_servings"));
