@@ -7,9 +7,9 @@
       <ul>
         <li v-for="recipe in recipes" v-bind:key="recipe.id">
           {{recipe.name}}&<nbsp>|</nbsp>
-          {{recipe.cookingTime}}&<nbsp>|</nbsp>
+          {{recipe.cooking-time}}&<nbsp>|</nbsp>
           {{recipe.difficulty}}&<nbsp>|</nbsp>
-          {{recipe.dietaryRestrictionId}}&<nbsp>|</nbsp>
+          {{recipe.dietary-restriction-id}}&<nbsp>|</nbsp>
         </li>
       </ul>
     </div>
@@ -29,7 +29,7 @@ export default {
   },
   created() {
     recipeService.getRecipes().then((response) => {
-      this.recipes = response.data.responses;
+      this.recipes = response.data;
     });
   }
 }
