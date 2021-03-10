@@ -8,6 +8,7 @@
         <li v-for="recipe in recipes" v-bind:key="recipe.id">
           {{recipe.recipeName}}&nbsp;|&nbsp;
           {{recipe.cookingTime}} min&nbsp;|&nbsp;
+          {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
           {{recipe.difficulty}}&nbsp;|&nbsp;
           <!-- {{recipe.dietaryRestriction-id}}&<nbsp>|</nbsp> -->
         </li>
