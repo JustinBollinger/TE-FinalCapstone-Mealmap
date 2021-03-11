@@ -47,6 +47,8 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'easy'
 );
 
+ALTER SEQUENCE seq_recipe_id RESTART WITH 4;
+
 
 INSERT INTO ingredients
 (
@@ -180,6 +182,8 @@ VALUES
     , 3
     , 'mayonnaise'
 );
+
+ALTER SEQUENCE seq_ingredient_id RESTART WITH 22;
 
 INSERT INTO recipes_ingredients
 (
