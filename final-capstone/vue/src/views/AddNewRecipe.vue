@@ -1,56 +1,70 @@
 <template>
-  <form>
-  <fieldset>
-    <legend>Add New Recipe</legend>
+  <form v-on:submit.prevent>
+    <fieldset>
+    <h1>Add New Recipe</h1>
     <div class="form-group">
-        <label class="col-form-label" for="inputDefault">Recipe Name</label>
-        <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+        <label class="col-form-label" for="inputDefault">Recipe Name&nbsp;</label>
+        <input type="text" class="form-control" placeholder="What do you call this recipe?" id="inputDefault">
     </div>
+    <p></p>
     <div class="form-group">
-      <label for="exampleSelect1">Number of Servings</label>
+      <label for="exampleSelect1">Number of Servings&nbsp;</label>
       <select class="form-control" id="exampleSelect1">
         <option>1</option>
         <option>2</option>
-        <option>3</option>
         <option>4</option>
-        <option>5</option>
+        <option>6</option>
+        <option>8</option>
+        <option>10</option>
       </select>
     </div>
-    <legend>Select Recipe Category</legend>
-    <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">
-          Appetizers
-          Mains
-        </label>
-      </div>
     <div class="form-group">
-      <label for="exampleTextarea">Directions</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        <label class="col-form-label" for="inputDefault">Cooking Time&nbsp;</label>
+        <input type="text" class="form-control" placeholder="How many minutes does the recipe take to complete? " id="inputDefault">
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Level of Difficulty&nbsp;</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>Easy</option>
+        <option>Challenging</option>
+        <option>Hard</option>
+      </select>
+    </div>
+    <p></p>
+    <div class="form-check">
+      <label class="form-check-label">Select Recipe Category&nbsp;</label>
+         <input class="form-check-input" type="checkbox" value="" unchecked="">Appetizer
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Main Dish
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Side Dish
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Soup
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Dessert
+    </div>
+    <p></p>
+    <div class="form-check">
+        <label class="form-check-label">Select Dietary Restrictions if applicable &nbsp;</label>
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Vegetarian
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Vegan
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Gluten-free
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Dairy-free
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Egg-free
+          <input class="form-check-input" type="checkbox" value="" unchecked="">Nut-free
+    </div>
+    <p></p>
+    <div class="form-group">
+        <label for="exampleTextarea">Ingredients</label>
+        <textarea class="form-control" placeholder="What do you need to make this and how much?" id="exampleTextarea" rows="3"></textarea>
+    </div>
+    <p></p>
+    <div class="form-group">
+        <label for="exampleTextarea">Directions</label>
+        <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3"></textarea>
     </div>
     </fieldset>
-    </form>
-   <!-- <div class="add-new-recipe">
-   <h1>Add New Recipe</h1>
-        <form v-on:submit.prevent>
-            <div class="field">
-                <label for="recipeName">Recipe Name</label>
-                <input type="text" v-model="recipe.recipeName"/>
-            </div>
-            <div class="field">
-                <label for="directions">Directions</label>
-                <input type="text" v-model="recipe.directions"/>
-            </div>
-            <div class="field">
-                <label for="numberOfServings">Number of Servings</label>
-                <input type="text" v-model="recipe.numberOfServings"/>
-            </div>
-                        
-            <button type="button" v-on:click="cancel()">Cancel</button>&nbsp;
-            <button type="submit" v-on:click="saveRecipe()">Save Recipe</button>
 
-        </form>
-    </div> -->
+    <!-- <button class="btn btn-primary btn-lg" v-on:click=resetForm>Clear Form</button> -->
+    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-on:submit.prevent="create(recipe.recipeId)" v-bind:to="{name: 'recipes'}">Save New Recipe</router-link>
+
+    </form>
 </template>
 
 <script>
@@ -66,6 +80,7 @@ data() {
         numberOfServings: "",
         recipeCategoryId: "",
         dietaryRestrictionId: "",
+        cookingTime: "",
         difficulty: ""
       }
     };
