@@ -30,7 +30,8 @@ public class IngredientController
 	@RequestMapping(path = "/ingredientList", method = RequestMethod.GET)
 	public List<Ingredient> listRecipes()
 	{
-		
+		List<Ingredient> ingredients = ingredientDAO.getAll();
+		return ingredients;
 	}
 	
 	@RequestMapping(path = "/ingredientList/{ingredient_id}", method = RequestMethod.GET)

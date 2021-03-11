@@ -23,6 +23,19 @@ public class IngredientSqlDAO implements IngredientDAO
 	{
 		List<Ingredient> ingredients = new ArrayList<>();
 		
+		String sql = "SELECT recipe_id" + 
+					", ingredient_id" + 
+					", ingredient_name" + 
+					", category_id" + 
+					" FROM ingredients;";
+		
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+		while(results.next())
+		{
+			Ingredient ingredient = mapRowToIngredient(results);
+			ingredients.add(ingredient);
+		}
+		return ingredients;
 		
 		
 	}
@@ -47,19 +60,20 @@ public class IngredientSqlDAO implements IngredientDAO
 	
 	public Ingredient create(Ingredient newIngredient)
 	{
-		// confirm sql
 		String sql = "INSERT INTO ingredients" + 
-					"(" + 
-					"recipe_id" + 
-					", ingredient_name" + 
-					", category_id" + 
-					")" + 
-					" VALUES" + 
-					"(?, ?, ?)" + 
-					" RETURNING ingredient_id;";
+				"(" + 
+				"recipe_id" + 
+				", ingredient_id" + 
+				", ingredient_name" + 
+				", category_id" + 
+				")" + 
+				" VALUES" + 
+				"(?, ?, ?, ?)" + 
+				" RETURNING ingredient_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class, 
 												newIngredient.getrecipeId(),
+												newIngredient.getIngredientId(),
 												newIngredient.getIngredientName(),
 												newIngredient.getCategoryId());
 		return getById(id);
