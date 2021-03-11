@@ -12,7 +12,7 @@
         <router-link class="meal-btn" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>
         <router-link class="meal-btn" v-bind:to="{ name: 'meal-plan' }">MEAL PLANS</router-link>
         <router-link class="meal-btn" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>
-        <router-link class="meal-btn" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout
+        <router-link class="meal-btn" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">LOGOUT
         </router-link>
       </div>
       <div id="blank-right">
@@ -33,7 +33,7 @@
   display: flex;
   justify-content: left;
   flex-grow: 2;
-  background: rgba(77, 77, 77, 0.5);
+  background: rgba(77, 77, 77, 0.75);
 }
 
 #right-panel {
@@ -41,7 +41,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
-  background: rgba(77, 77, 77, 0.5);
+  background: rgba(77, 77, 77, 0.75);
   /*border-bottom: solid 0.25rem #2c3e50;*/
 }
 
@@ -49,7 +49,7 @@
   display: flex;
   justify-content: right;
   flex-grow: 0.25;
-  background: rgba(77, 77, 77, 0.5);
+  background: rgba(77, 77, 77, 0.75);
 }
 
 .meal-btn {
