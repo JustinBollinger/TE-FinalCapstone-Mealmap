@@ -31,7 +31,7 @@
       </select>
     </div>
     <p></p>
-    <div class="form-check">
+    <!-- <div class="form-check">
       <label class="form-check-label">Select Recipe Category&nbsp;</label>
          <input class="form-check-input" type="checkbox" value="" unchecked="">Appetizer
           <input class="form-check-input" type="checkbox" value="" unchecked="">Main Dish
@@ -54,7 +54,7 @@
         <label for="exampleTextarea">Ingredients</label>
         <textarea class="form-control" placeholder="What do you need to make this and how much?" id="exampleTextarea" rows="3"></textarea>
     </div>
-    <p></p>
+    <p></p> -->
     <div class="form-group">
         <label for="exampleTextarea">Directions</label>
         <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3"></textarea>
@@ -78,8 +78,8 @@ data() {
         recipeName: "",
         directions: "",
         numberOfServings: "",
-        recipeCategoryId: "",
-        dietaryRestrictionId: "",
+        // recipeCategoryId: "",
+        // dietaryRestrictionId: "",
         cookingTime: "",
         difficulty: ""
       }
@@ -89,12 +89,12 @@ data() {
     saveRecipe() {
       RecipeService.create(this.recipe).then((response) => {
         if(response.status === 201) {
-          this.$router.push("/");
+          this.$router.push("/recipeList");
         }
       })
     },
     cancel() {
-      this.$router.push("/");
+      this.$router.push("/recipeList");
     }
   }
 }
