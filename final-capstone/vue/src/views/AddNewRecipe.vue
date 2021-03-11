@@ -62,7 +62,6 @@
     </fieldset>
     
     <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="saveRecipe()">Save New Recipe</button>
-    <!-- <button class="btn btn-primary btn-lg" v-on:click=resetForm>Clear Form</button> -->
     <div v-if="isCreated">
         <router-link v-bind:to="{name: 'recipes'}"></router-link>
     </div>
@@ -93,10 +92,8 @@ data() {
   methods: {
     saveRecipe() {
       RecipeService.create(this.recipe).then(() => {
-        
-          this.$router.push("/recipeList");
-          this.isCreated = true;
-        
+        this.$router.push("/recipeList");
+        this.isCreated = true;
       })
     },
     cancel() {
