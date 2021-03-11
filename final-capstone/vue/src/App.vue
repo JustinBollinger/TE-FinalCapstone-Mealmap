@@ -16,38 +16,18 @@
 
 #nav {
   display: flex;
-  justify-content: space-between;
-  border-bottom: solid 2px #2c3e50;
-}
+  justify-content: right;
+  background: #4D4D4D;
+  border-bottom: solid 0.25rem #2c3e50;
+  color: white !important;
 
-#navitem{
-  flex-grow: 1;
 }
-
-/*template{*/
-/*  display: flex;*/
-/*}*/
 
 #app {
+
   font-family: 'Fira Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  color: #2c3e50;
-  max-width: 800px;
-  margin: 0 auto;
-} 
-/* 
-#nav {
-  padding: 30px;
-  text-align: center;
+  max-width: 1920px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}  */
 
 </style>
