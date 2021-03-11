@@ -10,6 +10,7 @@ import IngredientList from '../views/IngredientList.vue'
 import MealPlan from '../views/MealPlan.vue'
 import RecipeDetail from '../views/RecipeDetail.vue'
 import RecipeList from '../views/RecipeList.vue'
+import AddNewRecipe from '../views/AddNewRecipe.vue'
 
 Vue.use(Router)
 
@@ -94,6 +95,14 @@ const router = new Router({
       path: "/recipeList",
       name: "recipes",
       component: RecipeList,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/recipeList/addNewRecipe",
+      name: "add-new-recipe",
+      component: AddNewRecipe,
       meta: {
         requiresAuth: true
       }

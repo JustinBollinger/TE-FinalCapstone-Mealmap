@@ -10,14 +10,14 @@ public class Recipe
 	private int recipeCategoryId;
 	private int dietRestrictId;
 	private int cookingTime;
-	private int difficulty;
+	private String difficulty;
 	
 	public Recipe()
 	{
 		
 	}
 	
-	public Recipe(int userId, int recipeId, String recipeName, String directions, int numServings, int categoryId, int restrictionId, int cookingTime, int difficulty)
+	public Recipe(int userId, int recipeId, String recipeName, String directions, int numServings, int categoryId, int restrictionId, int cookingTime, String difficulty)
 	{
 		this.userId = userId;
 		this.recipeId = recipeId;
@@ -110,12 +110,12 @@ public class Recipe
 		this.cookingTime = cookingTime;
 	}
 	
-	public int getDifficulty()
+	public String getDifficulty()
 	{
 		return difficulty;
 	}
 	
-	public void setDifficulty(int difficulty)
+	public void setDifficulty(String difficulty)
 	{
 		this.difficulty = difficulty;
 	}
