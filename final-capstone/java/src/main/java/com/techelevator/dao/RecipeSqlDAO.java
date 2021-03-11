@@ -66,22 +66,23 @@ public class RecipeSqlDAO implements RecipeDAO
 	
 	public Recipe create(Recipe newRecipe)
 	{		
-		// come up with SQL statement
+		// fix SQL statement
+		// keeps giving me a "column out of range" 
 		String sql = "INSERT INTO recipes" + 
-					"(" + 
-					" recipe_name" + 
+					"(" +
+					"user_id" +
+					", recipe_name" + 
 					", directions" + 
 					", number_of_servings" + 
 					", cooking_time" + 
 					", difficulty" + 
 					")" + 
 					" VALUES" + 
-					"(?, ?, ?, ?, ?) " +
+					"(?, ?, ?, ?, ?, ?) " +
 					"RETURNING recipe_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
 												newRecipe.getUserId(),
-												newRecipe.getRecipeId(),
 												newRecipe.getRecipeName(),
 												newRecipe.getDirections(),
 												newRecipe.getNumberOfServings(),
