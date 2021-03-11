@@ -76,7 +76,7 @@ public class RecipeSqlDAO implements RecipeDAO
 					", difficulty" + 
 					")" + 
 					" VALUES" + 
-					"(?, ?, ?, ?, ?, ?, ?) " +
+					"(?, ?, ?, ?, ?) " +
 					"RETURNING recipe_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
