@@ -4,7 +4,7 @@
     <h1>Add New Recipe</h1>
     <div class="form-group">
         <label class="col-form-label" for="inputDefault">Recipe Name&nbsp;</label>
-        <input type="text" class="form-control" placeholder="What do you call this recipe?" id="inputDefault">
+        <input type="text" class="form-control" placeholder="What do you call this recipe?" id="inputDefault" v-model="recipe.recipeName">
     </div>
     <p></p>
     <div class="form-group">
@@ -31,7 +31,7 @@
       </select>
     </div>
     <p></p>
-    <div class="form-check">
+    <!-- <div class="form-check">
       <label class="form-check-label">Select Recipe Category&nbsp;</label>
          <input class="form-check-input" type="checkbox" value="" unchecked="">Appetizer
           <input class="form-check-input" type="checkbox" value="" unchecked="">Main Dish
@@ -54,16 +54,19 @@
         <label for="exampleTextarea">Ingredients</label>
         <textarea class="form-control" placeholder="What do you need to make this and how much?" id="exampleTextarea" rows="3"></textarea>
     </div>
-    <p></p>
+    <p></p> -->
     <div class="form-group">
         <label for="exampleTextarea">Directions</label>
         <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3"></textarea>
     </div>
     </fieldset>
-
+    
+    <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="saveRecipe()">Save New Recipe</button>
     <!-- <button class="btn btn-primary btn-lg" v-on:click=resetForm>Clear Form</button> -->
-    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-on:submit.prevent="create(recipe.recipeId)" v-bind:to="{name: 'recipes'}">Save New Recipe</router-link>
-
+    <div v-if="isCreated">
+        <router-link v-bind:to="{name: 'recipes'}"></router-link>
+    </div>
+    
     </form>
 </template>
 
@@ -78,10 +81,11 @@ data() {
         recipeName: "",
         directions: "",
         numberOfServings: "",
-        recipeCategoryId: "",
-        dietaryRestrictionId: "",
+        // recipeCategoryId: "",
+        // dietaryRestrictionId: "",
         cookingTime: "",
-        difficulty: ""
+        difficulty: "",
+        isCreated: false
       }
     };
   },
@@ -89,7 +93,8 @@ data() {
     saveRecipe() {
       RecipeService.create(this.recipe).then((response) => {
         if(response.status === 201) {
-          this.$router.push("/");
+          this.$router.push("/recipeList");
+          this.isCreated = true;
         }
       })
     },
