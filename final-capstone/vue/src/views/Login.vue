@@ -4,8 +4,8 @@
       <img src="../assets/Artboard 4.png" alt="Meal Map logo"/>
     </div>
     <div id="heading">
-      <h1>Welcome to Mealmap!</h1>
-      <h2>Please sign-in to access your account</h2>
+      <h1 id="heading-one">Welcome to Mealmap!</h1>
+      <h2 id="heading-two">Please sign-in to access your account</h2>
 
       <div id="login-form">
         <form class="form-signin" @submit.prevent="login">
@@ -47,10 +47,13 @@
             </router-link>
           </menu>
         </form>
+
       </div>
+
+    </div>
+    <div id="blank-white">
     </div>
   </div>
-
 
 </template>
 
@@ -95,72 +98,11 @@ export default {
 
 <style>
 
-#login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 75px;
-  max-width: 400px;
-}
-
-#login-buttons {
-  display: flex;
-  flex-direction: column;
-}
-
-#horzlogo {
-  display: flex;
-  justify-content: left;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-#heading {
-  color: black;
-  background: linear-gradient(rgba(0, 0, 255, 0.6), rgba(255, 255, 0, 0.6));
-  /*background: rgba(255, 255, 255, 0.5);*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  font-size: 36pt !important;
-  margin: 75px;
-  text-align: center;
-  border-radius: 5rem;
-  max-width: 40rem;
-}
-
-body {
-  background-image: url("../assets/rainbow-produce.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.main-contain {
-
-}
-
-menu {
-  display: flex;
-  justify-content: space-between;
-}
-
-#btnsignin {
-  flex-grow: 1;
-  margin-right: 5rem;
-
-  /*background-color: #1d2124;*/
-}
-
-.lead {
-  justify-content: center;
+#blank-white{
+  background-color: white;
+  border: solid black 5px;
 }
 
 
-img {
-  justify-content: center;
-  align-content: center;
-  max-width: 25rem;
-}
 
 </style>
