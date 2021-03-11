@@ -69,16 +69,14 @@ public class RecipeSqlDAO implements RecipeDAO
 		// come up with SQL statement
 		String sql = "INSERT INTO recipes" + 
 					"(" + 
-					"user_id" + 
-					", recipe_id" + 
-					", recipe_name" + 
+					" recipe_name" + 
 					", directions" + 
 					", number_of_servings" + 
 					", cooking_time" + 
 					", difficulty" + 
 					")" + 
 					" VALUES" + 
-					"(?, ?, ?, ?, ?, ?, ?) " +
+					"(?, ?, ?, ?, ?) " +
 					"RETURNING recipe_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
