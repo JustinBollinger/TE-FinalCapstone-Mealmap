@@ -113,6 +113,7 @@ export default {
 
 <style>
 
+
 body {
   background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
   background-size: cover;
@@ -147,6 +148,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   max-width: 1200px;
+
 }
 
 
