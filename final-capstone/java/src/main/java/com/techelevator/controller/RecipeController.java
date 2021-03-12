@@ -48,4 +48,9 @@ public class RecipeController
 		return recipeDAO.create(recipe);
 	}
 	
+	public Recipe modifyRecipe(Recipe recipe)
+	{
+		return recipeDAO.modify(recipe);
+	}
+	
 }
