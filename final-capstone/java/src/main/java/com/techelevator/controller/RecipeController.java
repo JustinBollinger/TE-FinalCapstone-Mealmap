@@ -43,7 +43,7 @@ public class RecipeController
 	
 	
 	@RequestMapping(path = "/recipeList", method = RequestMethod.POST)
-	public Recipe create(@RequestBody Recipe recipe)
+	public Recipe createRecipe(@RequestBody Recipe recipe)
 	{
 		return recipeDAO.create(recipe);
 	}
