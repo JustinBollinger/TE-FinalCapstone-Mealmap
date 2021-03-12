@@ -9,7 +9,7 @@ export default {
   },
 
   getRecipeById(id) {
-    return axios.get('/recipeList', id)
+    return axios.get(`/recipeList/recipeDetail/${id}`)
   },
 
   create(recipe) {

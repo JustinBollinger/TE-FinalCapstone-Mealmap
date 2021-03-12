@@ -2,11 +2,11 @@
   <div class="card mb-3">
     <h3 class="card-header">Recipe Detail</h3>
     <div class="card-body">
-    <h5 class="card-title" v-bind:key="recipe.recipeId">{{recipe.recipeName}}</h5>
+    <h5 class="card-title" v-bind:id="recipe.recipeId">{{recipe.recipeName}}</h5>
     </div>
   
   <ul class="list-group list-group-flush">
-    <li class="list-group-item" v-bind:key="recipe.recipeId">
+    <li class="list-group-item" v-bind:id="recipe.recipeId">
             {{recipe.recipeName}}&nbsp;|&nbsp;
             {{recipe.cookingTime}} min&nbsp;|&nbsp;
             {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
