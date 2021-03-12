@@ -53,133 +53,111 @@ ALTER SEQUENCE seq_recipe_id RESTART WITH 4;
 INSERT INTO ingredients
 (
     ingredient_id
-    , recipe_id
 	, ingredient_name
 )
 VALUES
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'Jumbo Pasta Shells'
 ),
 
 (
     nextval ('seq_ingredient_id')
-   , 1
     , 'salt'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'olive oil'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'mushrooms'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    ,1
     , 'spinach'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'butter'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'marinara sauce'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'red pepper flakes'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'ricotta cheese'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'parmesean cheese'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 1
     , 'oregeno'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 2
     , 'olive oil'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 2
     , 'green beans'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 2
     , 'garlic'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 2
     , 'capers'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 2
     , 'red pepper flakes'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 3
     , 'bacon'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 3
     , 'lettuce'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 3
     , 'tomato'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 3
     , 'bread'
 ),
 
 (
     nextval ('seq_ingredient_id')
-    , 3
     , 'mayonnaise'
 );
 
