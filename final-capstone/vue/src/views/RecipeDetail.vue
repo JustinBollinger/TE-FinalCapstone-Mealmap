@@ -1,12 +1,12 @@
 <template>
   <div class="card mb-3">
-  <h3 class="card-header">Recipe Detail</h3>
-  <div class="card-body">
-    <h5 class="card-title" v-bind:id="recipe.id">{{recipe.recipeName}}</h5>
-  </div>
+    <h3 class="card-header">Recipe Detail</h3>
+    <div class="card-body">
+    <h5 class="card-title" v-bind:id="recipe.recipeId">{{recipe.recipeName}}</h5>
+    </div>
   
   <ul class="list-group list-group-flush">
-    <li class="list-group-item" v-bind:key="recipe.id">
+    <li class="list-group-item" v-bind:key="recipe.recipeId">
             {{recipe.recipeName}}&nbsp;|&nbsp;
             {{recipe.cookingTime}} min&nbsp;|&nbsp;
             {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
@@ -33,8 +33,8 @@ export default {
   data() {
     return {
       recipe: {
-        userId: this.$store.state.user.id,
-        recipeId: this.$store.state.recipe.id,
+        userId: "",
+        recipeId: "",
         recipeName: "",
         directions: "",
         numberOfServings: "",
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     saveRecipe() {
-      const current = this.$store.state.activeRecipe;
+      const current = this.activeRecipe;
       const recipe = {
         userId: current.userId,
         recipeId: this.recipeId,
@@ -64,8 +64,9 @@ export default {
     }
   },
   created() {
-    recipeService.getRecipes().then((response) => {
-      this.recipes = response.data;
+    const recipeId = this.$route.params.id;
+    recipeService.getRecipeById(recipeId).then((response) => {
+      this.recipe = response.data;
     });
   }
 }

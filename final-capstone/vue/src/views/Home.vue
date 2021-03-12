@@ -55,7 +55,7 @@ h1 {
 #header-text {
   display: flex;
   justify-content: left;
-  max-width: ;
+  /* max-width: ; */
 }
 
 img{

@@ -8,6 +8,10 @@ export default {
     return axios.get('/recipeList')
   },
 
+  getRecipeById(id) {
+    return axios.get('/recipeList', id)
+  },
+
   create(recipe) {
     return axios.post(`/recipeList/`, recipe);
   },

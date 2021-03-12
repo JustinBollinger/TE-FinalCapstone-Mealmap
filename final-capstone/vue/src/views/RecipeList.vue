@@ -6,7 +6,7 @@
     <div class="recipe-list">
       <ul>
         <li v-for="recipe in recipes" v-bind:key="recipe.id">
-          <router-link v-bind:to="{name: 'recipe-detail'}">
+          <router-link v-bind:to="'recipeList/recipeDetail/' + recipe.recipeId">
             {{recipe.recipeName}}&nbsp;|&nbsp;
             {{recipe.cookingTime}} min&nbsp;|&nbsp;
             {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
