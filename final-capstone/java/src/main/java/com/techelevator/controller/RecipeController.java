@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 import com.techelevator.dao.RecipeDAO;
 import com.techelevator.model.Recipe;
@@ -41,16 +43,17 @@ public class RecipeController
 		return recipeDAO.getById(recipe_id);
 	}
 	
-	
+	@ResponseStatus(HttpStatus.CREATED)
 	@RequestMapping(path = "/recipeList", method = RequestMethod.POST)
 	public Recipe createRecipe(@RequestBody Recipe recipe)
 	{
 		return recipeDAO.create(recipe);
 	}
 	
-//	public Recipe modifyRecipe(Recipe recipe)
+//	@RequestMapping(path = "/recipeList")
+//	public void updateDirections(@RequestBody Recipe recipe, @PathVariable int recipeId, @PathVariable String directions)
 //	{
-//		return recipeDAO.modify(recipe);
+//		recipeDAO.updateDirections(recipeId, directions);
 //	}
 	
 }
