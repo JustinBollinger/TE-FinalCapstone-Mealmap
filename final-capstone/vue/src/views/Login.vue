@@ -1,18 +1,10 @@
 <template>
-  <div class="main-contain">
+  <div id="main-contain" >
 
-    <div id="horzlogo">
-      <img src="../assets/Artboard 4.png" alt="Meal Map logo"/>
-    </div>
+    <img src="../assets/Artboard 4.png" alt="Meal Map logo"/>
 
-    <div id="landing-text">
-      <p> Welcome to Mealmap!</p>
-      <br>
-      <p> Please sign-in <br>
-        to access your account</p>
-    </div>
+      <p id="instructions"> Please sign-in to access your account</p>
 
-    <div id="login-form">
       <form class="form-signin" @submit.prevent="login">
 
         <div
@@ -66,12 +58,13 @@
 
       </form>
 
-    </div>
 
   </div>
 
 </template>
 
+Advanced Footer
+<footer>testifying</footer>
 <script>
 import authService from "../services/AuthService";
 
@@ -114,39 +107,40 @@ export default {
 <style>
 
 body {
+  /*background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));*/
+  /*background-image: linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));*/
+
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+
+  background-color: #343a40;
+}
+
+
+#main-contain{
   background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
-  background-size: cover;
   background-repeat: no-repeat;
-}
-
-#horzlogo{
-  display: flex;
-  justify-content: center;
-}
-
-#landing-text{
-  color: white;
-  font-family: Roboto, sans-serif;
-  font-size: 36pt;
-  text-align: center;
-  font-weight: bolder;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 1200px;
+  padding: 75px 100px 50px 100px;
+  justify-content: right;
+  border-bottom: rgba(77, 77, 77, 100) solid 5px;
+  /*margin-bottom: 300px;*/
 }
 
-#login-form{
-  display: flex;
-  justify-content: center;
-  max-width: 1200px;
+.form-signin{
+  margin-bottom: 100px;
+  max-width: 30rem;
 }
 
-#landing-buttons{
+#instructions{
+margin-top: 3rem;
+}
+
+#landing-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  max-width: 1200px;
+  justify-content: space-between;
 }
 
 
