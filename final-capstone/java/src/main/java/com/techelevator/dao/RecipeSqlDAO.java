@@ -89,6 +89,22 @@ public class RecipeSqlDAO implements RecipeDAO
 		return getById(id);
 	}
 	
+//	public void updateDirections(int recipeId, String directions)
+//	{
+//		String sql = "UPDATE recipes" + 
+//					" SET directions = ?" + 
+//					" WHERE recipe_id = ?;";
+//		jdbcTemplate.update(sql, directions, recipeId);
+//	}
+//	
+//	public void updateCookingTime(int recipeId, int cooking_time)
+//	{
+//		//sql statement will be an UPDATE statement
+//		String sql = "UPDATE recipes" + 
+//					" SET cooking_time = ?" + 
+//					" WHERE recipe_id = ?;";
+//		jdbcTemplate.update(sql, cooking_time, recipeId);
+//	}
 	
 	
 	private Recipe mapRowToRecipe(SqlRowSet rowSet)
