@@ -2,9 +2,7 @@
   <div id="app">
     <div id="nav">
       <div id="left-panel">
-        <v-toolbar id="head-logo">
           <img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/>
-        </v-toolbar>
       </div>
       <div id="right-panel">
         <router-link class="meal-btn" v-bind:to="{ name: 'home' }">HOME</router-link>
@@ -41,7 +39,8 @@
 <!--      </mdb-container>-->
       <div class="footer-copyright text-center py-3">
         <mdb-container fluid>
-          &copy; 2021 Copyright, DataChef Inc.
+          <img class="footer-logo" :src="require('../public/DC hori v2111.png')"   />
+          &copy;    Copyright 2021 DataChef Inc.
         </mdb-container>
       </div>
     </mdb-footer>
@@ -52,6 +51,14 @@
 
 <style>
 
+footer{
+  background-color: #1d9ce5;
+}
+
+.footer-logo{
+  height: 2rem;
+}
+
 #nav {
   display: flex;
 }
@@ -59,6 +66,7 @@
 #app-footer{
   color: white;
   opacity: 0.5;
+  background-color: #343a40;
 }
 
 #left-panel {
