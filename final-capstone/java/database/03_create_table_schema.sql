@@ -8,6 +8,8 @@ DROP TABLE IF EXISTS recipes_ingredients;
 
 -- drop sequences
 DROP SEQUENCE IF EXISTS seq_user_id;
+DROP SEQUENCE IF EXISTS seq_ingredient_id;
+DROP SEQUENCE IF EXISTS seq_recipe_id;
 
 --create sequences manually - so that you can set the value after inserting seed data
 CREATE SEQUENCE seq_user_id
@@ -15,6 +17,15 @@ CREATE SEQUENCE seq_user_id
   NO MAXVALUE
   NO MINVALUE
   CACHE 1;
+
+  CREATE SEQUENCE seq_ingredient_id
+  START 1
+  INCREMENT BY 1;
+
+  CREATE SEQUENCE seq_recipe_id
+  START 1
+  INCREMENT BY 1;
+  
 
 
 -- create tables
@@ -29,7 +40,7 @@ CREATE TABLE users (
 CREATE TABLE recipes
 (	
 	user_id INT NOT NULL,
-	recipe_id INT NOT NULL PRIMARY KEY,
+	recipe_id SERIAL NOT NULL PRIMARY KEY,
 	recipe_name varchar(200) NOT NULL,
 	directions TEXT NOT NULL,
 	number_of_servings INT NOT NULL,
@@ -69,11 +80,10 @@ ADD CONSTRAINT fk_ingredient_id
 FOREIGN KEY (ingredient_id)
 REFERENCES ingredients(ingredient_id);
 
-
-
-
-
-
+ALTER TABLE recipes
+ADD CONSTRAINT fk_user_id
+FOREIGN KEY (user_id)
+REFERENCES users (user_id);
 
 
 
