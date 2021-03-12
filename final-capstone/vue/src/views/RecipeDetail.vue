@@ -16,11 +16,11 @@
   </ul>
   
   <div class="card-body">
-    <p class="card-text">Recipe directions to display here</p>
+    <p class="card-text" v-bind:id="recipe.recipeId">{{recipe.directions}}</p>
   </div>
   
   <div class="card-body">
-    <a href="#" class="card-link">Back to Recipe Library</a>
+    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipe-list'}">Back to Recipe Library</router-link>
     <a href="#" class="card-link">Modify Recipe</a>
   </div>
   </div>
