@@ -9,5 +9,5 @@ public interface RecipeDAO
 	List<Recipe> getAll();
 	Recipe getById(int id);
 	Recipe create(Recipe recipe);
-//	Recipe modify(Recipe recipe);
+	Recipe modify(Recipe recipe);
 }
