@@ -66,8 +66,6 @@ public class RecipeSqlDAO implements RecipeDAO
 	
 	public Recipe create(Recipe newRecipe)
 	{		
-		// fix SQL statement
-		// keeps giving me a "column out of range" 
 		String sql = "INSERT INTO recipes" + 
 					"(" +
 					"user_id" +
@@ -88,7 +86,6 @@ public class RecipeSqlDAO implements RecipeDAO
 												newRecipe.getNumberOfServings(),
 												newRecipe.getCookingTime(),
 												newRecipe.getDifficulty());
-	
 		return getById(id);
 	}
 	
