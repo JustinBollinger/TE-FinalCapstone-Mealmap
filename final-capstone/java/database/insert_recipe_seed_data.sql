@@ -183,7 +183,7 @@ VALUES
     , 'mayonnaise'
 );
 
-ALTER SEQUENCE seq_ingredient_id RESTART WITH 22;
+--ALTER SEQUENCE seq_ingredient_id RESTART WITH 22;
 
 INSERT INTO recipes_ingredients
 (
