@@ -40,7 +40,7 @@ CREATE TABLE users (
 CREATE TABLE recipes
 (	
 	user_id INT NOT NULL,
-	recipe_id SERIAL NOT NULL PRIMARY KEY,
+	recipe_id int DEFAULT nextval('seq_recipe_id') NOT NULL PRIMARY KEY,
 	recipe_name varchar(200) NOT NULL,
 	directions TEXT NOT NULL,
 	number_of_servings INT NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE recipes
 CREATE TABLE ingredients
 (
 	recipe_id INT NOT NULL,
-	ingredient_id SERIAL NOT NULL PRIMARY KEY,
+	ingredient_id int DEFAULT nextval('seq_ingredient_id') NOT NULL PRIMARY KEY,
 	ingredient_name varchar(50) NOT NULL,
 	category_id INT
 );
