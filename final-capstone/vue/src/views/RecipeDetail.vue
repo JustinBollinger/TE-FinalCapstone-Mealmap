@@ -2,11 +2,11 @@
   <div class="card mb-3">
   <h3 class="card-header">Recipe Detail</h3>
   <div class="card-body">
-    <h5 class="card-title" v-for="recipe in recipes" v-bind:key="recipe.id">{{recipe.recipeName}}</h5>
+    <h5 class="card-title" v-bind:id="recipe.id">{{recipe.recipeName}}</h5>
   </div>
   
   <ul class="list-group list-group-flush">
-    <li class="list-group-item" v-for="recipe in recipes" v-bind:key="recipe.id">
+    <li class="list-group-item" v-bind:key="recipe.id">
             {{recipe.recipeName}}&nbsp;|&nbsp;
             {{recipe.cookingTime}} min&nbsp;|&nbsp;
             {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
@@ -16,7 +16,7 @@
   </ul>
   
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Recipe directions to display here</p>
   </div>
   
   <div class="card-body">
@@ -32,19 +32,18 @@ import recipeService from "../services/RecipeService"
 export default {
   data() {
     return {
-      recipe: ""
-      // recipe: {
-      //   userId: this.$store.state.user.id,
-      //   recipeId: this.$store.state.recipe.id,
-      //   recipeName: "",
-      //   directions: "",
-      //   numberOfServings: "",
-      //   // recipeCategoryId: "",
-      //   // dietaryRestrictionId: "",
-      //   cookingTime: "",
-      //   difficulty: "",
-      //   isCreated: false
-      // }
+      recipe: {
+        userId: this.$store.state.user.id,
+        recipeId: this.$store.state.recipe.id,
+        recipeName: "",
+        directions: "",
+        numberOfServings: "",
+        // recipeCategoryId: "",
+        // dietaryRestrictionId: "",
+        cookingTime: "",
+        difficulty: "",
+        isCreated: false
+      }
     };
   },
   methods: {
@@ -59,8 +58,8 @@ export default {
         cookingTime: current.cookingTime,
         difficulty: current.difficulty
       };
-      recipeService.update(recipe.Id, recipe).then(response => {
-        this.$router.push()
+      recipeService.update(recipe.Id, recipe).then(() => {
+        this.$router.push();
       })
     }
   },

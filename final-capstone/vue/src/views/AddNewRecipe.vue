@@ -26,7 +26,7 @@
       <label for="exampleSelect1">Level of Difficulty&nbsp;</label>
       <select class="form-control" id="exampleSelect1" v-model="recipe.difficulty">
         <option>Easy</option>
-        <option>Challenging</option>
+        <option>Intermediate</option>
         <option>Hard</option>
       </select>
     </div>
