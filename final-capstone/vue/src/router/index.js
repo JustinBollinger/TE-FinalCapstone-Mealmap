@@ -23,6 +23,7 @@ Vue.use(Router)
  * If they have (or don't need to) they're allowed to go about their way.
  */
 
+
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,

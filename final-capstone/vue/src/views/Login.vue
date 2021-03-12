@@ -63,8 +63,6 @@
 
 </template>
 
-Advanced Footer
-<footer>testifying</footer>
 <script>
 import authService from "../services/AuthService";
 
@@ -106,17 +104,9 @@ export default {
 
 <style>
 
-
 body {
-  /*background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));*/
-  /*background-image: linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));*/
-
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/
-
   background-color: #343a40;
 }
-
 
 #main-contain{
   background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
@@ -126,7 +116,6 @@ body {
   padding: 75px 100px 50px 100px;
   justify-content: right;
   border-bottom: rgba(77, 77, 77, 100) solid 5px;
-  /*margin-bottom: 300px;*/
 }
 
 .form-signin{
@@ -143,6 +132,5 @@ margin-top: 3rem;
   flex-direction: row;
   justify-content: space-between;
 }
-
 
 </style>
