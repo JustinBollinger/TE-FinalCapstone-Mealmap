@@ -2,7 +2,7 @@
   <div class="card mb-3">
     <h3 class="card-header">Recipe Detail</h3>
     <div class="card-body">
-    <h5 class="card-title" v-bind:id="recipe.recipeId">{{recipe.recipeName}}</h5>
+    <h5 class="card-title" v-bind:key="recipe.recipeId">{{recipe.recipeName}}</h5>
     </div>
   
   <ul class="list-group list-group-flush">
@@ -51,7 +51,7 @@ export default {
       const current = this.activeRecipe;
       const recipe = {
         userId: current.userId,
-        recipeId: this.recipeId,
+        recipeId: current.recipeId,
         recipeName: current.recipeName,
         directions: current.directions,
         numberOfServings: current.numberOfServings,
