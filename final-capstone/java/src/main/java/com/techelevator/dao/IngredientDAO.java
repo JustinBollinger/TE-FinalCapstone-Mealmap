@@ -1,6 +1,12 @@
 package com.techelevator.dao;
 
+import java.util.List;
+
+import com.techelevator.model.Ingredient;
+
 public interface IngredientDAO
 {
-	// interface functions go here
+	List<Ingredient> getAll();
+	Ingredient getById(int id);
+	Ingredient create(Ingredient ingredient);
 }

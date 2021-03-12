@@ -21,6 +21,7 @@ export default {
 
 h1 {
   font-family: 'Fira Sans', sans-serif;
+  color: white
 }
 img {
   /* justify-content: center; */
