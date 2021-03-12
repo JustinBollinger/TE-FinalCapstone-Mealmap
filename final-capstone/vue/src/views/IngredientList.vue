@@ -1,24 +1,25 @@
 <template>
-<ingredient-list>
+
 <div class = "ingredient-list">
     <h1>Ingredient Library</h1>
 
     <img src="../assets/Artboard 5.png" alt="full bag of groceries">
 
+    <h2>Ingredients</h2>
     <ul></ul>
 
     <h2>Add Ingredient</h2>
     <input type="text" id="list-input">
-    <input type="submit" id="list-submit" v-on:click="addIngredient">
-
+    <input type="submit" id="list-submit" v-on:click="saveIngredient()">
+  
 
   </div>
 
-</ingredient-list>
+
   
 </template>
 
-<script>
+// <script>
 import ingredientService from "../services/IngredientService"
 
 export default {
@@ -32,7 +33,21 @@ export default {
     ingredientService.getIngredients().then((response) => {
       this.ingredients = response.data;
     });
-  }
+  },
+
+  methods: {
+    saveIngredient() {
+      ingredientService
+    .create(this.ingredient)
+    .then((response) => {
+      if (response.status === 201) {
+        this.$router.push("/");
+      }
+    }) .catch(error => {
+      console.error(error);
+    });
+    }
+  } 
 }
 
 
