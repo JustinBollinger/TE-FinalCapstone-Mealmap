@@ -53,7 +53,6 @@ CREATE TABLE recipes
 
 CREATE TABLE ingredients
 (
-	recipe_id INT NOT NULL,
 	ingredient_id int DEFAULT nextval('seq_ingredient_id') NOT NULL PRIMARY KEY,
 	ingredient_name varchar(50) NOT NULL,
 	category_id INT
