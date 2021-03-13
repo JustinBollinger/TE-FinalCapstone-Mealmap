@@ -50,7 +50,7 @@ public class RecipeController
 		return recipeDAO.create(recipe);
 	}
 	
-//	@RequestMapping(path = "/recipeList")
+//	@RequestMapping(path = "/recipeDetail/modify/{recipe_id}")
 //	public void updateDirections(@RequestBody Recipe recipe, @PathVariable int recipeId, @PathVariable String directions)
 //	{
 //		recipeDAO.updateDirections(recipeId, directions);

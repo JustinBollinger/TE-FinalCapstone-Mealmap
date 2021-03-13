@@ -1,7 +1,7 @@
 <template>
   <form v-on:submit.prevent>
     <fieldset>
-    <h1>Add New Recipe</h1>
+    <h3>Modify Recipe</h3>
     <div class="form-group">
         <label class="col-form-label" for="inputDefault">Recipe Name&nbsp;</label>
         <input type="text" class="form-control" placeholder="What do you call this recipe?" id="inputDefault" v-model="recipe.recipeName">
@@ -31,52 +31,36 @@
       </select>
     </div>
     <p></p>
-    <!-- <div class="form-check">
-      <label class="form-check-label">Select Recipe Category&nbsp;</label>
-         <input class="form-check-input" type="checkbox" value="" unchecked="">Appetizer
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Main Dish
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Side Dish
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Soup
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Dessert
-    </div>
-    <p></p>
-    <div class="form-check">
-        <label class="form-check-label">Select Dietary Restrictions if applicable &nbsp;</label>
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Vegetarian
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Vegan
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Gluten-free
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Dairy-free
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Egg-free
-          <input class="form-check-input" type="checkbox" value="" unchecked="">Nut-free
-    </div>
-    <p></p>
+
     <div class="form-group">
         <label for="exampleTextarea">Ingredients</label>
         <textarea class="form-control" placeholder="What do you need to make this and how much?" id="exampleTextarea" rows="3"></textarea>
     </div>
-    <p></p> -->
+    <p></p>
     <div class="form-group">
         <label for="exampleTextarea">Directions</label>
         <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3" v-model="recipe.directions"></textarea>
     </div>
     </fieldset>
     
-    <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="saveRecipe()">Save New Recipe</button>
-    <div v-if="isCreated">
-        <router-link v-bind:to="{name: 'recipes'}"></router-link>
+   <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe()">Save Modified Recipe</button>
+    <div v-if="isModified">
+        <router-link v-bind:to="{name: 'recipes-detail'}"></router-link>
     </div>
-    
-    </form>
+   <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link> 
+
+  </form>  
 </template>
 
+
 <script>
-import RecipeService from "../services/RecipeService";
+import recipeService from "../services/RecipeService"
 
 export default {
-data() {
+  data() {
     return {
       recipe: {
-        userId: this.$store.state.user.id,
+        userId: "",
         recipeId: "",
         recipeName: "",
         directions: "",
@@ -85,24 +69,32 @@ data() {
         // dietaryRestrictionId: "",
         cookingTime: "",
         difficulty: "",
-        isCreated: false
+        isModified: false
       }
     };
   },
   methods: {
     saveRecipe() {
-      RecipeService.create(this.recipe).then(() => {
-        this.$router.push("/recipeList/");
-        this.isCreated = true;
+      const current = this.activeRecipe;
+      const recipe = {
+        userId: current.userId,
+        recipeId: current.recipeId,
+        recipeName: current.recipeName,
+        directions: current.directions,
+        numberOfServings: current.numberOfServings,
+        cookingTime: current.cookingTime,
+        difficulty: current.difficulty
+      };
+      recipeService.updateRecipe(recipe.id, recipe).then(() => {
+        this.$router.push();
       })
-    },
-    cancel() {
-      this.$router.push("/recipeList/");
     }
+  },
+  created() {
+    const recipeId = this.$route.params.id;
+    recipeService.getRecipeById(recipeId).then((response) => {
+      this.recipe = response.data;
+    });
   }
 }
 </script>
-
-<style>
-
-</style>

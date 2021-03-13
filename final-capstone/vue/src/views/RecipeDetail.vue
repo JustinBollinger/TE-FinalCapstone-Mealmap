@@ -7,7 +7,6 @@
   
   <ul class="list-group list-group-flush">
     <li class="list-group-item" v-bind:id="recipe.recipeId">
-            {{recipe.recipeName}}&nbsp;|&nbsp;
             {{recipe.cookingTime}} min&nbsp;|&nbsp;
             {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
             {{recipe.difficulty}}&nbsp;|&nbsp;
@@ -20,9 +19,10 @@
   </div>
   
   <div class="card-body">
-    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipe-list'}">Back to Recipe Library</router-link>
-    <a href="#" class="card-link">Modify Recipe</a>
-  </div>
+    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link>
+    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'modify-recipe'}">Modify Recipe</router-link>
+    <!-- <a href="#" class="card-link">Delete Recipe</a> -->
+      </div>
   </div>
 </template>
 
@@ -58,7 +58,7 @@ export default {
         cookingTime: current.cookingTime,
         difficulty: current.difficulty
       };
-      recipeService.update(recipe.Id, recipe).then(() => {
+      recipeService.updateRecipe(recipe.id, recipe).then(() => {
         this.$router.push();
       })
     }

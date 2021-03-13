@@ -16,12 +16,12 @@ export default {
     return axios.post(`/recipeList/`, recipe);
   },
 
-//   update(id, recipe) {
-//     return axios.put(`/recipeList/${id}`, recipe);
-//   },
+  updateRecipe(id, recipe) {
+    return axios.put(`/recipeList/recipeDetail/${id}`, recipe);
+  },
 
-//   delete(id) {
-//     return axios.delete(`/recipeList/${id}`);
-//   }
+  // delete(id) {
+  //   return axios.delete(`/recipeList/recipeDetail/${id}`);
+  // }
 
 }
