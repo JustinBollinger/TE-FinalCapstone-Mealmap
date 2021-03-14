@@ -59,17 +59,15 @@ public class IngredientSqlDAO implements IngredientDAO
 	public Ingredient create(Ingredient newIngredient)
 	{
 		String sql = "INSERT INTO ingredients" + 
-				"(" + 
-				"ingredient_id" + 
-				", ingredient_name" + 
-				", category_id" + 
-				")" + 
-				" VALUES" + 
-				"(?, ?, ?, ?)" + 
-				" RETURNING ingredient_id;";
+					"(" + 
+					"ingredient_name" +
+					", category_id" + 
+					")" + 
+					" VALUES" + 
+					"(?, ?)" +
+					" RETURNING ingredient_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class, 
-												newIngredient.getIngredientId(),
 												newIngredient.getIngredientName(),
 												newIngredient.getCategoryId());
 		return getById(id);

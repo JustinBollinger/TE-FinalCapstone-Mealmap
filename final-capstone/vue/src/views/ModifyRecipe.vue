@@ -42,11 +42,13 @@
         <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3" v-model="recipe.directions"></textarea>
     </div>
     </fieldset>
+
+    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes-detail'}">Save Modified Recipe</router-link>
     
-   <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe()">Save Modified Recipe</button>
+   <!-- <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe()">Save Modified Recipe</button>
     <div v-if="isModified">
         <router-link v-bind:to="{name: 'recipes-detail'}"></router-link>
-    </div>
+    </div> -->
    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link> 
 
   </form>  
@@ -69,12 +71,12 @@ export default {
         // dietaryRestrictionId: "",
         cookingTime: "",
         difficulty: "",
-        isModified: false
+        // isModified: false
       }
     };
   },
   methods: {
-    saveRecipe() {
+    updateRecipe() {
       const current = this.activeRecipe;
       const recipe = {
         userId: current.userId,
@@ -85,11 +87,15 @@ export default {
         cookingTime: current.cookingTime,
         difficulty: current.difficulty
       };
-      recipeService.updateRecipe(recipe.id, recipe).then(() => {
-        this.$router.push();
-      })
-    }
-  },
+      recipeService.updateRecipe(this.recipeId, recipe).then(() => {
+            this.$router.push({name: 'modify-recipe', params: {recipeId: this.recipe}});
+        })
+    }  
+    //   recipeService.updateRecipe(recipe.id, recipe).then(() => {
+    //     this.$router.push();
+    //   })
+    },
+  
   created() {
     const recipeId = this.$route.params.id;
     recipeService.getRecipeById(recipeId).then((response) => {
