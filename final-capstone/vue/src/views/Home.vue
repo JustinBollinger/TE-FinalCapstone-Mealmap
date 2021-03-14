@@ -4,13 +4,7 @@
     <h1>Welcome to Your Meal Planner</h1>
     <div id="home-left-right-container">
       <div id="header-text" class="home-left">
-        <ul>
-          <li>1. Do some stuff in your stuff</li>
-          <li>2. also you can can in your can</li>
-          <li>3. make some making to make make</li>
-          <li>4. store all your store in your store</li>
-          <li>5. data is data that you can data with data</li>
-        </ul>
+        <p> Do you have a favorite recipe? Do you need help planning for "Taco Tuesdays" or "Meatless Mondays?" With MealMap, you can <strong>enter and save recipes</strong>. You can <strong>modify a recipe</strong> in your library too. You can also use MealMap to plan your weekly meals. Recipes can be added to specific meals on certain days. MealMap even reads your <strong>weekly meal plan</strong> and populates a <strong>grocery list</strong> for you! You can also check what <strong>ingredients</strong> you have already so that you're not buying unecessary items.</p>
       </div>
       <div id="home-image" class="home-right">
         <img src="../assets/Artboard 5.png" alt="full bag of groceries">
