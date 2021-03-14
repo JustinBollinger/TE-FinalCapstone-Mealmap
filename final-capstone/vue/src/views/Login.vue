@@ -109,9 +109,15 @@ body {
 }
 
 #main-contain{
-  background-image: url("../../public/rainbow-produce-copy.png")
-  , linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
+  /*min-height: 100vh;*/
+  background-image: url("../../public/rainbow-produce.jpg")
+  ;
+  /*background: white;*/
+
+  /*, linear-gradient(rgba(255, 255, 255, 0.75)0%, rgba(255, 255, 255, 0.75)100%);*/
   background-repeat: no-repeat;
+  /*background-size:100%;*/
+
   display: flex;
   flex-direction: column;
   padding: 75px 100px 50px 100px;

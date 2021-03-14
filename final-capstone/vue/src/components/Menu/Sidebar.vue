@@ -27,7 +27,7 @@ export default {
 .slide-enter-active,
 .slide-leave-active
 {
-  transition: transform 0.2s ease;
+  transition: transform .2s ease;
 }
 
 .slide-enter,
@@ -39,9 +39,9 @@ export default {
 .sidebar-backdrop {
   /*background-color: rgba(0,0,0,.85);*/
   /*background: linear-gradient(45deg, rgba(101,31,87,1) 0%, rgba(225,113,87,1) 48%, rgba(249,248,113,1) 100%);*/
-  /*background: linear-gradient(45deg, rgba(237,28,36,1) 0%, rgba(0,113,188,1) 48%, rgba(27,20,100,1) 100%);*/
-  background: #343A40;
-  opacity: 85%;
+
+  background: #534187;
+  opacity: 50%;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -52,13 +52,14 @@ export default {
 
 .sidebar-panel {
   overflow-y: auto;
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, .95);
+  border-bottom-right-radius: 50px;
+
   position: fixed;
   left: 0;
-  top: 0;
-  height: 100vh;
+  height: 50vh;
   z-index: 1;
-  padding: 3rem 20px 2rem 20px;
+  padding: 2.5rem 20px 2rem 20px;
   width: 300px;
 }
 </style>

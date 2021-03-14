@@ -43,16 +43,16 @@ button:focus {
 }
 
 .burger-button {
-  position: relative;
+  position: fixed;
   height: 30px;
   width: 32px;
   display: block;
-  z-index: 999;
+  /*z-index: 999;*/
   border: 0;
   border-radius: 0;
   background-color: transparent;
-  margin-top: 16px;
-  margin-right: 50px;
+  margin-top: 7px;
+  margin-left: 25px;
   pointer-events: all;
   transition: transform .6s cubic-bezier(.165,.84,.44,1);
 }
