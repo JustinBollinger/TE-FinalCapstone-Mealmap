@@ -1,22 +1,21 @@
 <template>
-
-<div class = "ingredient-list">
+  <div class = "ingredient-list">
     <h1>Ingredient Library</h1>
 
     <img src="../assets/Artboard 5.png" alt="full bag of groceries">
 
     <h2>Ingredients</h2>
-    <ul></ul>
+    <ul>
+      <li v-for="ingredient in ingredients" v-bind:key="ingredient.id">
+          {{ingredient.ingredientName}}
+      </li>
+    </ul>
 
-    <h2>Add Ingredient</h2>
-    <input type="text" id="list-input">
-    <input type="submit" id="list-submit" v-on:click="saveIngredient()">
+    <label>Add Ingredient</label>
+    <input type="text" id="ingredinet-input">
+    <input type="submit" v-on:click="saveIngredient()">
   
-
   </div>
-
-
-  
 </template>
 
 // <script>
@@ -38,16 +37,12 @@ export default {
   methods: {
     saveIngredient() {
       ingredientService
-    .create(this.ingredient)
-    .then((response) => {
-      if (response.status === 201) {
-        this.$router.push("/");
-      }
-    }) .catch(error => {
-      console.error(error);
-    });
+      .create(this.ingredient)
+      .then(() => {
+        this.$router.push("/ingredientList/");
+    }) 
     }
-  } 
+  }
 }
 
 
