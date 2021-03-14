@@ -105,17 +105,18 @@ export default {
 <style>
 
 body {
-  background-color: #343a40;
+  /*background-color: #343a40;*/
 }
 
 #main-contain{
-  background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
+  background-image: url("../../public/rainbow-produce-copy.png")
+  , linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   padding: 75px 100px 50px 100px;
   justify-content: right;
-  border-bottom: rgba(77, 77, 77, 100) solid 5px;
+  /*border-bottom: rgba(77, 77, 77, 100) solid 5px;*/
 }
 
 .form-signin{

@@ -38,7 +38,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   padding: 75px 100px 50px 100px;
-  border-bottom: rgba(77, 77, 77, 100) solid 5px;
+  /*border-bottom: rgba(77, 77, 77, 100) solid 5px;*/
 }
 
 #home-left-right-container{
