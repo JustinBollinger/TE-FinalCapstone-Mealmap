@@ -43,7 +43,7 @@
     </div>
     </fieldset>
     
-   <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe()">Save Modified Recipe</button>
+   <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="saveRecipe()">Save Modified Recipe</button>
     <div v-if="isModified">
         <router-link v-bind:to="{name: 'recipes-detail'}"></router-link>
     </div>
