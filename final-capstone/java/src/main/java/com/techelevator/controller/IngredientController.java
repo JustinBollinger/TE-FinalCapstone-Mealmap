@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 import com.techelevator.dao.IngredientDAO;
 import com.techelevator.model.Ingredient;
@@ -40,7 +42,7 @@ public class IngredientController
 		return ingredientDAO.getById(ingredient_id);
 	}
 	
-	
+	@ResponseStatus(HttpStatus.CREATED)
 	@RequestMapping(path = "/ingredientList", method = RequestMethod.POST)
 	public Ingredient createIngredient(@RequestBody Ingredient ingredient)
 	{
