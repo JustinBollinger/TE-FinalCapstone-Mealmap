@@ -37,11 +37,7 @@ export default {
 }
 
 .sidebar-backdrop {
-  /*background-color: rgba(0,0,0,.85);*/
-  /*background: linear-gradient(45deg, rgba(101,31,87,1) 0%, rgba(225,113,87,1) 48%, rgba(249,248,113,1) 100%);*/
-
-  background: #534187;
-  opacity: 50%;
+  background-color: rgba(88, 84, 84, 0.75);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -52,12 +48,11 @@ export default {
 
 .sidebar-panel {
   overflow-y: auto;
-  background-color: rgba(255, 255, 255, .95);
+  background-color: white;
   border-bottom-right-radius: 50px;
-
   position: fixed;
   left: 0;
-  height: 50vh;
+  height: 100vh;
   z-index: 1;
   padding: 2.5rem 20px 2rem 20px;
   width: 300px;
