@@ -90,22 +90,24 @@ public class RecipeSqlDAO implements RecipeDAO
 	}
 	
 	
-//	public void update(String recipeName, int numberOfServings, int cookingTime, String difficulty, String directions)
-//	{	
-//		// need to determine complete SQL statement 
-//		String sql = "UPDATE recipes" + 
-//					"SET recipe_name = ?" + 
-//					", number_of_servings = ?" + 
-//					", cooking_time = ?" + 
-//					", difficulty = ?" + 
-//					", directions = ?" + 
-//					" WHERE recipe_id = ?;";
-//		jdbcTemplate.update(sql, recipeName, numberOfServings, cookingTime, difficulty, directions);
-//	}
+	public void update(Recipe recipe, int recipeId)
+	{	
+		// need to determine complete SQL statement 
+		String sql = "UPDATE recipes" + 
+					"SET recipe_name = ?" + 
+					", number_of_servings = ?" + 
+					", cooking_time = ?" + 
+					", difficulty = ?" + 
+					", directions = ?" + 
+					" WHERE recipe_id = ?;";
+		jdbcTemplate.update(sql, recipe, recipeId);
+	}
 	
 	public void delete(int recipeId)
 	{
 		// need delete logic here and SQL statement
+		// can chain two DELETE statements in the same query
+		// DELETE child first, then parent
 	}
 
 	
