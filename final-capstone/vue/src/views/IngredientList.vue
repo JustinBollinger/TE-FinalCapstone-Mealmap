@@ -158,6 +158,13 @@ export default {
 
 <style>
 
+/* h2{
+  color: white
+} */
+
+#list{
+  color:white
+}
 
 
 </style>
