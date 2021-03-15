@@ -18,6 +18,7 @@ import com.techelevator.model.Ingredient;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/ingredientList")
 @PreAuthorize("isAuthenticated()")
 public class IngredientController
 {
@@ -29,21 +30,21 @@ public class IngredientController
 		this.ingredientDAO = ingredientDAO;
 	}
 	
-	@RequestMapping(path = "/ingredientList", method = RequestMethod.GET)
+	@RequestMapping(path = "", method = RequestMethod.GET)
 	public List<Ingredient> listRecipes()
 	{
 		List<Ingredient> ingredients = ingredientDAO.getAll();
 		return ingredients;
 	}
 	
-	@RequestMapping(path = "/ingredientList/{ingredient_id}", method = RequestMethod.GET)
+	@RequestMapping(path = "/{ingredient_id}", method = RequestMethod.GET)
 	public Ingredient getIngredientById(@PathVariable int ingredient_id)
 	{
 		return ingredientDAO.getById(ingredient_id);
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(path = "/ingredientList", method = RequestMethod.POST)
+	@RequestMapping(path = "", method = RequestMethod.POST)
 	public Ingredient createIngredient(@RequestBody Ingredient ingredient)
 	{
 		return ingredientDAO.create(ingredient);
