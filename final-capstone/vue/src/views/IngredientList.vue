@@ -1,15 +1,39 @@
 <template>
-  <div class = "ingredient-list">
+  <div class="jumbotron" id="main-contain">
     <h1>Ingredient Library</h1>
 
-    <img src="../assets/Artboard 5.png" alt="full bag of groceries">
 
-    <h2>Ingredients</h2>
-    <ul id="list">
-      <li v-for="ingredient in ingredients" v-bind:key="ingredient.id">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+      <div class="card-header">
+        <h4 class="card-title">My Ingredients</h4>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+        <ul id="list">
+        <li v-for="ingredient in ingredients" v-bind:key="ingredient.id">
           {{ingredient.ingredientName}}
-      </li>
-    </ul>
+        </li>
+      </ul></p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile02">
+          <label class="custom-file-label" for="inputGroupFile02">Ingredient Name</label>
+        </div>
+        <div class="input-group-append">
+          <span class="input-group-text">Add</span>
+        </div>
+      </div>
+    </div>
+<!--    <h2></h2>-->
+<!--    <ul id="list">-->
+<!--      <li v-for="ingredient in ingredients" v-bind:key="ingredient.id">-->
+<!--          {{ingredient.ingredientName}}-->
+<!--      </li>-->
+<!--    </ul>-->
 
     <add-ingredient></add-ingredient>
   

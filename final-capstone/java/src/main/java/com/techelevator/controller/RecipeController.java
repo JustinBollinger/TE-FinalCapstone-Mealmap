@@ -51,17 +51,18 @@ public class RecipeController
 		return recipeDAO.create(recipe);
 	}
 	
-//	@RequestMapping(path = "/recipeList/recipeDetail/{recipe_id}", method = RequestMethod.PUT)
-//	public void updateRecipe(@RequestBody Recipe recipe, @PathVariable int recipeId)
-//	{
-//		recipeDAO.update(recipeName, numberOfServings, cookingTime, difficulty, directions);
-//	}
+	// add parameter validation
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.PUT)
+	public void updateRecipe(@RequestBody Recipe recipe, @PathVariable int recipe_id)
+	{
+		recipeDAO.update(recipe, recipe_id);
+	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable int recipeId)
+	public void delete(@PathVariable int recipe_id)
 	{
-		recipeDAO.delete(recipeId);
+		recipeDAO.delete(recipe_id);
 	}
 	
 }
