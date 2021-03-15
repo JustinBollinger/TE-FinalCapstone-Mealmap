@@ -9,6 +9,6 @@ public interface RecipeDAO
 	List<Recipe> getAll();
 	Recipe getById(int id);
 	Recipe create(Recipe recipe);
-//	void update(String recipeName, int numberOfServings, int cookingTime, String difficulty, String directions);
+	void update(Recipe recipe, int recipeId);
 	void delete(int recipeId);
 }
