@@ -1,10 +1,10 @@
 <template>
 
   <div class="jumbotron" id="main-contain">
-    <div id="h1-contain">
+    <div class="h1-contain">
       <h1 class="display-3">Welcome to Your Meal Planner</h1>
     </div>
-    <div id="h2-contain">
+    <div class="h2-contain">
       <p class="lead">Do you have a favorite recipe? Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? With
         MealMap©, you can enter and save all your favorite <strong>
           <router-link v-bind:to="{ name: 'recipes' }">recipes</router-link>
@@ -38,32 +38,10 @@ export default {
 <style>
 
 #main-contain {
-  background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(255, 255, 255, 99), rgba(255, 255, 255, 99));
-  background-repeat: no-repeat;
+
 }
 
-h1 {
-  /*padding: 50px 100px 50px 100px;*/
-  font-size: 3rem;
-}
 
-h2 {
-  line-height: 3rem;
-  font-size: 1rem;
-  color: #1d2124 !important;
-}
-
-#h2-contain {
-  /*margin-bottom: 10rem;*/
-  padding-top: 3rem;
-  padding-right: 4rem;
-  padding-left: 4rem;
-  padding-bottom: 3rem;
-  border-radius: 2.5rem;
-  background: white;
-  max-width: 800px;
-  display: flex;
-}
 
 /* #h1-contain{
 
