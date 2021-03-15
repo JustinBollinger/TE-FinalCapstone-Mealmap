@@ -26,8 +26,14 @@ CREATE SEQUENCE seq_user_id
   START 1
   INCREMENT BY 1;
   
+  CREATE SEQUENCE seq_meal_plan_id
+  START 1
+  INCREMENT BY 1;
 
-
+  CREATE SEQUENCE seq_meal_id
+  START 1
+  INCREMENT BY 1;
+  
 -- create tables
 CREATE TABLE users (
 	user_id int DEFAULT nextval('seq_user_id') NOT NULL,
@@ -65,6 +71,25 @@ CREATE TABLE recipes_ingredients
 	measurement_unit VARCHAR(100),
 	measurement_quantity INT
 );
+
+CREATE TABLE meal_plan
+(
+	user_id INT,
+	meal_plan_id INT DEFAULT nextval('seq_meal_plan_id') NOT NULL PRIMARY KEY,
+	meal_plan_name VARCHAR(100),
+	start_date date,
+	end_date date
+)
+
+CREATE TABLE meal_recipes
+(
+	meal_plan_id INT,
+	meal_id INT DEFAULT nextval('seq_meal_id') NOT NULL PRIMARY KEY,
+	recipe_id INT,
+	recipe_name VARCHAR(200),
+	meal_category VARCHAR(50),
+	day_of_week VARCHAR(50)
+)
 
 
 -- create foreign key constraints

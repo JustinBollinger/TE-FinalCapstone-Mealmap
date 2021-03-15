@@ -12,6 +12,6 @@ export default {
     },
 
     create(ingredient) {
-        return axios.post(`/ingredientList/`, ingredient)
+        return axios.post(`/ingredientList`, ingredient)
     }
 }
