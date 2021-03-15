@@ -52,17 +52,17 @@ public class RecipeController
 	}
 	
 	// add parameter validation
-	@RequestMapping(path = "/recipeList/recipeDetail/{recipe_id}", method = RequestMethod.PUT)
-	public void updateRecipe(@RequestBody Recipe recipe, @PathVariable int recipeId)
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.PUT)
+	public void updateRecipe(@RequestBody Recipe recipe, @PathVariable int recipe_id)
 	{
-		recipeDAO.update(recipe, recipeId);
+		recipeDAO.update(recipe, recipe_id);
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable int recipeId)
+	public void delete(@PathVariable int recipe_id)
 	{
-		recipeDAO.delete(recipeId);
+		recipeDAO.delete(recipe_id);
 	}
 	
 }

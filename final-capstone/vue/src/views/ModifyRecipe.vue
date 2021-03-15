@@ -74,7 +74,7 @@ export default {
     updateRecipe() {
       const recipeId = this.$route.params.id;
       recipeService.updateRecipe(recipeId, this.recipe).then(() => {
-          this.$router.push({name: 'modify-recipe', params: {id: this.recipe.recipeId}});
+          this.$router.push({name: 'recipe-detail', params: {id: recipeId}});
         })
     }  
   },
