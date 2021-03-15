@@ -18,6 +18,7 @@ import com.techelevator.model.Recipe;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/recipeList")
 @PreAuthorize("isAuthenticated()")
 public class RecipeController
 {
@@ -30,30 +31,37 @@ public class RecipeController
 	}
 	
 	
-	@RequestMapping(path = "/recipeList", method = RequestMethod.GET)
+	@RequestMapping(path = "", method = RequestMethod.GET)
 	public List <Recipe> listRecipes()
 	{
 		List <Recipe> recipes = recipeDAO.getAll();
 		return recipes;
 	}
 	
-	@RequestMapping(path = "/recipeList/recipeDetail/{recipe_id}", method = RequestMethod.GET)
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.GET)
 	public Recipe getRecipeById(@PathVariable int recipe_id)
 	{
 		return recipeDAO.getById(recipe_id);
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(path = "/recipeList", method = RequestMethod.POST)
+	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public Recipe createRecipe(@RequestBody Recipe recipe)
 	{
 		return recipeDAO.create(recipe);
 	}
 	
-//	@RequestMapping(path = "/recipeDetail/modify/{recipe_id}")
-//	public void updateDirections(@RequestBody Recipe recipe, @PathVariable int recipeId, @PathVariable String directions)
+//	@RequestMapping(path = "/recipeList/recipeDetail/{recipe_id}", method = RequestMethod.PUT)
+//	public void updateRecipe(@RequestBody Recipe recipe, @PathVariable int recipeId)
 //	{
-//		recipeDAO.updateDirections(recipeId, directions);
+//		recipeDAO.update(recipeName, numberOfServings, cookingTime, difficulty, directions);
 //	}
+	
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.DELETE)
+	public void delete(@PathVariable int recipeId)
+	{
+		recipeDAO.delete(recipeId);
+	}
 	
 }
