@@ -22,9 +22,11 @@ public class MealPlanSqlDAO implements MealPlanDAO
 	private MealPlan mapRowToMealPlan(SqlRowSet rowSet)
 	{
 		MealPlan mealPlan = new MealPlan();
-		// setter mapping goes here
-		
-		
-		
+		mealPlan.setUserId(rowSet.getInt("user_id"));
+		mealPlan.setMealPlanId(rowSet.getInt("meal_plan_id"));
+		mealPlan.setMealPlanName(rowSet.getString("meal_plan_name"));
+		mealPlan.setStartDate(rowSet.getDate("start_date").toLocalDate());
+		mealPlan.setEndDate(rowSet.getDate("end_date").toLocalDate());
+		return mealPlan;
 	}
 }
