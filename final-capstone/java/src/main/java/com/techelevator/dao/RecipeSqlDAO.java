@@ -94,13 +94,19 @@ public class RecipeSqlDAO implements RecipeDAO
 	{	
 		// need to determine complete SQL statement 
 		String sql = "UPDATE recipes" + 
-					"SET recipe_name = ?" + 
+					" SET recipe_name = ?" + 
 					", number_of_servings = ?" + 
 					", cooking_time = ?" + 
 					", difficulty = ?" + 
 					", directions = ?" + 
 					" WHERE recipe_id = ?;";
-		jdbcTemplate.update(sql, recipe, recipeId);
+		
+		jdbcTemplate.update(sql, recipe.getRecipeName(),
+								recipe.getNumberOfServings(),
+								recipe.getCookingTime(),
+								recipe.getDifficulty(),
+								recipe.getDirections(),
+								recipeId);
 	}
 	
 	public void delete(int recipeId)
