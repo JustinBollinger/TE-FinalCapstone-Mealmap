@@ -6,5 +6,6 @@ import com.techelevator.model.MealPlan;
 
 public interface MealPlanDAO
 {
-	public List<MealPlan> getAll();
+	List<MealPlan> getAll();
+	MealPlan getById(int mealPlanId);
 }

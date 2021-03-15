@@ -24,11 +24,11 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		List<MealPlan> mealPlans = new ArrayList<>();
 		
 		String sql = "SELECT user_id" + 
-				", meal_plan_id" + 
-				", meal_plan_name" + 
-				", start_date" + 
-				", end_date" + 
-				" FROM meal_plan;";
+					", meal_plan_id" + 
+					", meal_plan_name" + 
+					", start_date" + 
+					", end_date" + 
+					" FROM meal_plan;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while (results.next())
@@ -38,6 +38,25 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		}
 		
 		return mealPlans;
+	}
+	
+	public MealPlan getById(int mealPlanId)
+	{
+		String sql = "SELECT user_id" + 
+					", meal_plan_id" + 
+					", meal_plan_name" + 
+					", start_date" + 
+					", end_date" + 
+					" FROM meal_plan" + 
+					" WHERE meal_plan_id = ?;";
+		
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, mealPlanId);
+		if(results.next())
+		{
+			return mapRowToMealPlan(results);
+		}
+		
+		return null;
 	}
 	
 	
