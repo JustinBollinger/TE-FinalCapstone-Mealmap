@@ -1,14 +1,25 @@
 <template>
 
-  <div id="home-contain">
-    <h1>Welcome to Your Meal Planner</h1>
-    <div id="home-left-right-container">
-      <div id="header-text" class="home-left">
-        <p> Do you have a favorite recipe? Do you need help planning for "Taco Tuesdays" or "Meatless Mondays?" With MealMap, you can <strong>enter and save recipes</strong>. You can <strong>modify a recipe</strong> in your library too. You can also use MealMap to plan your weekly meals. Recipes can be added to specific meals on certain days. MealMap even reads your <strong>weekly meal plan</strong> and populates a <strong>grocery list</strong> for you! You can also check what <strong>ingredients</strong> you have already so that you're not buying unecessary items.</p>
-      </div>
-      <div id="home-image" class="home-right">
-        <img src="../assets/Artboard 5.png" alt="full bag of groceries">
-      </div>
+  <div id="h1-contain">
+    <div id="h1-home">
+      <h1>Welcome to Your Meal Planner</h1>
+    </div>
+    <div id="h2-contain">
+      <h2> Do you have a favorite recipe? Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? With
+        MealMap©, you can enter and save all your favorite <strong>
+          <router-link v-bind:to="{ name: 'recipes' }">recipes</router-link>
+        </strong>. You can <strong>
+          <router-link v-bind:to="{ name: 'modify-recipe' }">modify</router-link>
+        </strong> a recipe in your library too. You can also use MealMap to plan your weekly meals. Recipes can be added
+        to specific meals on certain days. MealMap even reads your <strong>
+          <router-link v-bind:to="{ name: 'meal-plan' }">meal plan</router-link>
+        </strong> and populates a <strong>
+          <router-link v-bind:to="{ name: 'grocery-list' }">grocery list</router-link>
+        </strong> for you! You can also check what <strong>
+          <router-link v-bind:to="{ name: 'ingredient-list'}">ingredients</router-link>
+        </strong> you have already so that you're
+        not buying unnecessary items.
+      </h2>
     </div>
 
   </div>
@@ -26,41 +37,39 @@ export default {
 <style>
 
 #home-contain {
-  background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
+  background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(255, 255, 255, 99), rgba(255, 255, 255, 99));
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 75px 100px 50px 100px;
-  /*border-bottom: rgba(77, 77, 77, 100) solid 5px;*/
-}
-
-#home-left-right-container{
-  display: flex;
-  flex-direction: row;
+  padding: 50px 100px 50px 100px;
 }
 
 h1 {
-  font-family: Roboto, sans-serif;
-  color: white;
-  font-size: 4rem;
+  /*padding: 50px 100px 50px 100px;*/
+  font-size: 3rem;
 }
 
-#header-text {
+h2 {
+  line-height: 3rem;
+  font-size: 1rem;
+  color: #1d2124 !important;
+}
+
+#h2-contain {
+  /*margin-bottom: 10rem;*/
+  padding-top: 3rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-bottom: 3rem;
+  border-radius: 2.5rem;
+  background: white;
+  max-width: 800px;
   display: flex;
-  justify-content: left;
-  /* max-width: ; */
 }
 
-img{
-  max-width: 300px;
+#h1-contain{
+
 }
-
-#home-image {
-  display: flex;
-  justify-content: right;
-}
-
-
 
 </style>
