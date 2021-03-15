@@ -10,7 +10,7 @@
       <add-ingredient></add-ingredient>
       <table class="table">
         <tbody>
-        <tr v-for="ingredient in ingredients" class="table table-hover">
+        <tr v-for="ingredient in ingredients" v-bind:key="ingredient.id" class="table table-hover">
           <th scope="row">{{ ingredient.ingredientName }}</th>
         </tr>
         </tbody>
