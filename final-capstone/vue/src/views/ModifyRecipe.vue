@@ -43,12 +43,10 @@
     </div>
     </fieldset>
 
-    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipe-detail'}">Save Modified Recipe</router-link>
-    
-   <!-- <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe()">Save Modified Recipe</button>
-    <div v-if="isModified">
+    <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe">Save Modified Recipe</button>
+    <!-- <div v-if="isModified">
         <router-link v-bind:to="{name: 'recipe-detail'}"></router-link>
-    </div> -->
+    </div>  -->
    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link> 
 
   </form>  
@@ -71,24 +69,15 @@ export default {
         // dietaryRestrictionId: "",
         cookingTime: "",
         difficulty: "",
-        isModified: false
       }
     };
   },
   methods: {
     updateRecipe() {
       // const current = this.activeRecipe;
-      const recipe = {
-        userId: this.userId,
-        recipeId: this.recipeId,
-        recipeName: this.recipeName,
-        directions: this.directions,
-        numberOfServings: this.numberOfServings,
-        cookingTime: this.cookingTime,
-        difficulty: this.difficulty,
-      };
-      recipeService.updateRecipe(this.recipeId, recipe).then(() => {
-            this.$router.push({name: 'modify-recipe', params: {recipeId: this.recipe}});
+      const recipeId = this.$route.params.id;
+      recipeService.updateRecipe(recipeId, this.recipe).then(() => {
+          this.$router.push({name: 'modify-recipe', params: {id: this.recipe.recipeId}});
         })
     }  
     //   recipeService.updateRecipe(recipe.id, recipe).then(() => {
@@ -99,8 +88,16 @@ export default {
   created() {
     const recipeId = this.$route.params.id;
     recipeService.getRecipeById(recipeId).then((response) => {
-      this.recipe = response.data;
+      this.recipe =response.data;
     });
   }
 }
 </script>
+
+<style>
+
+.form-group {
+  color: black;
+}
+
+</style>
