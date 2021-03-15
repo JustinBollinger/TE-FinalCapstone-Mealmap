@@ -4,11 +4,11 @@ axios.defaults.baseURL = process.env.VUE_APP_REMOTE_API;
 
 export default {
 
-  getMeals() {
+  getMeal() {
     return axios.get('/recipeList')
   },
 
-  getMealsBy(id) {
+  getMealsByDay(id) {
     return axios.get(`/recipeList/recipeDetail/${id}`)
   },
 
