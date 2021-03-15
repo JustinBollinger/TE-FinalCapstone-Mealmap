@@ -74,4 +74,7 @@ export default {
 
 <style>
 
+ul {
+  color: black;
+}
 </style>

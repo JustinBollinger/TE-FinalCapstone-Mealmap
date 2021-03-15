@@ -6,8 +6,8 @@
 
     <div class="mealplan-list">
       <ul>
-        <li>Meal Plan for Week 1</li>
-        <li>Meal Plan for Week 2</li>
+        <li>Meal Plan for Week 1 - Date Range</li>
+        <li>Meal Plan for Week 2 - Date Range</li>
       </ul>
     </div>
   </div>
