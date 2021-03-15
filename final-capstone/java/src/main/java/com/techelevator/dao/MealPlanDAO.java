@@ -8,4 +8,5 @@ public interface MealPlanDAO
 {
 	List<MealPlan> getAll();
 	MealPlan getById(int mealPlanId);
+	MealPlan create(MealPlan mealPlan);
 }

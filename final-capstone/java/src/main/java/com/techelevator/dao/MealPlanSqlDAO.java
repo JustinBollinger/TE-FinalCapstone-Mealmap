@@ -59,6 +59,26 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		return null;
 	}
 	
+	public MealPlan create(MealPlan newMealPlan)
+	{
+		String sql = "INSERT INTO meal_plan" + 
+					"(" + 
+					"user_id" + 
+					", meal_plan_name" + 
+					", start_date" + 
+					", end_date" + 
+					")" + 
+					" VALUES (?, ?, ?, ?)" + 
+					" RETURNING meal_plan_id;";
+		
+		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
+												newMealPlan.getUserId(),
+												newMealPlan.getMealPlanName(),
+												newMealPlan.getStartDate(),
+												newMealPlan.getEndDate());
+		return getById(id);
+	}
+	
 	
 	private MealPlan mapRowToMealPlan(SqlRowSet rowSet)
 	{
