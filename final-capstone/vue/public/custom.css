@@ -23,31 +23,15 @@ h2 {
 }
 
 
-body{
+body {
     background: linear-gradient(45deg, rgba(237, 28, 36, .25) 0%, rgba(0, 113, 188, .25) 48%, rgba(27, 20, 100, .25) 100%);
-
-    /*background: rgb(0, 109, 182);*/
-    /*background-image: url("rainbow-produce-copy.png"), linear-gradient(rgba(255, 255, 255, 99), rgba(255, 255, 255, 99)) !important;*/
 }
 
 #main-contain{
-    /*box-shadow: 1px 1px 1px 1px black;*/
     border-radius: 2.5rem;
     padding: 50px 100px 50px 100px !important;
     margin: 50px;
     background-image: url("rainbow-produce.jpg"), linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5));
-    /*background-repeat: no-repeat;*/
-    /*padding: 100px !important;*/
-}
-
-#main-contain-alt{
-    /*box-shadow: 1px 1px 1px 1px black;*/
-    border-radius: 2.5rem;
-    padding: 50px 100px 50px 100px !important;
-    margin: 50px;
-    background-image: url("rainbow-produce-copy.png"), linear-gradient(rgba(255, 255, 255, 99), rgba(255, 255, 255, 99));
-    /*background-repeat: no-repeat;*/
-    /*padding: 100px !important;*/
 }
 
 #signin-logo{

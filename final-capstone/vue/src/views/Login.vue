@@ -1,7 +1,7 @@
 <template>
 
   <div class="jumbotron" id="main-contain">
-    <div id="h1-contain">
+    <div class="h1-contain">
       <h1 class="display-3">
         <img id="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/>
       </h1>
