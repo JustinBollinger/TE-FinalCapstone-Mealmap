@@ -1,8 +1,14 @@
 <template>
-  <div id="main-contain" >
 
-    <img src="../assets/Artboard 4.png" alt="Meal Map logo"/>
+  <div class="jumbotron" id="main-contain">
+    <div id="h1-contain">
+      <h1 class="display-3">
+        <img id="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/>
+      </h1>
+    </div>
 
+
+    <div class="h2-contain">
       <p id="instructions"> Please sign-in to access your account</p>
 
       <form class="form-signin" @submit.prevent="login">
@@ -55,10 +61,9 @@
             </router-link>
           </menu>
         </div>
-
       </form>
 
-
+    </div>
   </div>
 
 </template>
@@ -104,40 +109,5 @@ export default {
 
 <style>
 
-body {
-  /*background-color: #343a40;*/
-}
-
-#main-contain{
-  /*min-height: 100vh;*/
-  background-image: url("../../public/rainbow-produce.jpg")
-  ;
-  /*background: white;*/
-
-  /*, linear-gradient(rgba(255, 255, 255, 0.75)0%, rgba(255, 255, 255, 0.75)100%);*/
-  background-repeat: no-repeat;
-  /*background-size:100%;*/
-
-  display: flex;
-  flex-direction: column;
-  padding: 75px 100px 50px 100px;
-  justify-content: right;
-  /*border-bottom: rgba(77, 77, 77, 100) solid 5px;*/
-}
-
-.form-signin{
-  margin-bottom: 100px;
-  max-width: 30rem;
-}
-
-#instructions{
-margin-top: 3rem;
-}
-
-#landing-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 </style>

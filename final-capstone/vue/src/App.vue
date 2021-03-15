@@ -100,7 +100,9 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);;
+  /*background: rgba(255, 255, 255, .25) !important;*/
+
+  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
 }
 
 .footer-logo {
@@ -110,7 +112,9 @@ body {
 footer {
   color: #ffffff;
   text-align: center;
-  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);;
+  /*background: rgba(255, 255, 255, .25) !important;*/
+
+  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
