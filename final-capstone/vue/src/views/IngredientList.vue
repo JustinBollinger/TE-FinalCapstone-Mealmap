@@ -70,7 +70,7 @@ export default {
 } */
 
 #list{
-  color:cornflowerblue
+  color:white
 }
 
 </style>
