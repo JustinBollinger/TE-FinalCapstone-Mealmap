@@ -7,7 +7,7 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import GroceryList from '../views/GroceryList.vue'
 import IngredientList from '../views/IngredientList.vue'
-import MealPlan from '../views/MealPlan.vue'
+import MealPlanList from '../views/MealPlanList.vue'
 import RecipeDetail from '../views/RecipeDetail.vue'
 import RecipeList from '../views/RecipeList.vue'
 import AddNewRecipe from '../views/AddNewRecipe.vue'
@@ -80,7 +80,7 @@ const router = new Router({
     {
       path: "/mealPlan",
       name: "meal-plan",
-      component: MealPlan,
+      component: MealPlanList,
       meta: {
         requiresAuth: true
       }

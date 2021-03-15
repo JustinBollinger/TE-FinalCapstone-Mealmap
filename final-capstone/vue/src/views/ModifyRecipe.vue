@@ -43,11 +43,11 @@
     </div>
     </fieldset>
 
-    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes-detail'}">Save Modified Recipe</router-link>
+    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipe-detail'}">Save Modified Recipe</router-link>
     
    <!-- <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe()">Save Modified Recipe</button>
     <div v-if="isModified">
-        <router-link v-bind:to="{name: 'recipes-detail'}"></router-link>
+        <router-link v-bind:to="{name: 'recipe-detail'}"></router-link>
     </div> -->
    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link> 
 
@@ -71,21 +71,21 @@ export default {
         // dietaryRestrictionId: "",
         cookingTime: "",
         difficulty: "",
-        // isModified: false
+        isModified: false
       }
     };
   },
   methods: {
     updateRecipe() {
-      const current = this.activeRecipe;
+      // const current = this.activeRecipe;
       const recipe = {
-        userId: current.userId,
-        recipeId: current.recipeId,
-        recipeName: current.recipeName,
-        directions: current.directions,
-        numberOfServings: current.numberOfServings,
-        cookingTime: current.cookingTime,
-        difficulty: current.difficulty
+        userId: this.userId,
+        recipeId: this.recipeId,
+        recipeName: this.recipeName,
+        directions: this.directions,
+        numberOfServings: this.numberOfServings,
+        cookingTime: this.cookingTime,
+        difficulty: this.difficulty,
       };
       recipeService.updateRecipe(this.recipeId, recipe).then(() => {
             this.$router.push({name: 'modify-recipe', params: {recipeId: this.recipe}});

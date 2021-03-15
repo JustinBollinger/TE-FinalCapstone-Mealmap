@@ -5,46 +5,37 @@
     <img src="../assets/Artboard 5.png" alt="full bag of groceries">
 
     <h2>Ingredients</h2>
-    <ul>
+    <ul id="list">
       <li v-for="ingredient in ingredients" v-bind:key="ingredient.id">
           {{ingredient.ingredientName}}
       </li>
     </ul>
 
-    <label>Add Ingredient</label>
-    <input type="text" id="ingredinet-input">
-    <input type="submit" v-on:click="saveIngredient()">
+    <add-ingredient></add-ingredient>
   
   </div>
 </template>
 
-// <script>
-import ingredientService from "../services/IngredientService"
+<script>
+import AddIngredient from "../components/AddIngredient";
+import IngredientService from "../services/IngredientService";
 
 export default {
-  name: 'ingredient-list',
-  data() {
-    return {
+  data(){
+    return{
       ingredients: []
     };
   },
   created() {
-    ingredientService.getIngredients().then((response) => {
-      this.ingredients = response.data;
-    });
+  IngredientService.getIngredients().then((response) => {
+    this.ingredients = response.data;
+  });
   },
-
-  methods: {
-    saveIngredient() {
-      ingredientService
-      .create(this.ingredient)
-      .then(() => {
-        this.$router.push("/ingredientList/");
-    }) 
-    }
+  components:{
+    AddIngredient
   }
 }
-
+  
 
 </script>
 
@@ -52,6 +43,10 @@ export default {
 
 h2{
   color: white
+}
+
+#list{
+  color:white
 }
 
 </style>
