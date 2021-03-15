@@ -1,5 +1,8 @@
 package com.techelevator.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Service;
@@ -16,7 +19,26 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
-	// jdbc CRUD ops go here
+	public List<MealPlan> getAll()
+	{
+		List<MealPlan> mealPlans = new ArrayList<>();
+		
+		String sql = "SELECT user_id" + 
+				", meal_plan_id" + 
+				", meal_plan_name" + 
+				", start_date" + 
+				", end_date" + 
+				" FROM meal_plan;";
+		
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+		while (results.next())
+		{
+			MealPlan mealPlan = mapRowToMealPlan(results);
+			mealPlans.add(mealPlan);
+		}
+		
+		return mealPlans;
+	}
 	
 	
 	private MealPlan mapRowToMealPlan(SqlRowSet rowSet)

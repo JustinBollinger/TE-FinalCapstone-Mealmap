@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.techelevator.model.Recipe;
 
@@ -92,7 +93,6 @@ public class RecipeSqlDAO implements RecipeDAO
 	
 	public void update(Recipe recipe, int recipeId)
 	{	
-		// need to determine complete SQL statement 
 		String sql = "UPDATE recipes" + 
 					" SET recipe_name = ?" + 
 					", number_of_servings = ?" + 
@@ -111,9 +111,13 @@ public class RecipeSqlDAO implements RecipeDAO
 	
 	public void delete(int recipeId)
 	{
-		// need delete logic here and SQL statement
-		// can chain two DELETE statements in the same query
-		// DELETE child first, then parent
+		String sql = "DELETE FROM recipes_ingredients" + 
+				" WHERE recipe_id = ?;" + 
+				" " + 
+				"DELETE FROM recipes" + 
+				" WHERE recipe_id = ?;";
+		
+		jdbcTemplate.update(sql, recipeId, recipeId);
 	}
 
 	
