@@ -1,11 +1,11 @@
 <template>
 
-  <div id="h1-contain">
-    <div id="h1-home">
-      <h1>Welcome to Your Meal Planner</h1>
+  <div class="jumbotron" id="main-contain">
+    <div id="h1-contain">
+      <h1 class="display-3">Welcome to Your Meal Planner</h1>
     </div>
     <div id="h2-contain">
-      <h2> Do you have a favorite recipe? Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? With
+      <p class="lead">Do you have a favorite recipe? Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? With
         MealMap©, you can enter and save all your favorite <strong>
           <router-link v-bind:to="{ name: 'recipes' }">recipes</router-link>
         </strong>. You can <strong>
@@ -19,7 +19,8 @@
           <router-link v-bind:to="{ name: 'ingredient-list'}">ingredients</router-link>
         </strong> you have already so that you're
         not buying unnecessary items.
-      </h2>
+      </p>
+      <hr class="my-4">
     </div>
 
   </div>
@@ -36,13 +37,9 @@ export default {
 
 <style>
 
-#home-contain {
+#main-contain {
   background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(255, 255, 255, 99), rgba(255, 255, 255, 99));
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 50px 100px 50px 100px;
 }
 
 h1 {
