@@ -1,27 +1,21 @@
-<template>
-  <!--  <div id="app">-->
-
-
-  <!--    hamburger test start -->
-  <div id="app">
+<template >
+  <div id="app" class="main-app">
     <nav class="main-nav">
-      <Burger>
+      <Burger class="burger">
+<!--        <img class="head-logo" :src="require('../public/hamburger_menu.svg')"/>-->
+<!--        Menu-->
       </Burger>
       <div class="logo">
-        <router-link class="meal-btn" v-bind:to="{ name: 'home' }"><img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/>
-        </router-link>
+        <router-link class="meal-btn" v-bind:to="{ name: 'home' }"><img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/></router-link>
       </div>
-
       <div>
-        <button  class="btn btn-primary btn-lg" v-on:click="login(user.id)">Sign in</button>
+        <button class="btn btn-primary btn-lg" v-on:click="login(user.id)">Sign in</button>
         <router-link id="btnsignin" class="btn btn-primary btn-lg" v-bind:to="{ name: 'register' }">Need an
           account?
         </router-link>
       </div>
     </nav>
-
     <Sidebar>
-
       <ul id="nav" class="sidebar-panel-nav">
         <li>
           <router-link class="meal-btn" v-bind:to="{ name: 'home' }">HOME</router-link>
@@ -44,52 +38,13 @@
         </li>
       </ul>
     </Sidebar>
-
     <router-view/>
-    <mdb-footer id="app-footer">
-      <div class="footer-copyright text-center py-3">
-        <mdb-container fluid>
-          Mealmap&copy; Copyright 2021 <img class="footer-logo" :src="require('../public/DC hori v2111.png')"/> inc.
-        </mdb-container>
-      </div>
-    </mdb-footer>
-
+    <footer>
+      Mealmap©; Copyright 2021 <img class="footer-logo" :src="require('../public/DC hori v2111.png')"/> inc.
+    </footer>
   </div>
-  <!--    hamburger test end -->
-
-
-  <!--    <div id="nav">-->
-  <!--      <div id="left-panel">-->
-  <!--          <img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/>-->
-  <!--      </div>-->
-  <!--      <div id="right-panel">-->
-  <!--        <router-link class="meal-btn" v-bind:to="{ name: 'home' }">HOME</router-link>-->
-  <!--        <router-link class="meal-btn" v-bind:to="{ name: 'ingredient-list'}">INGREDIENTS</router-link>-->
-  <!--        <router-link class="meal-btn" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>-->
-  <!--        <router-link class="meal-btn" v-bind:to="{ name: 'meal-plan' }">MEAL PLANS</router-link>-->
-  <!--        <router-link class="meal-btn" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>-->
-  <!--        <router-link class="meal-btn" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">LOGOUT-->
-  <!--        </router-link>-->
-  <!--      </div>-->
-  <!--      <div id="blank-right">-->
-
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--    <router-view/>-->
-  <!-- Footer -->
-  <!--    <mdb-footer id="app-footer">-->
-  <!--      <div class="footer-copyright text-center py-3">-->
-  <!--        <mdb-container fluid>-->
-  <!--          Mealmap&copy; Copyright 2021 <img class="footer-logo" :src="require('../public/DC hori v2111.png')"/> inc.-->
-  <!--        </mdb-container>-->
-  <!--      </div>-->
-  <!--    </mdb-footer>-->
-  <!-- Footer -->
-  <!--  </div>-->
-
 </template>
 
-<!--hamburger test start-->
 <script>
 import Burger from './components/Menu/Burger.vue';
 import Sidebar from './components/Menu/Sidebar.vue';
@@ -102,35 +57,48 @@ export default {
   }
 }
 </script>
-<!--hamburger tet end -->
 
 <style>
 
-#sidebar-logo {
-  height: 3rem;
-  margin-bottom: 50px;
+.main-app{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-/*hamburger test start*/
 html {
   height: 100%;
   overflow: hidden;
 }
 
 body {
+  position: relative;
+  min-height: 100vh;
+  overflow: scroll;
   border: 0;
   margin: 0;
   padding: 0;
-  font-family: 'Lato';
   height: 100%;
-  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
+  /*background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);*/
 }
 
 .main-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   flex-grow: 1;
   padding: 0.5rem 0.8rem;
+  /*background: #343A40;*/
+  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);;
+
+}
+.burger{
+  /*flex-grow: 1;*/
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 ul.sidebar-panel-nav {
@@ -141,7 +109,6 @@ ul.sidebar-panel-nav > li > a {
   color: #011c35;
   text-decoration: none;
   font-size: 1.5rem;
-  font-family: Roboto, sans-serif;
   font-weight: bolder;
   display: block;
   padding-bottom: 0.5em;
@@ -154,26 +121,42 @@ ul.sidebar-panel-nav > li > a {
 #app-footer {
   color: white;
   opacity: 0.5;
+  background: yellow;
+
+
+}
+
+footer {
+  color: #ffffff;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  /*background: #343A40;*/
+  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);;
+  position: center;
+  margin-top: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+
 }
 
 .meal-btn {
   color: white;
   font-weight: bold;
-  font-family: Roboto, sans-serif;
 }
 
 .head-logo {
-  position: fixed;
+  /*position: fixed;*/
   color: #fff;
   height: 3rem;
 }
 
-#btnsignin{
+#btnsignin {
   height: 3rem;
 }
 
 #app {
-  font-family: 'Roboto', sans-serif;
 }
 
 </style>
