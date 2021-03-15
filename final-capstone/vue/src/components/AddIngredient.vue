@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       ingredient:{
-          name: "",
+          ingredientName: "",
           isCreated:false
       }
     };
@@ -35,9 +35,9 @@ export default {
 
 <style>
 
-label{
+/* label{
     color:white
-}
+} */
 
 
 </style>

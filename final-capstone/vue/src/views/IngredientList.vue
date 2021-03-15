@@ -41,12 +41,12 @@ export default {
 
 <style>
 
-h2{
+/* h2{
   color: white
-}
+} */
 
 #list{
-  color:white
+  color:cornflowerblue
 }
 
 </style>
