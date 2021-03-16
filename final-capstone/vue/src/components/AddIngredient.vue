@@ -4,7 +4,7 @@
 
     <div class="input-group mb-3">
 
-      <input type="text" class="form-control" placeholder="Add New Ingredient Name" id="inputDefault">
+      <input type="text" class="form-control" placeholder="Add New Ingredient Name" id="inputDefault" v-model="ingredient.ingredientName">
       <div>
         <span type="button" class="btn btn-secondary" v-on:click="saveIngredient()">Add</span>
       </div>
@@ -29,16 +29,24 @@ export default {
   },
 
   methods: {
+    reloadPage(){
+      location.reload();
+    },
+
     saveIngredient() {
       IngredientService
           .create(this.ingredient)
-          // .then(() => {
-          // this.$router.push("/ingredientList/");
+          .then(() => {
+          //this.$router.push("/ingredientList/");
           this.isCreated = true;
-          
-        //})
-    }
-  }
+          IngredientService.getIngredients().then((response) => {
+          this.ingredients = response.data;
+          //this.location.reload(true);
+          });
+        })
+    },
+  },
+
 }
 </script>
 
