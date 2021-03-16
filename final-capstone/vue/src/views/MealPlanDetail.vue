@@ -186,10 +186,12 @@
 
         </tbody>
       </table>
-      <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">Back to Meal Plans
-          </router-link>
-      <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">Modify Meal Plan
+      <div class="button-separator"><router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">Back to Meal Plans
       </router-link>
+        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">Modify Meal Plan
+        </router-link>
+      </div>
+
     </div>
   </div>
 </template>
