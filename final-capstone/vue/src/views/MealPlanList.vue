@@ -2,20 +2,25 @@
 
   <div class="jumbotron" id="main-contain">
     <div class="h1-contain">
-      <h1 class="display-4-custom">My Meal PLans</h1>
+      <h1 class="display-4-custom">My Meal Plans</h1>
     </div>
 
-    <div class="mealplan-list">
-      <ul>
-        <li v-for="mealPlan in mealPlans" v-bind:key="mealPlan.mealPlanId">
-          <router-link v-bind:to="'mealPlanDetail/' + mealPlan.mealPlanId">
-            {{mealPlan.mealPlanName}}&nbsp;|&nbsp;
-            {{mealPlan.startDate}} -&nbsp;
-            {{mealPlan.endDate}} &nbsp;|&nbsp;
-          </router-link>
-        </li>
-      </ul>
-      <router-link id="btnmealplan" class="btn btn-primary btn-lg" v-bind:to="{name: 'meal-plan'}">Add New Meal Plan</router-link>
+    <div class="h2-contain">
+
+      <div class="mealplan-list">
+        <ul>
+          <li v-for="mealPlan in mealPlans" v-bind:key="mealPlan.mealPlanId">
+            <router-link v-bind:to="'mealPlanDetail/' + mealPlan.mealPlanId">
+              {{ mealPlan.mealPlanName }}&nbsp;|&nbsp;
+              {{ mealPlan.startDate }} -&nbsp;
+              {{ mealPlan.endDate }} &nbsp;|&nbsp;
+            </router-link>
+          </li>
+        </ul>
+        <div class="button-separator">
+          <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">Add New Meal Plan</router-link>
+        </div>
+      </div>
     </div>
   </div>
 
