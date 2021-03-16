@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
 
 h1 {
-    /*padding: 50px 100px 50px 100px;*/
     font-size: 3rem;
 }
 
+.home-image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
 .display-4-custom {
-    /*color: #000000;*/
     color: white;
-    /*text-shadow: ;*/
     font-size: 3rem;
     font-style: italic;
-    /*letter-spacing: -.15rem;*/
     letter-spacing: 1rem;
     font-weight: 200;
-    /*line-height: 1.2;*/
     font-family: 'Work Sans', sans-serif;
-    /*text-shadow: 1px 1px 0px black;*/
     text-transform: uppercase;
-    /*max-width: 800px;*/
 }
 
 
@@ -35,38 +34,24 @@ h2 {
 }
 
 .h2-contain {
-    /*margin-bottom: 10rem;*/
-    /*box-shadow: 1px 1px 1px 1px black;*/
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     padding: 3rem 4rem;
     border-radius: 1.5rem;
     background: #ffffff;
-    /*max-width: 800px;*/
-    /*display: flex;*/
 }
 
 
 body {
-    /*height: 100vh;*/
     background: #242528;
-    /*background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgb(0, 113, 188) 48%, rgba(27, 20, 100, 1) 100%);*/
-    /*background: linear-gradient(45deg, rgba(237, 28, 36, .25) 0%, rgba(0, 113, 188, .25) 48%, rgba(27, 20, 100, .25) 100%);*/
 }
 
 #main-contain {
-    /*background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);;*/
-    /*max-width: 1280px;*/
-    /*border-radius: 2.5rem;*/
     justify-content: center;
-    /*background: rgba(255, 255, 255, .0) !important;*/
     background: #242528;
     padding: 20px 100px 50px 100px !important;
-    /*margin: 5px;*/
-    /*border: 5px solid white;*/
-    /*background-image: url("rainbow-produce.jpg"), linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5));*/
 }
 
-#signin-logo {
+.signin-logo {
     height: 10rem;
 }
 
@@ -79,6 +64,6 @@ body {
 
 .button-separator{
     display: flex;
-
+    justify-content: space-around;
 }
 
