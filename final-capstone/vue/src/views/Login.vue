@@ -54,9 +54,9 @@
 
         <div id="landing-buttons">
           <menu>
-            <button id="btnsignin" class="btn btn-primary btn-lg" v-on:click="login(user.id)">Sign in</button>
+            <button id="btnsignin" class="btn btn-secondary" v-on:click="login(user.id)">Sign in</button>
 
-            <router-link id="btnsignin" class="btn btn-primary btn-lg" v-bind:to="{ name: 'register' }">Need an
+            <router-link id="btnsignin" class="btn btn-secondary" v-bind:to="{ name: 'register' }">Need an
               account?
             </router-link>
           </menu>

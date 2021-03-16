@@ -44,18 +44,16 @@
               <a class="dropdown-item" href="#">Separated link</a>
             </div>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" href="#" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
-              LOGOUT
-            </router-link>
-          </li>
         </ul>
 
-        <div id="nav-btns" v-if="$store.state.token == ''">
-          <router-link id="sign-in-btn" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'login' }">
+        <div id="nav-btns">
+          <router-link id="sign-in-btn" type="button" class="btn btn-outline-secondary" href="#" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
+            LOGOUT
+          </router-link>
+          <router-link id="sign-in-btn" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'login' }" v-if="$store.state.token == ''">
             Sign in
           </router-link>
-          <router-link id="nav-btns2" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'register' }">
+          <router-link id="nav-btns2" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'register' }" v-if="$store.state.token == ''">
             Create Account
           </router-link>
         </div>
@@ -65,7 +63,7 @@
     <router-view/>
 
     <footer>
-      mealmap© Copyright 2021 <img class="footer-logo" :src="require('../public/DC hori v2111.png')"/> inc.
+      <div>mealmap© Copyright 2021</div><div><img class="footer-logo" :src="require('../public/DC hori v2111.png')"/></div> <div>inc.</div>
     </footer>
   </div>
 </template>
@@ -100,8 +98,8 @@ body {
 }
 
 .navbar {
-  /*background: rgba(255, 255, 255, .25) !important;*/
-
+  /*background: rgba(0, 0, 0, 0.25) !important;*/
+border-bottom: white solid .15rem;
   background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
 }
 
@@ -110,13 +108,18 @@ body {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
   color: #ffffff;
   text-align: center;
-  /*background: rgba(255, 255, 255, .25) !important;*/
+  /*background: rgba(0, 0, 0, 0.25) !important;*/
 
   background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-top: white solid .15rem;
 }
 
 .head-logo {

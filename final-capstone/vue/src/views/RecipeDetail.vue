@@ -1,28 +1,34 @@
 <template>
-  <div class="card mb-3">
-    <h3 class="card-header">Recipe Detail</h3>
-    <div class="card-body">
-    <h5 class="card-title" v-bind:id="recipe.recipeId">{{recipe.recipeName}}</h5>
+  <div class="jumbotron" id="main-contain">
+
+    <div class="h1-contain">
+      <h1 class="display-4-custom">Recipe Detail</h1>
     </div>
-  
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item" v-bind:id="recipe.recipeId">
-            {{recipe.cookingTime}} min&nbsp;|&nbsp;
-            {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
-            {{recipe.difficulty}}&nbsp;|&nbsp;
-            <!-- {{recipe.dietaryRestriction-id}}&nbsp;|nbsp; -->
-    </li>
-  </ul>
-  
-  <div class="card-body">
-    <p class="card-text" v-bind:id="recipe.recipeId">{{recipe.directions}}</p>
-  </div>
-  
-  <div class="card-body">
-    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link>
-    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'modify-recipe'}">Modify Recipe</router-link>
-    <!-- <a href="#" class="card-link">Delete Recipe</a> -->
+
+    <div class="h2-contain">
+      <div>
+        <h3 v-bind:id="recipe.recipeId">{{ recipe.recipeName }}<small class="text-muted" v-bind:id="recipe.recipeId">
+          <br>
+          <hr>
+          {{ recipe.cookingTime }} minutes |&nbsp;
+          {{ recipe.numberOfServings }} servings&nbsp;|&nbsp;
+          {{ recipe.difficulty }}
+          <hr>
+        </small></h3>
+        <div>
+          <p class="lead" v-bind:id="recipe.recipeId">{{ recipe.directions }}</p>
+          <hr>
+        </div>
+        <div id="detail-buttons">
+          <router-link class="btn btn-secondary" v-bind:to="{name: 'recipes'}">Back to Recipe
+            Library
+          </router-link>
+          <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-recipe'}">Modify Recipe
+          </router-link>
+          <!-- <a href="#" class="card-link">Delete Recipe</a> -->
+        </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -74,7 +80,4 @@ export default {
 
 <style>
 
-ul {
-  color: black;
-}
 </style>
