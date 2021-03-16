@@ -2,6 +2,7 @@
 
   <div class="jumbotron" id="main-contain">
 
+
     <div class="h1-contain">
       <h1 class="display-4-custom">Ingredient Library</h1>
     </div>
@@ -46,7 +47,7 @@ export default {
 
 <style>
 
-#ingred-table{
+#ingred-table {
   display: flex;
   justify-content: center;
   flex-direction: column;

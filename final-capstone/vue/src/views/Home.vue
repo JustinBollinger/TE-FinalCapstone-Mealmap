@@ -9,7 +9,7 @@
     <div class="h2-contain">
       <div id="home-image"> <img id="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
       <p class="lead">Do you have a favorite recipe? Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? With
-        MealMap©, you can enter and save all your favorite <strong>
+        MealMap you can enter and save all your favorite <strong>
           <router-link v-bind:to="{ name: 'recipes' }">recipes</router-link>
         </strong>. You can <strong>modify</strong> a recipe in your library too. You can also use MealMap to plan your weekly meals. Recipes can be added
         to specific meals on certain days. MealMap even reads your <strong>

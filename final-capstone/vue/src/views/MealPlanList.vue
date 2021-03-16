@@ -1,4 +1,5 @@
 <template>
+
   <div class="jumbotron" id="main-contain">
     <div class="h1-contain">
       <h1 class="display-4-custom">My Meal PLans</h1>

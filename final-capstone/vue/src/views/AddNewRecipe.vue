@@ -1,4 +1,13 @@
 <template>
+
+  <div class="jumbotron" id="main-contain">
+
+    <div class="h1-contain">
+      <h1 class="display-4-custom">Modify Recipe</h1>
+    </div>
+
+    <div class="h2-contain">
+
   <form v-on:submit.prevent>
     <fieldset>
     <h1>Add New Recipe</h1>
@@ -61,12 +70,14 @@
     </div>
     </fieldset>
     
-    <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="saveRecipe()">Save New Recipe</button>
+    <button type="submit" class="btn btn-secondary" v-on:click="saveRecipe()">Save New Recipe</button>
     <div v-if="isCreated">
         <router-link v-bind:to="{name: 'recipes'}"></router-link>
     </div>
     
     </form>
+    </div>
+  </div>
 </template>
 
 <script>
