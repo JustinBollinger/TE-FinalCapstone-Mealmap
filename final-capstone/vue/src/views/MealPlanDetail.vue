@@ -13,32 +13,169 @@
   </thead>
   <tbody>
     <tr class="table-light">
-      <td>Breakfast</td>
-      <td>Breakfast</td>
-      <td>Breakfast</td>
-      <td>Breakfast</td>
-      <td>Breakfast</td>
-      <td>Breakfast</td>
-      <td>Breakfast</td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Breakfast</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lunch</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+            </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dinner</h4>
+                <a href="#" class="card-link">Link to Recipe 1</a>
+                <a href="#" class="card-link">Link to Recipe 2</a>
+            </div>
+        </div>
+        </td>
     </tr>
-    <tr class="table-light">
-      <td>Lunch</td>
-      <td>Lunch</td>
-      <td>Lunch</td>
-      <td>Lunch</td>
-      <td>Lunch</td>
-      <td>Lunch</td>
-      <td>Lunch</td>
-    </tr>
-     <tr class="table-light">
-      <td>Dinner</td>
-      <td>Dinner</td>
-      <td>Dinner</td>
-      <td>Dinner</td>
-      <td>Dinner</td>
-      <td>Dinner</td>
-      <td>Dinner</td>
-    </tr>
+    
   </tbody> 
   </table> 
 </template>
@@ -83,7 +220,5 @@ data() {
 </script>
 
 <style>
-th.scope {
 
-}
 </style>
