@@ -10,6 +10,7 @@ import IngredientList from '../views/IngredientList.vue'
 import MealPlanList from '../views/MealPlanList.vue'
 import MealPlanDetail from '../views/MealPlanDetail.vue'
 import ModifyMealPlan from "../views/ModifyMealPlan.vue"
+import AddMealPlan from "../views/AddMealPlan.vue"
 import RecipeDetail from '../views/RecipeDetail.vue'
 import RecipeList from '../views/RecipeList.vue'
 import AddNewRecipe from '../views/AddNewRecipe.vue'
@@ -99,6 +100,14 @@ const router = new Router({
       path: "/mealPlanDetail/modify/:id",
       name: "modify-meal-plan",
       component: ModifyMealPlan,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/addMealPlan",
+      name: "add-meal-plan",
+      component: AddMealPlan,
       meta: {
         requiresAuth: true
       }
