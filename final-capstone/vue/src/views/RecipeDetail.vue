@@ -19,7 +19,7 @@
           <p class="lead" v-bind:id="recipe.recipeId">{{ recipe.directions }}</p>
           <hr>
         </div>
-        <div id="detail-buttons">
+        <div class="button-separator">
           <router-link class="btn btn-secondary" v-bind:to="{name: 'recipes'}">Back to Recipe
             Library
           </router-link>

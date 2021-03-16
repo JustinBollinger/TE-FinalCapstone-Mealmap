@@ -17,10 +17,11 @@
             </router-link>
           </li>
         </ul>
+      </div>
         <div class="button-separator">
           <router-link class="btn btn-secondary" v-bind:to="{name: 'add-meal-plan'}">Add New Meal Plan</router-link>
         </div>
-      </div>
+
     </div>
   </div>
 
