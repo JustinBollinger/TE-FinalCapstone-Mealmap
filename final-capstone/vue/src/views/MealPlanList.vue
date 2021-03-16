@@ -6,17 +6,34 @@
 
     <div class="mealplan-list">
       <ul>
-        <li>Meal Plan for Week 1 - Date Range</li>
-        <li>Meal Plan for Week 2 - Date Range</li>
+        <li v-for="mealPlan in mealPlans" v-bind:key="mealPlan.mealPlanId">
+          <router-link v-bind:to="'mealPlanDetail/' + mealPlan.mealPlanId">
+            {{mealPlan.mealPlanName}}&nbsp;|&nbsp;
+            {{mealPlan.startDate}} -&nbsp;
+            {{mealPlan.endDate}} &nbsp;|&nbsp;
+          </router-link>
+        </li>
       </ul>
+      <router-link id="btnmealplan" class="btn btn-primary btn-lg" v-bind:to="{name: 'meal-plan'}">Add New Meal Plan</router-link>
     </div>
   </div>
 
 </template>
 
 <script>
-export default {
+import mealPlanService from "../services/MealPlanService"
 
+export default {
+  data() {
+    return {
+      mealPlans: []
+    };
+  },
+  created() {
+    mealPlanService.getMealPlans().then((response) => {
+      this.mealPlans = response.data;
+    });
+  }
 }
 </script>
 
