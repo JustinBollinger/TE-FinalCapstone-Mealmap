@@ -11,11 +11,12 @@
     </div>
   </div>
 
+
 </template>
 
 <script>
 
-import IngredientService from "../services/IngredientService"
+import IngredientService from "../services/IngredientService";
 
 export default {
   data() {
@@ -31,13 +32,13 @@ export default {
     saveIngredient() {
       IngredientService
           .create(this.ingredient)
-          .then(() => {
-            this.$router.push("/ingredientList/");
-            this.isCreated = true;
-          })
+          // .then(() => {
+          // this.$router.push("/ingredientList/");
+          this.isCreated = true;
+          
+        //})
     }
   }
-
 }
 </script>
 
