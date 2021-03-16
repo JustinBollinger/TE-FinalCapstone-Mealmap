@@ -1,31 +1,10 @@
 <template>
   <div id="app" class="main-app">
 
-<!--    <div>-->
-<!--      <b-navbar type="dark" variant="dark">-->
-<!--        <b-navbar-nav>-->
-<!--          <b-nav-item href="#">Home</b-nav-item>-->
-
-<!--          &lt;!&ndash; Navbar dropdowns &ndash;&gt;-->
-<!--          <b-nav-item-dropdown text="Lang" right>-->
-<!--            <b-dropdown-item href="#">EN</b-dropdown-item>-->
-<!--            <b-dropdown-item href="#">ES</b-dropdown-item>-->
-<!--            <b-dropdown-item href="#">RU</b-dropdown-item>-->
-<!--            <b-dropdown-item href="#">FA</b-dropdown-item>-->
-<!--          </b-nav-item-dropdown>-->
-
-<!--          <b-nav-item-dropdown text="User" right>-->
-<!--            <b-dropdown-item href="#">Account</b-dropdown-item>-->
-<!--            <b-dropdown-item href="#">Settings</b-dropdown-item>-->
-<!--          </b-nav-item-dropdown>-->
-<!--        </b-navbar-nav>-->
-<!--      </b-navbar>-->
-<!--    </div>-->
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="#">
-        <router-link class="nav-link" href="#" v-bind:to="{ name: 'home'}"><img class="head-logo"
-                                                                                :src="require('../public/Artboard 4 copy.png')"/>
+        <router-link class="nav-link" href="#" v-bind:to="{ name: 'home'}">
+          <img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/>
         </router-link>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -47,6 +26,8 @@
           <li class="nav-item">
             <router-link class="nav-link" href="#" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>
           </li>
+
+<!--          DROPDOWN MENU CODE IF NEEDED LATER  -->
 <!--          <li class="nav-item dropdown">-->
 <!--            <a class="nav-link dropdown-toggle"-->
 <!--               data-toggle="dropdown"-->
@@ -76,11 +57,11 @@
           </router-link>
           <router-link id="sign-in-btn" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'login' }"
                        v-if="$store.state.token == ''">
-            Sign in
+            SIGN IN
           </router-link>
           <router-link id="nav-btns2" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'register' }"
                        v-if="$store.state.token == ''">
-            Create Account
+            CREATE ACCOUNT
           </router-link>
         </div>
       </div>
@@ -88,10 +69,10 @@
 
     <router-view/>
 
-    <footer>
-      <div>mealmap© Copyright 2021</div>
+    <footer class="fixed-bottom">
+      <div>mealmap© Copyright 2021 &nbsp</div>
       <div><img class="footer-logo" :src="require('../public/DC hori v2111.png')"/></div>
-      <div>inc.</div>
+      <div>&nbsp inc.</div>
     </footer>
   </div>
 </template>
@@ -132,7 +113,8 @@ body {
 
 .navbar {
   /*background: rgba(0, 0, 0, 0.25) !important;*/
-  border-bottom: white solid .15rem;
+  border-bottom: white solid .10rem;
+  height: 60px;
   background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
 }
 
@@ -141,18 +123,19 @@ body {
 }
 
 footer {
+  height: 60px;
   display: flex;
   justify-content: center;
-  align-content: flex-end;
+  align-content: center;
   align-items: center;
   color: #ffffff;
   text-align: center;
-  /*background: rgba(0, 0, 0, 0.25) !important;*/
 
   background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-top: white solid .15rem;
+  border-top: white solid .10rem;
+
 }
 
 .head-logo {

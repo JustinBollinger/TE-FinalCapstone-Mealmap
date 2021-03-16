@@ -2,7 +2,7 @@
 
   <div class="jumbotron" id="main-contain">
     <div class="h1-contain">
-      <h1 class="display-4-custom">My Meal Plans</h1>
+      <h1 class="display-4-custom">Meal Plans</h1>
     </div>
 
     <div class="h2-contain">
