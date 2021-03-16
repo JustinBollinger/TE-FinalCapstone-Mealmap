@@ -77,3 +77,8 @@ body {
     width: 200px;
 }
 
+.button-separator{
+    display: flex;
+
+}
+
