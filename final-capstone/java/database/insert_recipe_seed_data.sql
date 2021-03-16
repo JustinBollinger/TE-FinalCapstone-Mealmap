@@ -53,13 +53,125 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Ham and Swiss Omelet'
     , 'In a small nonstick skillet, melt butter over medium-high heat. Whisk the eggs, water, salt and pepper. Add egg mixture to skillet (mixture should set immediately at edges).
     As eggs set, push cooked edges toward the center, letting uncooked portion flow underneath. When the eggs are set, place ham on one side and sprinkle with cheese; fold other side over filling. Slide omelet onto a plate.'
+    , 1
     , 20
+    , 'easy'
+),
+
+(
+    1
+    , 5
+    , 'Peanut Butter Oatmeal'
+    , 'In a small saucepan, bring water and salt to a boil. Stir in oats; cook 5 minutes over medium heat, stirring occasionally. Transfer oatmeal to 2 bowls; in each bowl, stir half each peanut butter, honey, flaxseed, cinnamon and, if desired, apple. Serve immediately.'
+    , 2
+    , 15
+    , 'easy'
+),
+
+(
+    1
+    , 6
+    , 'Banana Oatmeal Pancakes'
+    , 'Prepare pancake batter according to package directions. Stir in the banana, oats and walnuts. Pour batter by 1/4 cupfuls onto a hot griddle coated with cooking spray; turn when bubbles form on top. Cook until the second side is golden brown.'
+    , 8
+    , 15
+    , 'easy'
+),
+
+(
+    1
+    , 7
+    , 'Yogurt Parfait'
+    , 'Layer half the yogurt, peaches, blackberries and granola into 4 parfait glasses. Repeat layers.'
+    , 4
+    , 15
+    , 'easy'
+),
+
+(
+    1
+    , 8
+    , 'Tuna Casserole'
+    , 'Preheat oven to 350 degrees F (175 degrees C). In a 9x13-inch baking dish, combine the macaroni, tuna, and soup. Mix well, and then top with cheese. Bake at 350 degrees F (175 degrees C) for about 25 minutes, or until bubbly. Sprinkle with fried onions, and bake for another 5 minutes. Serve hot.'
+    , 8
+    , 45
+    , 'moderate'
+),
+
+(
+    1
+    , 9
+    , 'Kielbasa with Peppers and Potatoes'
+    , 'Heat the oil in a saucepan over medium heat. Place kielbasa and potatoes in the saucepan. Cover, and cook 25 minutes, stirring occasionally, until potatoes are tender. Mix red bell pepper and yellow bell pepper into the saucepan, and continue cooking 5 minutes, until peppers are just tender.'
+    , 6
+    , 40
+    , 'moderate'
+),
+
+(
+    1
+    , 10
+    , 'Mexican Casserole'
+    , 'Preheat oven to 375 degrees F (190 degrees C). Spray a 9-inch pie pan with non-stick cooking spray.
+    In a saucepan, cook refried beans and onions (to soften them) on medium-high heat for about 5 minutes.
+    Place one tortilla in the bottom of the greased pan. Spread about 1/3 cup of the bean mixture over it. Layer a few tablespoons of salsa over this. Then, place another tortilla over the salsa, and add more of the bean mixture. Follow the beans with a big handful of cheese, spreading evenly. repeat layers, spreading the ingredients evenly over the tortillas. On the top layer, make sure to use lots of salsa and cheese!
+    Bake until the cheese is melted, approximately 15 to 20 minutes.'
+    , 4
+    , 30
+    , 'easy'
+),
+
+(
+    1
+    , 11
+    , 'Slow Cooker Pulled Pork'
+    , 'Place pork loin, salsa, and chipotle peppers in a slow cooker. Pour in enough water to cover the pork halfway.
+    Cook on High until pork is very tender, 4 to 5 hours.
+    Transfer to a cutting board; shred with a fork and knife.'
+    , 6
+    , 240
+    , 'easy'
+),
+
+(
+    1
+    , 12
+    , 'Tatertot Casserole'
+    , 'Preheat oven to 350 degrees F (175 degrees C).
+    Cook and stir ground beef in a large skillet over medium heat until no longer pink and completely browned, 7 to 10 minutes; season with salt and black pepper. Stir cream of mushroom soup into the cooked ground beef; pour the mixture into a 9x13-inch baking dish. Layer tater tots evenly over the ground beef mixture; top with Cheddar cheese.
+    Bake until tater tots are golden brown and hot, 30 to 45 minutes.'
+    , 8
+    , 40
+    , 'easy'
+),
+
+(
+    1
+    , 13
+    , 'Oven Roasted Potatoes'
+    , 'Preheat oven to 425°F.
+    Scrub potatoes (do not peel them). Dice into 1” cubes.
+    If time allows, soak potatoes in cold water for up to 1 hour. (This removes starch and makes for a fluffier potato). Drain and dry potatoes, if required.
+    Toss potatoes, olive oil, herbs, and seasonings
+    Place on a baking sheet and bake for 30-35 minutes until browned and tender.'
+    , 6
+    , 45
+    ,'easy'
+),
+
+(
+    1
+    , 14
+    , 'Steamed Brocoli'
+    , 'Place a steamer insert into a saucepan and fill with water to just below the bottom of the steamer. Bring water to a boil. Add broccoli, cover, and steam until tender, 3 to 5 minutes.
+    Mix steamed broccoli, bacon, butter, salt, and pepper together in a bowl.'
+    , 2
+    , 15
     , 'easy'
 );
 
 
-
-ALTER SEQUENCE seq_recipe_id RESTART WITH 4;
+ALTER SEQUENCE seq_recipe_id RESTART WITH 15;
 
 
 INSERT INTO ingredients
@@ -181,7 +293,104 @@ VALUES
 (
     nextval ('seq_ingredient_id')
     , 'pepper'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'ham'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'swiss cheese'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'water'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'old fashioned oats'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'peanut butter'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'honey'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'cinnamon'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'pancake mix'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'banana'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'walnuts'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'vanilla yogurt'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'peaches'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'blackberries'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'granola'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'cooked macaroni'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'canned tuna'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'cream of chicken soup'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'shredded cheddar cheese'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'french fried onions'
 );
+
+
 
 --ALTER SEQUENCE seq_ingredient_id RESTART WITH 22;
 
@@ -272,50 +481,57 @@ VALUES
 
 (
     2
-    , 12
+    , 3
     , 'cup'
     , 1/3
 ),
 
 (
     2
-    , 13
+    , 12
     , 'lb'
     , 1
 ),
 
 (
     2
-    , 14
+    , 13
     , 'cloves'
     , 6
 ),
 
 (
     2
-    , 15
+    , 14
     , 'tablespoon'
     , 1
 ),
 
 (
     2
-    , 16
+    , 15
     , 'teaspoon'
     , 1
 ),
 
 (
     3
-    , 17
+    , 16
     , 'slices'
     , 4
 ),
 
 (
     3
-    , 18
+    , 17
     , 'leaves'
+    , 2
+),
+
+(
+    3
+    , 18
+    , 'slices'
     , 2
 ),
 
@@ -323,21 +539,169 @@ VALUES
     3
     , 19
     , 'slices'
-    , '2'
+    , 2
 ),
 
 (
     3
     , 20
-    , 'slices'
-    , '2'
+    , 'tablespoon'
+    , 1
 ),
 
 (
-    3
+    4
     , 21
+    , 'whole'
+    , 3
+),
+
+(
+    4
+    , 22
+    , 'teaspoon'
+    , 1/8
+),
+
+(
+    4
+    , 23
+    , 'cup'
+    , 1/2
+),
+
+(
+    4
+    , 24
+    , 'cup'
+    , 1/4
+),
+
+(
+    5
+    , 25
+    , 'cup'
+    , 1.75
+),
+
+(
+    5
+    , 2
+    , 'teaspoon'
+    , 1/8
+),
+
+(
+    5
+    , 26
+    , 'cup'
+    , 1
+),
+
+(
+    5
+    , 27
     , 'tablespoon'
+    , 2
+),
+
+(
+    5
+    , 28
+    , 'tablespoon'
+    , 2
+),
+
+(
+    5
+    , 29
+    , 'teaspoon'
+    , 1
+),
+
+(
+    6
+    , 30
+    , 'cup'
+    , 2
+),
+
+(
+    6
+    , 31
+    , 'whole'
+    , 1
+),
+
+(
+    6
+    , 26
+    , 'cup'
+    , 1/2
+),
+
+(
+    6
+    , 32
+    , 'cup'
+    , 1/4
+), 
+
+(
+    7
+    , 33
+    , 'cups'
+    , 4
+),
+
+(
+    7
+    , 34
+    , 'medium'
+    , 2
+),
+
+(
+    7
+    , 35
+    , 'cups'
+    , 2
+),
+
+(
+    7
+    , 36
+    , 'cup'
+    , 1/2
+),
+
+(
+    8
+    , 37
+    , 'cups'
+    , 3
+),
+
+(
+    8
+    , 38
+    , 'oz'
+    , 5
+),
+
+(
+    8
+    , 39
+    , 'oz'
+    , 10.75
+),
+
+(
+    8
+    , 40
+    , 'cup'
     , 1
 );
+
 
 
