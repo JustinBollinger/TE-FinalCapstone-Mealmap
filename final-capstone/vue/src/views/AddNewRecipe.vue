@@ -69,12 +69,14 @@
         <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3" v-model="recipe.directions"></textarea>
     </div>
     </fieldset>
-    
+
+    <div class="button-separator">
     <button type="submit" class="btn btn-secondary" v-on:click="saveRecipe()">Save New Recipe</button>
     <div v-if="isCreated">
         <router-link v-bind:to="{name: 'recipes'}"></router-link>
     </div>
-    
+    </div>
+
     </form>
     </div>
   </div>

@@ -2,14 +2,13 @@
 
   <div class="jumbotron" id="main-contain">
     <div class="h1-contain">
-      <h1 class="display-3">
-        <img id="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/>
-      </h1>
+      <h1 class="display-4-custom">please Sign-in</h1>
     </div>
 
 
     <div class="h2-contain">
-      <p id="instructions"> Please sign-in to access your account</p>
+        <div class="home-image"> <img class="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
+<!--      <p id="instructions"> Please sign-in to access your account</p>-->
 
       <form class="form-signin" @submit.prevent="login">
 

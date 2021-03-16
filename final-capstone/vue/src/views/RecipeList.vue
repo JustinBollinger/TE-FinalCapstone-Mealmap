@@ -29,8 +29,11 @@
         </tbody>
 
       </table>
+
+      <div class="button-separator">
       <router-link id="btnrecipe" class="btn btn-secondary" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe
       </router-link>
+      </div>
     </div>
   </div>
 

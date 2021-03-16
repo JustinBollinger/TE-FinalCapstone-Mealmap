@@ -7,7 +7,7 @@
     </div>
 
     <div class="h2-contain">
-      <div id="home-image"> <img id="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
+      <div id="home-image"> <img class="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
       <p class="lead">Do you have a favorite recipe? Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? With
         MealMap you can enter and save all your favorite <strong>
           <router-link v-bind:to="{ name: 'recipes' }">recipes</router-link>

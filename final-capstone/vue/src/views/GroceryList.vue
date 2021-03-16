@@ -2,11 +2,11 @@
   <div class="jumbotron" id="main-contain">
 
     <div class="h1-contain">
-      <h1 class="display-4-custom">My Grocery Lists</h1>
+      <h1 class="display-4-custom">Grocery Lists</h1>
     </div>
 
     <div class="h2-contain">
-      <div id="home-image"><img id="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
+      <div class="home-image"><img class="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
     </div>
 
   </div>
