@@ -221,7 +221,7 @@
 
 <script>
 import mealPlanService from "../services/MealPlanService"
-import recipeService from "../services/RecipeService"
+// import recipeService from "../services/RecipeService"
 
 export default {
 data() {
