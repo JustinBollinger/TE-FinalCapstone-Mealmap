@@ -40,7 +40,7 @@
 import recipeService from "../services/RecipeService"
 
 export default {
-  name: 'recipe-list',
+  name: 'recipes',
   data() {
     return {
       recipes: []

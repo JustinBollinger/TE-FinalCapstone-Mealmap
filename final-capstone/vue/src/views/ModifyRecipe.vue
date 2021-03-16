@@ -44,9 +44,7 @@
     </fieldset>
 
     <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="updateRecipe">Save Modified Recipe</button>
-    <!-- <div v-if="isModified">
-        <router-link v-bind:to="{name: 'recipe-detail'}"></router-link>
-    </div>  -->
+   
    <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'recipes'}">Back to Recipe Library</router-link> 
 
   </form>  
@@ -74,16 +72,12 @@ export default {
   },
   methods: {
     updateRecipe() {
-      // const current = this.activeRecipe;
       const recipeId = this.$route.params.id;
       recipeService.updateRecipe(recipeId, this.recipe).then(() => {
           this.$router.push({name: 'recipe-detail', params: {id: recipeId}});
         })
     }  
-    //   recipeService.updateRecipe(recipe.id, recipe).then(() => {
-    //     this.$router.push();
-    //   })
-    },
+  },
   
   created() {
     const recipeId = this.$route.params.id;
