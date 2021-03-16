@@ -9,6 +9,7 @@ import GroceryList from '../views/GroceryList.vue'
 import IngredientList from '../views/IngredientList.vue'
 import MealPlanList from '../views/MealPlanList.vue'
 import MealPlanDetail from '../views/MealPlanDetail.vue'
+import ModifyMealPlan from "../views/ModifyMealPlan.vue"
 import RecipeDetail from '../views/RecipeDetail.vue'
 import RecipeList from '../views/RecipeList.vue'
 import AddNewRecipe from '../views/AddNewRecipe.vue'
@@ -90,6 +91,14 @@ const router = new Router({
       path: "/mealPlanDetail/:id",
       name: "meal-plan-detail",
       component: MealPlanDetail,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/mealPlanDetail/modify/:id",
+      name: "modify-meal-plan",
+      component: ModifyMealPlan,
       meta: {
         requiresAuth: true
       }
