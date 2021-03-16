@@ -22,7 +22,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
 '
     , 4
     , 45 
-    , 'moderate'
+    , 'intermediate'
 ),
 
 (
@@ -45,7 +45,19 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 1
     , 15
     , 'easy'
+),
+
+(
+    1
+    , 4
+    , 'Ham and Swiss Omelet'
+    , 'In a small nonstick skillet, melt butter over medium-high heat. Whisk the eggs, water, salt and pepper. Add egg mixture to skillet (mixture should set immediately at edges).
+    As eggs set, push cooked edges toward the center, letting uncooked portion flow underneath. When the eggs are set, place ham on one side and sprinkle with cheese; fold other side over filling. Slide omelet onto a plate.'
+    , 20
+    , 'easy'
 );
+
+
 
 ALTER SEQUENCE seq_recipe_id RESTART WITH 4;
 
@@ -58,7 +70,7 @@ INSERT INTO ingredients
 VALUES
 (
     nextval ('seq_ingredient_id')
-    , 'Jumbo Pasta Shells'
+    , 'jumbo pasta shells'
 ),
 
 (
@@ -159,6 +171,16 @@ VALUES
 (
     nextval ('seq_ingredient_id')
     , 'mayonnaise'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'eggs'
+),
+
+(
+    nextval ('seq_ingredient_id')
+    , 'pepper'
 );
 
 --ALTER SEQUENCE seq_ingredient_id RESTART WITH 22;

@@ -15,3 +15,6 @@ FROM meal_plan;
 
 SELECT *
 FROM meal_recipes;
+
+DELETE FROM ingredients
+WHERE ingredient_id >= 22;
