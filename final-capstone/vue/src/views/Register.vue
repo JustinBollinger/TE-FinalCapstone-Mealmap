@@ -43,8 +43,8 @@
       </div>
 
         <div class="button-separator">
-      <router-link class="btn btn-secondary" :to="{ name: 'login' }">Have an account?</router-link>
-      <button class="btn btn-secondary" type="submit">Create Account</button>
+      <router-link class="btn btn-secondary button-properties" :to="{ name: 'login' }">Have an account?</router-link>
+      <button class="btn btn-secondary button-properties" type="submit">Create Account</button>
         </div>
     </form>
     </div>

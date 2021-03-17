@@ -5,6 +5,7 @@
       <h1 class="display-4-custom">Recipe Library</h1>
     </div>
 
+
     <div id="ingred-table" class="h2-contain">
       <table class="table">
         <thead>
@@ -31,7 +32,7 @@
       </table>
 
       <div class="button-separator">
-      <router-link id="btnrecipe" class="btn btn-secondary" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe
+      <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe
       </router-link>
       </div>
     </div>
@@ -40,6 +41,7 @@
 </template>
 
 <script>
+
 import recipeService from "../services/RecipeService"
 
 export default {
