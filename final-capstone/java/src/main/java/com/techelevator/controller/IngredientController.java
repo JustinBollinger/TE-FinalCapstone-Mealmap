@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 import com.techelevator.dao.IngredientDAO;
 import com.techelevator.model.Ingredient;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/ingredientList")
 @PreAuthorize("isAuthenticated()")
 public class IngredientController
 {
@@ -27,21 +30,21 @@ public class IngredientController
 		this.ingredientDAO = ingredientDAO;
 	}
 	
-	@RequestMapping(path = "/ingredientList", method = RequestMethod.GET)
+	@RequestMapping(path = "", method = RequestMethod.GET)
 	public List<Ingredient> listRecipes()
 	{
 		List<Ingredient> ingredients = ingredientDAO.getAll();
 		return ingredients;
 	}
 	
-	@RequestMapping(path = "/ingredientList/{ingredient_id}", method = RequestMethod.GET)
+	@RequestMapping(path = "/{ingredient_id}", method = RequestMethod.GET)
 	public Ingredient getIngredientById(@PathVariable int ingredient_id)
 	{
 		return ingredientDAO.getById(ingredient_id);
 	}
 	
-	
-	@RequestMapping(path = "/ingredientList", method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(path = "", method = RequestMethod.POST)
 	public Ingredient createIngredient(@RequestBody Ingredient ingredient)
 	{
 		return ingredientDAO.create(ingredient);

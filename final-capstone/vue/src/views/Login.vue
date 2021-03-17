@@ -1,9 +1,14 @@
 <template>
-  <div id="main-contain" >
 
-    <img src="../assets/Artboard 4.png" alt="Meal Map logo"/>
+  <div class="jumbotron" id="main-contain">
+    <div class="h1-contain">
+      <h1 class="display-4-custom">please Sign-in</h1>
+    </div>
 
-      <p id="instructions"> Please sign-in to access your account</p>
+
+    <div class="h2-contain">
+        <div class="home-image"> <img class="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
+<!--      <p id="instructions"> Please sign-in to access your account</p>-->
 
       <form class="form-signin" @submit.prevent="login">
 
@@ -48,23 +53,20 @@
 
         <div id="landing-buttons">
           <menu>
-            <button id="btnsignin" class="btn btn-primary btn-lg" v-on:click="login(user.id)">Sign in</button>
+            <button id="btnsignin" class="btn btn-secondary" v-on:click="login(user.id)">Sign in</button>
 
-            <router-link id="btnsignin" class="btn btn-primary btn-lg" v-bind:to="{ name: 'register' }">Need an
+            <router-link id="btnsignin" class="btn btn-secondary" v-bind:to="{ name: 'register' }">Need an
               account?
             </router-link>
           </menu>
         </div>
-
       </form>
 
-
+    </div>
   </div>
 
 </template>
 
-Advanced Footer
-<footer>testifying</footer>
 <script>
 import authService from "../services/AuthService";
 
@@ -105,44 +107,6 @@ export default {
 </script>
 
 <style>
-
-
-body {
-  /*background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));*/
-  /*background-image: linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));*/
-
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/
-
-  background-color: #343a40;
-}
-
-
-#main-contain{
-  background-image: url("../../public/rainbow-produce-copy.png"), linear-gradient(rgba(0, 0, 255, 0.75), rgba(255, 255, 0, 0.75));
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  padding: 75px 100px 50px 100px;
-  justify-content: right;
-  border-bottom: rgba(77, 77, 77, 100) solid 5px;
-  /*margin-bottom: 300px;*/
-}
-
-.form-signin{
-  margin-bottom: 100px;
-  max-width: 30rem;
-}
-
-#instructions{
-margin-top: 3rem;
-}
-
-#landing-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 
 </style>

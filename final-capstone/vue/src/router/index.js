@@ -7,10 +7,14 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import GroceryList from '../views/GroceryList.vue'
 import IngredientList from '../views/IngredientList.vue'
-import MealPlan from '../views/MealPlan.vue'
+import MealPlanList from '../views/MealPlanList.vue'
+import MealPlanDetail from '../views/MealPlanDetail.vue'
+import ModifyMealPlan from "../views/ModifyMealPlan.vue"
+import AddMealPlan from "../views/AddMealPlan.vue"
 import RecipeDetail from '../views/RecipeDetail.vue'
 import RecipeList from '../views/RecipeList.vue'
 import AddNewRecipe from '../views/AddNewRecipe.vue'
+import ModifyRecipe from '../views/ModifyRecipe.vue'
 
 Vue.use(Router)
 
@@ -22,6 +26,7 @@ Vue.use(Router)
  * If the user has not yet authenticated (and needs to) they are redirected to /login
  * If they have (or don't need to) they're allowed to go about their way.
  */
+
 
 const router = new Router({
   mode: 'history',
@@ -78,15 +83,47 @@ const router = new Router({
     {
       path: "/mealPlan",
       name: "meal-plan",
-      component: MealPlan,
+      component: MealPlanList,
       meta: {
         requiresAuth: true
       }
     },
     {
-      path: "/recipeList/recipeDetail",
+      path: "/mealPlanDetail/:id",
+      name: "meal-plan-detail",
+      component: MealPlanDetail,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/mealPlanDetail/modify/:id",
+      name: "modify-meal-plan",
+      component: ModifyMealPlan,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/addMealPlan",
+      name: "add-meal-plan",
+      component: AddMealPlan,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/recipeList/recipeDetail/:id",
       name: "recipe-detail",
       component: RecipeDetail,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: "/recipeDetail/modify/:id",
+      name: "modify-recipe",
+      component: ModifyRecipe,
       meta: {
         requiresAuth: true
       }

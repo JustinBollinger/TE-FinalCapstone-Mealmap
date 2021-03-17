@@ -9,3 +9,12 @@ FROM ingredients;
 
 SELECT *
 FROM recipes_ingredients;
+
+SELECT *
+FROM meal_plan;
+
+SELECT *
+FROM meal_recipes;
+
+DELETE FROM ingredients
+WHERE ingredient_id >= 43;

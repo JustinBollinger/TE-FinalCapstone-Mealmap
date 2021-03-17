@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 import com.techelevator.dao.RecipeDAO;
 import com.techelevator.model.Recipe;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/recipeList")
 @PreAuthorize("isAuthenticated()")
 public class RecipeController
 {
@@ -28,29 +31,38 @@ public class RecipeController
 	}
 	
 	
-	@RequestMapping(path = "/recipeList", method = RequestMethod.GET)
+	@RequestMapping(path = "", method = RequestMethod.GET)
 	public List <Recipe> listRecipes()
 	{
 		List <Recipe> recipes = recipeDAO.getAll();
 		return recipes;
 	}
 	
-	@RequestMapping(path = "/recipeList/{recipe_id}", method = RequestMethod.GET)
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.GET)
 	public Recipe getRecipeById(@PathVariable int recipe_id)
 	{
 		return recipeDAO.getById(recipe_id);
 	}
 	
-	
-	@RequestMapping(path = "/recipeList", method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public Recipe createRecipe(@RequestBody Recipe recipe)
 	{
 		return recipeDAO.create(recipe);
 	}
 	
-//	public Recipe modifyRecipe(Recipe recipe)
-//	{
-//		return recipeDAO.modify(recipe);
-//	}
+	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.PUT)
+	public void updateRecipe(@RequestBody Recipe recipe, @PathVariable int recipe_id)
+	{
+		recipeDAO.update(recipe, recipe_id);
+	}
+	
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@RequestMapping(path = "/recipeDetail/{recipe_id}", method = RequestMethod.DELETE)
+	public void delete(@PathVariable int recipe_id)
+	{
+		recipeDAO.delete(recipe_id);
+	}
 	
 }

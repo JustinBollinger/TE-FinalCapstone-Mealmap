@@ -2,7 +2,6 @@ package com.techelevator.model;
 
 public class Ingredient
 {
-	private int recipeId;
 	private int ingredientId;
 	private String ingredientName;
 	private int categoryId;
@@ -12,24 +11,13 @@ public class Ingredient
 		
 	}
 	
-	public Ingredient(int recipeId, int ingredientId, String ingredientName, int categoryId)
+	public Ingredient(int ingredientId, String ingredientName, int categoryId)
 	{
-		this.recipeId = recipeId;
 		this.ingredientId = ingredientId;
 		this.ingredientName = ingredientName;
 		this.categoryId = categoryId;
 	} 
-	
-	public int getrecipeId() 
-	{
-		return recipeId;
-	}
-	
-	public void setRecipeId(int recipeId)
-	{
-		this.recipeId = recipeId;
-	}
-	
+
 	public int getIngredientId()
 	{
 		return ingredientId;
@@ -64,7 +52,6 @@ public class Ingredient
 	public String toString()
 	{
 		return "Ingredient{" +
-							"recipeId = " + recipeId +
 							"ingredientId = " + ingredientId +
 							"ingredientName = " + ingredientName +
 							" categoryId = " + categoryId +

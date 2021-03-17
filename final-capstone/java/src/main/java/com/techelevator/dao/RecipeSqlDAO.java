@@ -90,6 +90,37 @@ public class RecipeSqlDAO implements RecipeDAO
 	}
 	
 	
+	public void update(Recipe recipe, int recipeId)
+	{	
+		String sql = "UPDATE recipes" + 
+					" SET recipe_name = ?" + 
+					", number_of_servings = ?" + 
+					", cooking_time = ?" + 
+					", difficulty = ?" + 
+					", directions = ?" + 
+					" WHERE recipe_id = ?;";
+		
+		jdbcTemplate.update(sql, recipe.getRecipeName(),
+								recipe.getNumberOfServings(),
+								recipe.getCookingTime(),
+								recipe.getDifficulty(),
+								recipe.getDirections(),
+								recipeId);
+	}
+	
+	public void delete(int recipeId)
+	{
+		String sql = "DELETE FROM recipes_ingredients" + 
+				" WHERE recipe_id = ?;" + 
+				" " + 
+				"DELETE FROM recipes" + 
+				" WHERE recipe_id = ?;";
+		
+		jdbcTemplate.update(sql, recipeId, recipeId);
+	}
+
+	
+	
 	
 	private Recipe mapRowToRecipe(SqlRowSet rowSet)
 	{

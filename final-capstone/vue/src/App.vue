@@ -1,104 +1,147 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <div id="left-panel">
-        <v-toolbar id="head-logo">
+  <div id="app" class="main-app">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">
+        <router-link class="nav-link" href="#" v-bind:to="{ name: 'home'}">
           <img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/>
-        </v-toolbar>
-      </div>
-      <div id="right-panel">
-        <router-link class="meal-btn" v-bind:to="{ name: 'home' }">HOME</router-link>
-        <router-link class="meal-btn" v-bind:to="{ name: 'ingredient-list'}">INGREDIENTS</router-link>
-        <router-link class="meal-btn" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>
-        <router-link class="meal-btn" v-bind:to="{ name: 'meal-plan' }">MEAL PLANS</router-link>
-        <router-link class="meal-btn" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>
-        <router-link class="meal-btn" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">LOGOUT
         </router-link>
-      </div>
-      <div id="blank-right">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+              aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <router-link class="nav-link" href="#" v-bind:to="{ name: 'ingredient-list'}">INGREDIENTS</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" href="#" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" href="#" v-bind:to="{ name: 'meal-plan' }">MEAL PLANS</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" href="#" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>
+          </li>
+
+<!--          DROPDOWN MENU CODE IF NEEDED LATER  -->
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle"-->
+<!--               data-toggle="dropdown"-->
+<!--               href="#"-->
+<!--               role="button"-->
+<!--               aria-haspopup="true"-->
+<!--               aria-expanded="false">-->
+<!--              RECIPES-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu">-->
+<!--              <a class="dropdown-item" href="#" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</a>-->
+<!--              <a class="dropdown-item">-->
+<!--                <router-link class="nav-link" href="#" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>-->
+<!--              </a>-->
+<!--              <a class="dropdown-item" href="#" v-bind:to="{ name: 'modify-recipe' }">MODIFY RECIPE</a>-->
+<!--              <a class="dropdown-item" href="#" v-bind:to="{ name: 'recipe-detail' }">Something else here</a>-->
+<!--              <div class="dropdown-divider"></div>-->
+<!--              <a class="dropdown-item" href="#">Separated link</a>-->
+<!--            </div>-->
+<!--          </li>-->
+        </ul>
+
+        <div id="nav-btns">
+          <router-link id="sign-in-btn" type="button" class="btn btn-outline-secondary" href="#"
+                       v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
+            LOGOUT
+          </router-link>
+          <router-link id="sign-in-btn" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'login' }"
+                       v-if="$store.state.token == ''">
+            SIGN IN
+          </router-link>
+          <router-link id="nav-btns2" type="button" class="btn btn-outline-secondary" v-bind:to="{ name: 'register' }"
+                       v-if="$store.state.token == ''">
+            CREATE ACCOUNT
+          </router-link>
+        </div>
       </div>
-    </div>
+    </nav>
+
     <router-view/>
-    <!-- Footer -->
-    <mdb-footer id="app-footer">
-<!--      <mdb-container class="text-left">-->
-<!--        <mdb-row>-->
-<!--          <mdb-col sm="6">-->
-<!--            <h5 class="title">Footer Content</h5>-->
-<!--            <p>Here you can use rows and columns here to organize your footer content.</p>-->
-<!--          </mdb-col>-->
-<!--          <mdb-col sm="6">-->
-<!--            <h5 class="title">Links</h5>-->
-<!--            <ul>-->
-<!--              <li class="list-unstyled"><a href="#!">Link 1</a></li>-->
-<!--              <li class="list-unstyled"><a href="#!">Link 2</a></li>-->
-<!--              <li class="list-unstyled"><a href="#!">Link 3</a></li>-->
-<!--              <li class="list-unstyled"><a href="#!">Link 4</a></li>-->
-<!--            </ul>-->
-<!--          </mdb-col>-->
-<!--        </mdb-row>-->
-<!--      </mdb-container>-->
-      <div class="footer-copyright text-center py-3">
-        <mdb-container fluid>
-          &copy; 2021 Copyright, DataChef Inc.
-        </mdb-container>
-      </div>
-    </mdb-footer>
-    <!-- Footer -->
-  </div>
 
+    <footer class="fixed-bottom">
+      <div>mealmap© Copyright 2021 &nbsp</div>
+      <div><img class="footer-logo" :src="require('../public/DC hori v2111.png')"/></div>
+      <div>&nbsp inc.</div>
+    </footer>
+  </div>
 </template>
+
+<script>
+
+// import Burger from './components/Menu/Burger.vue';
+// import Sidebar from './components/Menu/Sidebar.vue';
+//
+// export default {
+//   name: 'app',
+//   components: {
+//     Burger,
+//     Sidebar
+//   }
+// }
+
+// import { NavbarPlugin } from 'bootstrap-vue'
+// Vue.use(NavbarPlugin)
+
+</script>
 
 <style>
 
-#nav {
+#nav-btns {
   display: flex;
-}
-
-#app-footer{
-  color: white;
-  opacity: 0.5;
-}
-
-#left-panel {
-  display: flex;
-  justify-content: left;
-  flex-grow: 2;
-  background: rgba(77, 77, 77, 0.50);
-}
-
-#right-panel {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-grow: 1;
-  background: rgba(77, 77, 77, 0.50);
-  /*border-bottom: solid 0.25rem #2c3e50;*/
-}
-
-#blank-right{
-  display: flex;
+  flex-direction: row;
   justify-content: right;
-  flex-grow: 0.25;
-  background: rgba(77, 77, 77, 0.50);
 }
 
-.meal-btn {
-  color: white;
-  font-weight: bold;
-  font-family: Roboto, sans-serif;
+#sign-in-btn {
+  margin-right: 10px;
+}
+
+body {
+
+}
+
+.navbar {
+  /*background: rgba(0, 0, 0, 0.25) !important;*/
+  border-bottom: white solid .10rem;
+  height: 60px;
+  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
+}
+
+.footer-logo {
+  height: 2rem;
+}
+
+footer {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+
+  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: white solid .10rem;
+
 }
 
 .head-logo {
-  height: 3rem;
-  margin-top: 10px;
-  margin-left: 50px;
-  margin-bottom: 10px;
-}
-
-#app {
-  font-family: 'Roboto', sans-serif;
+  /*position: fixed;*/
+  color: #fff;
+  height: 2.5rem;
 }
 
 </style>

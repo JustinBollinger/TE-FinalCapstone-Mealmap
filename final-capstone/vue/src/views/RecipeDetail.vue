@@ -1,35 +1,80 @@
 <template>
-  <div class="card mb-3">
-  <h3 class="card-header">Card header</h3>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+  <div class="jumbotron" id="main-contain">
+
+    <div class="h1-contain">
+      <h1 class="display-4-custom">Recipe Detail</h1>
+    </div>
+
+    <div class="h2-contain">
+      <div>
+        <h3 v-bind:id="recipe.recipeId">{{ recipe.recipeName }}<small class="text-muted" v-bind:id="recipe.recipeId">
+          <br>
+          <hr>
+          {{ recipe.cookingTime }} minutes |&nbsp;
+          {{ recipe.numberOfServings }} servings&nbsp;|&nbsp;
+          {{ recipe.difficulty }}
+          <hr>
+        </small></h3>
+        <div>
+          <p class="lead" v-bind:id="recipe.recipeId">{{ recipe.directions }}</p>
+          <hr>
+        </div>
+        <div class="button-separator">
+          <router-link class="btn btn-secondary" v-bind:to="{name: 'recipes'}">Back to Recipe
+            Library
+          </router-link>
+          <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-recipe'}">Modify Recipe
+          </router-link>
+          <!-- <a href="#" class="card-link">Delete Recipe</a> -->
+        </div>
+      </div>
+    </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-    <rect width="100%" height="100%" fill="#868e96"></rect>
-    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-  </svg>
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
 </template>
 
 <script>
-export default {
+import recipeService from "../services/RecipeService"
 
+export default {
+  data() {
+    return {
+      recipe: {
+        userId: "",
+        recipeId: "",
+        recipeName: "",
+        directions: "",
+        numberOfServings: "",
+        // recipeCategoryId: "",
+        // dietaryRestrictionId: "",
+        cookingTime: "",
+        difficulty: "",
+        isCreated: false
+      }
+    };
+  },
+  methods: {
+    saveRecipe() {
+      const current = this.activeRecipe;
+      const recipe = {
+        userId: current.userId,
+        recipeId: current.recipeId,
+        recipeName: current.recipeName,
+        directions: current.directions,
+        numberOfServings: current.numberOfServings,
+        cookingTime: current.cookingTime,
+        difficulty: current.difficulty
+      };
+      recipeService.updateRecipe(recipe.id, recipe).then(() => {
+        this.$router.push();
+      })
+    }
+  },
+  created() {
+    const recipeId = this.$route.params.id;
+    recipeService.getRecipeById(recipeId).then((response) => {
+      this.recipe = response.data;
+    });
+  }
 }
 </script>
 

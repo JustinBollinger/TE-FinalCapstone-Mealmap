@@ -1,21 +1,39 @@
 <template>
-  <div class="recipes">
-    <h1>Recipe Library</h1>
-    <img src="../assets/Artboard 5.png" alt="full bag of groceries">
+  <div class="jumbotron" id="main-contain">
 
-    <div class="recipe-list">
-      <ul>
-        <li v-for="recipe in recipes" v-bind:key="recipe.id">
-          <router-link v-bind:to="{name: 'recipe-detail'}">
-            {{recipe.recipeName}}&nbsp;|&nbsp;
-            {{recipe.cookingTime}} min&nbsp;|&nbsp;
-            {{recipe.numberOfServings}} servings&nbsp;|&nbsp;
-            {{recipe.difficulty}}&nbsp;|&nbsp;
-            <!-- {{recipe.dietaryRestriction-id}}&nbsp;|nbsp; -->
-          </router-link>
-        </li>
-      </ul>
-      <router-link id="btnrecipe" class="btn btn-primary btn-lg" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe</router-link>
+    <div class="h1-contain">
+      <h1 class="display-4-custom">Recipe Library</h1>
+    </div>
+
+    <div id="ingred-table" class="h2-contain">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Recipe Name</th>
+          <th scope="col">Preparation Time</th>
+          <th scope="col">Number Of Servings</th>
+          <th scope="col">Difficulty</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="recipe in recipes" v-bind:key="recipe.id" class="table table-hover">
+          <th scope="row">
+            <router-link v-bind:to="'recipeList/recipeDetail/' + recipe.recipeId"> {{ recipe.recipeName }}
+              &nbsp;&nbsp;
+            </router-link>
+          </th>
+          <td>{{ recipe.cookingTime }} minutes</td>
+          <td>{{ recipe.numberOfServings }}</td>
+          <td>{{ recipe.difficulty }}</td>
+        </tr>
+        </tbody>
+
+      </table>
+
+      <div class="button-separator">
+      <router-link id="btnrecipe" class="btn btn-secondary" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe
+      </router-link>
+      </div>
     </div>
   </div>
 
@@ -25,7 +43,7 @@
 import recipeService from "../services/RecipeService"
 
 export default {
-  name: 'recipe-list',
+  name: 'recipes',
   data() {
     return {
       recipes: []

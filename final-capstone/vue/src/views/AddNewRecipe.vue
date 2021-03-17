@@ -1,4 +1,13 @@
 <template>
+
+  <div class="jumbotron" id="main-contain">
+
+    <div class="h1-contain">
+      <h1 class="display-4-custom">Modify Recipe</h1>
+    </div>
+
+    <div class="h2-contain">
+
   <form v-on:submit.prevent>
     <fieldset>
     <h1>Add New Recipe</h1>
@@ -26,7 +35,7 @@
       <label for="exampleSelect1">Level of Difficulty&nbsp;</label>
       <select class="form-control" id="exampleSelect1" v-model="recipe.difficulty">
         <option>Easy</option>
-        <option>Challenging</option>
+        <option>Intermediate</option>
         <option>Hard</option>
       </select>
     </div>
@@ -60,13 +69,17 @@
         <textarea class="form-control" placeholder="How do you make this recipe?" id="exampleTextarea" rows="3" v-model="recipe.directions"></textarea>
     </div>
     </fieldset>
-    
-    <button type="submit" id="btnrecipe" class="btn btn-primary btn-lg" v-on:click="saveRecipe()">Save New Recipe</button>
+
+    <div class="button-separator">
+    <button type="submit" class="btn btn-secondary" v-on:click="saveRecipe()">Save New Recipe</button>
     <div v-if="isCreated">
         <router-link v-bind:to="{name: 'recipes'}"></router-link>
     </div>
-    
+    </div>
+
     </form>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -92,12 +105,12 @@ data() {
   methods: {
     saveRecipe() {
       RecipeService.create(this.recipe).then(() => {
-        this.$router.push("/recipeList");
+        this.$router.push("/recipeList/");
         this.isCreated = true;
       })
     },
     cancel() {
-      this.$router.push("/recipeList");
+      this.$router.push("/recipeList/");
     }
   }
 }

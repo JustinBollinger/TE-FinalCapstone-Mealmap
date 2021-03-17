@@ -23,8 +23,7 @@ public class IngredientSqlDAO implements IngredientDAO
 	{
 		List<Ingredient> ingredients = new ArrayList<>();
 		
-		String sql = "SELECT recipe_id" + 
-					", ingredient_id" + 
+		String sql = "SELECT ingredient_id" + 
 					", ingredient_name" + 
 					", category_id" + 
 					" FROM ingredients;";
@@ -42,8 +41,7 @@ public class IngredientSqlDAO implements IngredientDAO
 	
 	public Ingredient getById(int id)
 	{
-		String sql = "SELECT recipe_id" + 
-					", ingredient_id" + 
+		String sql = "SELECT ingredient_id" + 
 					", ingredient_name" + 
 					", category_id" + 
 					" FROM ingredients" + 
@@ -61,19 +59,15 @@ public class IngredientSqlDAO implements IngredientDAO
 	public Ingredient create(Ingredient newIngredient)
 	{
 		String sql = "INSERT INTO ingredients" + 
-				"(" + 
-				"recipe_id" + 
-				", ingredient_id" + 
-				", ingredient_name" + 
-				", category_id" + 
-				")" + 
-				" VALUES" + 
-				"(?, ?, ?, ?)" + 
-				" RETURNING ingredient_id;";
+					"(" + 
+					"ingredient_name" +
+					", category_id" + 
+					")" + 
+					" VALUES" + 
+					"(?, ?)" +
+					" RETURNING ingredient_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class, 
-												newIngredient.getrecipeId(),
-												newIngredient.getIngredientId(),
 												newIngredient.getIngredientName(),
 												newIngredient.getCategoryId());
 		return getById(id);
@@ -83,7 +77,6 @@ public class IngredientSqlDAO implements IngredientDAO
 	private Ingredient mapRowToIngredient(SqlRowSet rowSet)
 	{
 		Ingredient ingredient = new Ingredient();
-		ingredient.setRecipeId(rowSet.getInt("recipe_id"));
 		ingredient.setIngredientId(rowSet.getInt("ingredient_id"));
 		ingredient.setIngredientName(rowSet.getString("ingredient_name"));
 		ingredient.setCategoryId(rowSet.getInt("category_id"));
