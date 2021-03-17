@@ -24,11 +24,15 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		List<MealPlan> mealPlans = new ArrayList<>();
 		
 		String sql = "SELECT user_id" + 
-					", meal_plan_id" + 
-					", meal_plan_name" + 
-					", start_date" + 
-					", end_date" + 
-					" FROM meal_plan;";
+				", meal_plan_id" + 
+				", meal_plan_name" + 
+				", start_date" + 
+				", recipe_id" + 
+				", recipe_name" + 
+				", meal_category" + 
+				", day_of_week" + 
+				" FROM meal_plan" + 
+				" ORDER BY start_date;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while (results.next())
@@ -43,12 +47,15 @@ public class MealPlanSqlDAO implements MealPlanDAO
 	public MealPlan getById(int mealPlanId)
 	{
 		String sql = "SELECT user_id" + 
-					", meal_plan_id" + 
-					", meal_plan_name" + 
-					", start_date" + 
-					", end_date" + 
-					" FROM meal_plan" + 
-					" WHERE meal_plan_id = ?;";
+				", meal_plan_id" + 
+				", meal_plan_name" + 
+				", start_date" + 
+				", recipe_id" + 
+				", recipe_name" + 
+				", meal_category" + 
+				", day_of_week" + 
+				" FROM meal_plan" + 
+				" WHERE meal_plan_id = ?;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, mealPlanId);
 		if(results.next())
@@ -66,16 +73,25 @@ public class MealPlanSqlDAO implements MealPlanDAO
 					"user_id" + 
 					", meal_plan_name" + 
 					", start_date" + 
-					", end_date" + 
+					", recipe_id" + 
+					", recipe_name" + 
+					", meal_category" + 
+					", day_of_week" + 
 					")" + 
-					" VALUES (?, ?, ?, ?)" + 
+					" VALUES" + 
+					"(?, ?, ?, ?, ?, ?, ?) " + 
+					", (?, ?, ?, ?, ?, ?, ?)" + 
+					", (?, ?, ?, ?, ?, ?, ?)" + 
 					" RETURNING meal_plan_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
 												newMealPlan.getUserId(),
 												newMealPlan.getMealPlanName(),
 												newMealPlan.getStartDate(),
-												newMealPlan.getEndDate());
+												newMealPlan.getRecipeId(),
+												newMealPlan.getRecipeName(),
+												newMealPlan.getMealCategory(),
+												newMealPlan.getDayOfWeek());
 		return getById(id);
 	}
 	
@@ -87,7 +103,10 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		mealPlan.setMealPlanId(rowSet.getInt("meal_plan_id"));
 		mealPlan.setMealPlanName(rowSet.getString("meal_plan_name"));
 		mealPlan.setStartDate(rowSet.getDate("start_date").toLocalDate());
-		mealPlan.setEndDate(rowSet.getDate("end_date").toLocalDate());
+		mealPlan.setRecipeId(rowSet.getInt("recipe_id"));
+		mealPlan.setRecipeName(rowSet.getString("recipe_name"));
+		mealPlan.setMealCategory(rowSet.getString("meal_category"));
+		mealPlan.setDayOfWeek(rowSet.getString("day_of_week"));
 		return mealPlan;
 	}
 	

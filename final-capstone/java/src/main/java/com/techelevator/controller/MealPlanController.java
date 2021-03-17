@@ -36,8 +36,6 @@ public class MealPlanController
 		return mealPlans;
 	}
 	
-	// path is currently not established.
-	// may need to change later
 	@RequestMapping(path = "/mealPlanDetail/{meal_plan_id}", method = RequestMethod.GET)
 	public MealPlan getMealPlanById(@PathVariable int meal_plan_id)
 	{
@@ -51,7 +49,5 @@ public class MealPlanController
 		return mealPlanDAO.add(mealPlan);
 	}
 	
-	
-	
-	
+
 }

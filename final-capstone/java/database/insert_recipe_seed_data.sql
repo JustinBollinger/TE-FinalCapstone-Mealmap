@@ -111,7 +111,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
 (
     1
     , 10
-    , 'Mexican Casserole'
+    , 'Mexican Torte'
     , 'Preheat oven to 375 degrees F (190 degrees C). Spray a 9-inch pie pan with non-stick cooking spray.
     In a saucepan, cook refried beans and onions (to soften them) on medium-high heat for about 5 minutes.
     Place one tortilla in the bottom of the greased pan. Spread about 1/3 cup of the bean mixture over it. Layer a few tablespoons of salsa over this. Then, place another tortilla over the salsa, and add more of the bean mixture. Follow the beans with a big handful of cheese, spreading evenly. repeat layers, spreading the ingredients evenly over the tortillas. On the top layer, make sure to use lots of salsa and cheese!
@@ -136,7 +136,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
 (
     1
     , 12
-    , 'Tatertot Casserole'
+    , 'Loaded Tatertots'
     , 'Preheat oven to 350 degrees F (175 degrees C).
     Cook and stir ground beef in a large skillet over medium heat until no longer pink and completely browned, 7 to 10 minutes; season with salt and black pepper. Stir cream of mushroom soup into the cooked ground beef; pour the mixture into a 9x13-inch baking dish. Layer tater tots evenly over the ground beef mixture; top with Cheddar cheese.
     Bake until tater tots are golden brown and hot, 30 to 45 minutes.'
@@ -232,7 +232,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
 (
     1
     , 20
-    , 'White Bean Argula Salad'
+    , 'White Bean Arugula Salad'
     , 'In a small skillet, cook pancetta over medium heat until crisp, stirring occasionally. Remove with a slotted spoon; drain on paper towels.
     In same pan, heat oil and drippings over medium heat. Add onion; cook and stir 1-2 minutes or until tender. Add tomatoes, rosemary, salt and pepper; cook 2-3 minutes longer or until tomatoes are softened. Cool slightly.
     In a large bowl, combine beans, tomato mixture, pancetta, vinegar and basil. Add arugula and cheese; toss to coat.'
