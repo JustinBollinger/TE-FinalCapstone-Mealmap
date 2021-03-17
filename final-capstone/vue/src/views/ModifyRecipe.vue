@@ -6,9 +6,9 @@
       <h1 class="display-4-custom">Modify Recipe</h1>
     </div>
 
-    <div class="h2-contain">
+    <div class="h2-contain signin-container">
 
-      <form v-on:submit.prevent>
+      <form v-on:submit.prevent class="form-signin">
 
         <fieldset>
           <div class="form-group">
