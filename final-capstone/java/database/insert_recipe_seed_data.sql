@@ -95,7 +95,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Preheat oven to 350 degrees F (175 degrees C). In a 9x13-inch baking dish, combine the macaroni, tuna, and soup. Mix well, and then top with cheese. Bake at 350 degrees F (175 degrees C) for about 25 minutes, or until bubbly. Sprinkle with fried onions, and bake for another 5 minutes. Serve hot.'
     , 8
     , 45
-    , 'moderate'
+    , 'intermediate'
 ),
 
 (
@@ -105,7 +105,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Heat the oil in a saucepan over medium heat. Place kielbasa and potatoes in the saucepan. Cover, and cook 25 minutes, stirring occasionally, until potatoes are tender. Mix red bell pepper and yellow bell pepper into the saucepan, and continue cooking 5 minutes, until peppers are just tender.'
     , 6
     , 40
-    , 'moderate'
+    , 'intermediate'
 ),
 
 (
@@ -168,10 +168,133 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 2
     , 15
     , 'easy'
+),
+
+(
+    1
+    ,15
+    , 'Chicken Salad'
+    , 'Step 1: Make Your Sauce
+    Start by mixing the first five ingredients together for a creamy sauce. The sour cream and lemon juice add a tangy kick to this chunky chicken salad. Whisk together the mayonnaise, sour cream, lemon juice, salt and pepper until fully combined, tasting as you go, then set aside.
+    Step 2: Mix Together
+    In a large bowl, mix together the shredded chicken, halved red grapes, chopped pecans and chopped celery. If using onion, add it along with your mayonnaise sauce. Toss to coat.
+    Step 3: Serve and Store
+    Once your chicken salad is combined, serve with fresh homemade bread, mixed greens salad or whole-grain crackers. Store leftovers in a sealed container in the refrigerator right away.'
+    , 4
+    , 15
+    ,'easy'
+),
+
+(
+    1
+    , 16
+    , 'Turkey Spinach Salad'
+    , 'In a large salad bowl, combine the first 7 ingredients. In a small bowl, whisk the remaining ingredients. Drizzle over salad; toss to coat.'
+    , 2
+    , 15
+    , 'easy'
+),
+
+(
+    1
+    , 17
+    , 'Indian Spiced Chickpea Wraps'
+    , 'For pineapple raita, mix first 4 ingredients.
+    For wraps, in a large nonstick skillet, heat oil over medium-high heat; saute onion until tender. Add ginger, garlic and seasonings; cook and stir until fragrant, about 1 minute. Stir in chickpeas and tomatoes; bring to a boil. Reduce heat; simmer, uncovered, until slightly thickened, 5-8 minutes, stirring occasionally.
+    To serve, place spinach and chickpea mixture on tortillas. Top with raita and roll up.'
+    , 4
+    , 30
+    , 'intermediate'
+),
+
+(
+    1
+    , 18
+    , 'Sloppy Joes'
+    , 'In a large cast-iron or other heavy skillet, cook beef, onion, red pepper and celery over medium heat until meat is no longer pink and vegetables are crisp-tender; drain.
+    In a small bowl, combine the ketchup, vinegar, chili powder, Worcestershire sauce, sugar and salt; stir into beef mixture. Simmer, uncovered, for 10 minutes, stirring occasionally. Serve on buns.'
+    , 6
+    , 20
+    , 'easy'
+),
+
+(
+    1
+    , 19
+    , 'Taco Wraps'
+    , 'In a small bowl, beat cream cheese until smooth. Stir in green chiles, sour cream and taco seasoning.
+    Spread bean dip over tortillas to within 1/2 in. of edges. Layer with guacamole dip, cream cheese mixture, onion, pepper, cheese and olives. Roll up tightly and serve.'
+    , 4
+    , 15
+    , 'easy'
+),
+
+(
+    1
+    , 20
+    , 'White Bean Argula Salad'
+    , 'In a small skillet, cook pancetta over medium heat until crisp, stirring occasionally. Remove with a slotted spoon; drain on paper towels.
+    In same pan, heat oil and drippings over medium heat. Add onion; cook and stir 1-2 minutes or until tender. Add tomatoes, rosemary, salt and pepper; cook 2-3 minutes longer or until tomatoes are softened. Cool slightly.
+    In a large bowl, combine beans, tomato mixture, pancetta, vinegar and basil. Add arugula and cheese; toss to coat.'
+    , 4
+    , 30
+    , 'easy'
+),
+
+(
+    1
+    , 21
+    , 'Almond Strawberry Salad'
+    , 'Place spinach, strawberries and almonds in a large bowl. Mix vinegar, honey and sugar until blended; toss with salad.'
+    , 4
+    , 10
+    , 'easy'
+),
+
+(
+    1
+    , 22
+    , 'Ultimate Grilled Cheese'
+    , 'In a large bowl, beat cream cheese and mayonnaise until smooth. Stir in the cheeses, garlic powder and seasoned salt. Spread 5 slices of bread with the cheese mixture, about 1/3 cup on each. Top with remaining bread.
+    Butter the outsides of sandwiches. In a skillet over medium heat, toast sandwiches for 4-5 minutes on each side or until bread is lightly browned and cheese is melted.'
+    , 5
+    , 15
+    , 'easy'
+),
+
+(
+    1
+    , 23
+    , 'Chocolate Mousse'
+    , 'In a small saucepan, melt chocolate chips with water; stir until smooth. Stir a small amount of hot chocolate mixture into egg yolk; return all to the pan, stirring constantly. Cook and stir for 2 minutes or until slightly thickened. Remove from the heat; stir in vanilla. Quickly transfer to a small bowl. Stir occasionally until completely cooled.
+    In a small bowl, beat whipping cream until it begins to thicken. Add sugar; beat until soft peaks form. Fold into cooled chocolate mixture. Cover and refrigerate for at least 2 hours. If desired, garnish with whipped cream and raspberries.'
+    , 2
+    , 20
+    , 'easy'
+),
+
+(
+    1
+    , 24
+    , 'Peanut Butter Oatmeal Bars'
+    , 'In a small saucepan, combine peanut butter and honey. Cook and stir over medium-low heat until melted and blended. Remove from heat; stir in oats. Spread into a greased 9-in. square pan; press lightly. Cool to room temperature; cover and chill for 1 hour.'
+    , 9
+    , 10
+    , 'easy'
+),
+
+(
+    1
+    , 25
+    , 'Layered Lemon Pie'
+    , 'In a small bowl, beat cream cheese and sugar until smooth. Beat in half of the pie filling. Fold in the whipped topping. Spoon into crust. Spread remaining pie filling over cream cheese layer. Refrigerate for at least 15 minutes before serving.'
+    , 8
+    , 20
+    , 'intermediate'
 );
 
 
-ALTER SEQUENCE seq_recipe_id RESTART WITH 15;
+ALTER SEQUENCE seq_recipe_id RESTART WITH 26;
 
 
 
