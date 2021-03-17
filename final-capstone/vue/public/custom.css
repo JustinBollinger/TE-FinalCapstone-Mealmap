@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap');
 
+#sign-in-btn {
+    margin-right: 10px;
+}
+
+.navbar {
+    border-bottom: white solid .10rem;
+    background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
+}
+
+.footer-logo {
+    height: 2rem;
+}
+
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: white solid .10rem;
+
+}
+
+.head-logo {
+    color: #fff;
+    height:2.5rem;
+}
+
+#nav-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 15px;
+}
+
 h1 {
     font-size: 3rem;
 }
@@ -40,7 +80,6 @@ h2 {
     background: #ffffff;
 }
 
-
 body {
     background: #242528;
 }
@@ -65,31 +104,65 @@ body {
 .button-separator{
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    flex-grow: 1;
-    margin-top: 15px;
-    margin-left: 70px;
-    margin-right: 25px;
+    justify-content: center;
+    /*flex-grow: 1;*/
+    /*margin-top: 15px;*/
+    max-width: 800px;
+    /*background: rgba(255, 255, 255, 0.95);*/
+    border-radius: 0 1.5rem  1.5rem 0;
+}
+
+.button-properties{
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 25px 15px 15px 15px;
+    max-width: 500px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
 }
 
 .form-signin{
+    margin: 25px;
+    padding: 15px;
+    min-width: 300px;
     max-width: 500px;
+    /*background: #242528;*/
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: .75rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-signin2{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    margin: 25px;
+    padding: 15px;
+    /*min-width: 500px;*/
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: .75rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #signin-container{
     background-image: url("/assets/rainbow-produce.jpg"),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255,.5));
-
-
     background-size: cover;
-
-
 }
 
 .signin-container{
-    background-image: url("/assets/rainbow-produce.jpg"),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255,.5));
-
-
+    background: url("/assets/rainbow-produce.jpg"),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255,.5));
     background-size: cover;
+}
 
+#add-new-recipe-container{
+    display: flex;
+    justify-content: left;
+}
 
+.home-text{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }

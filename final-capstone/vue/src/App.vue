@@ -66,51 +66,6 @@
 
 <style>
 
-#nav-btns {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-}
 
-#sign-in-btn {
-  margin-right: 10px;
-}
-
-body {
-
-}
-
-.navbar {
-  /*background: rgba(0, 0, 0, 0.25) !important;*/
-  border-bottom: white solid .10rem;
-  /*height: 60px;*/
-  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
-}
-
-.footer-logo {
-  height: 2rem;
-}
-
-footer {
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  color: #ffffff;
-  text-align: center;
-
-  background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: white solid .10rem;
-
-}
-
-.head-logo {
-  /*position: fixed;*/
-  color: #fff;
-  height:2.5rem;
-}
 
 </style>

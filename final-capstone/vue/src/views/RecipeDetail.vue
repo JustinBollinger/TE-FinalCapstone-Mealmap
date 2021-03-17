@@ -6,6 +6,8 @@
     </div>
 
     <div class="h2-contain">
+
+
       <div>
         <h3 v-bind:id="recipe.recipeId">{{ recipe.recipeName }}<small class="text-muted" v-bind:id="recipe.recipeId">
           <br>
@@ -20,10 +22,10 @@
           <hr>
         </div>
         <div class="button-separator">
-          <router-link class="btn btn-secondary" v-bind:to="{name: 'recipes'}">Back to Recipe
+          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'recipes'}">Back to Recipe
             Library
           </router-link>
-          <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-recipe'}">Modify Recipe
+          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'modify-recipe'}">Modify Recipe
           </router-link>
           <!-- <a href="#" class="card-link">Delete Recipe</a> -->
         </div>

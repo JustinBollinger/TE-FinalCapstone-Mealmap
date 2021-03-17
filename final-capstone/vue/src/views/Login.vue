@@ -51,21 +51,20 @@
           />
         </div>
 
-
+        <div class="button-separator">
+          <button class="btn btn-secondary button-properties" v-on:click="login(user.id)">Sign in</button>
+          <router-link class="btn btn-secondary button-properties" v-bind:to="{ name: 'register' }">Need an
+            account?
+          </router-link>
+        </div>
       </form>
 
-    </div>
 
-    <div class="button-separator form-signin">
 
-      <button id="btnsignin" class="btn btn-secondary" v-on:click="login(user.id)">Sign in</button>
-    </div>
-      <div class="button-separator form-signin">
-      <router-link id="btnsignin" class="btn btn-secondary" v-bind:to="{ name: 'register' }">Need an
-        account?
-      </router-link>
 
     </div>
+
+
 
   </div>
 
