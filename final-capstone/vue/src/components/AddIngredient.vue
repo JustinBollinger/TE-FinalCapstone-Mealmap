@@ -41,7 +41,7 @@ export default {
           this.isCreated = true;
           IngredientService.getIngredients().then((response) => {
           this.ingredients = response.data;
-          //this.location.reload(true);
+          //.this.location.reload(true);
           });
         })
     },

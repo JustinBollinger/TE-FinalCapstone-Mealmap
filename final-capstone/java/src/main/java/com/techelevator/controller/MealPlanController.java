@@ -18,7 +18,6 @@ import com.techelevator.model.MealPlan;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/mealPlan")
 @PreAuthorize("isAuthenticated()")
 public class MealPlanController
 {
@@ -30,7 +29,7 @@ public class MealPlanController
 		this.mealPlanDAO = mealPlanDAO;
 	}
 	
-	@RequestMapping(path = "", method = RequestMethod.GET)
+	@RequestMapping(path = "/mealPlan", method = RequestMethod.GET)
 	public List<MealPlan> listMealPlans()
 	{
 		List<MealPlan> mealPlans = mealPlanDAO.getAll();
@@ -46,11 +45,13 @@ public class MealPlanController
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(path = "", method = RequestMethod.POST)
+	@RequestMapping(path = "/addMealPlan", method = RequestMethod.POST)
 	public MealPlan createMealPlan(@RequestBody MealPlan mealPlan)
 	{
-		return mealPlanDAO.create(mealPlan);
+		return mealPlanDAO.add(mealPlan);
 	}
+	
+	
 	
 	
 }

@@ -33,13 +33,7 @@ CREATE SEQUENCE seq_user_id
   START 1
   INCREMENT BY 1;
   
-  CREATE SEQUENCE seq_meal_plan_id
-  START 1
-  INCREMENT BY 1;
 
-  CREATE SEQUENCE seq_meal_id
-  START 1
-  INCREMENT BY 1;
   
 -- create tables
 CREATE TABLE users (
@@ -82,16 +76,9 @@ CREATE TABLE recipes_ingredients
 CREATE TABLE meal_plan
 (
 	user_id INT,
-	meal_plan_id INT DEFAULT nextval('seq_meal_plan_id') NOT NULL PRIMARY KEY,
+	meal_plan_id INT,
 	meal_plan_name VARCHAR(100),
 	start_date date,
-	end_date date
-);
-
-CREATE TABLE meal_recipes
-(
-	meal_plan_id INT,
-	meal_id INT DEFAULT nextval('seq_meal_id') NOT NULL PRIMARY KEY,
 	recipe_id INT,
 	recipe_name VARCHAR(200),
 	meal_category VARCHAR(50),
@@ -116,16 +103,10 @@ ADD CONSTRAINT fk_user_id
 FOREIGN KEY (user_id)
 REFERENCES users (user_id);
 
-ALTER TABLE meal_recipes
-ADD CONSTRAINT fk_meal_plan_id
-FOREIGN KEY (meal_plan_id)
-REFERENCES meal_plan (meal_plan_id);
-
 ALTER TABLE meal_plan
 ADD CONSTRAINT fk_user_id
 FOREIGN KEY (user_id)
 REFERENCES users (user_id);
-
 
 
 COMMIT TRANSACTION;

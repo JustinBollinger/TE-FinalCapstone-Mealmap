@@ -56,10 +56,10 @@ public class MealPlanSqlDAO implements MealPlanDAO
 			return mapRowToMealPlan(results);
 		}
 		
-		return null;
+		return null;		
 	}
 	
-	public MealPlan create(MealPlan newMealPlan)
+	public MealPlan add(MealPlan newMealPlan)
 	{
 		String sql = "INSERT INTO meal_plan" + 
 					"(" + 
@@ -90,4 +90,6 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		mealPlan.setEndDate(rowSet.getDate("end_date").toLocalDate());
 		return mealPlan;
 	}
+	
+	
 }

@@ -26,7 +26,8 @@ public class IngredientSqlDAO implements IngredientDAO
 		String sql = "SELECT ingredient_id" + 
 					", ingredient_name" + 
 					", category_id" + 
-					" FROM ingredients;";
+					" FROM ingredients" + 
+					" ORDER BY ingredient_name;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while(results.next())
