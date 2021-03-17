@@ -6,7 +6,7 @@
     </div>
 
     <div class="h2-contain">
-
+      <h2>Use the drop-down menus to select different recipes for this meal plan.</h2>
       <table class="table">
         <thead>
         <tr>
@@ -23,8 +23,8 @@
         <tr class="table-light">
           <td v-for="date in dates" v-bind:key="date.id">
             <meal-card v-bind:date="date" meal-name="Breakfast" v-bind:meal="mealByDate(date, 'Breakfast')" />
-            <meal-card v-bind:date="date" meal-name="Lunch" v-bind:meal="mealByDate(date,'Lunch')"  />
-            <meal-card v-bind:date="date" meal-name="Dinner" v-bind:meal="mealByDate(date,'Dinner')"  />
+            <meal-card v-bind:date="date" meal-name="Lunch" v-bind:meal="mealByDate(date,'Lunch')" />
+            <meal-card v-bind:date="date" meal-name="Dinner" v-bind:meal="mealByDate(date,'Dinner')" />
           </td>
         </tr>
 
@@ -55,12 +55,11 @@ export default {
         userId: "",
         mealPlanId: "",
         mealPlanName: "",
-        startDate: "3/14/2021",
-        endDate: "3/20/2021"
+        startDate: ""
       },
       meals: [
         {
-          date: new Date('3/14/2021'),
+          date: new Date("3/14/2021"),
           mealName: "Breakfast",
           recipes: [
             { id: 1, name: "pancakes"},
