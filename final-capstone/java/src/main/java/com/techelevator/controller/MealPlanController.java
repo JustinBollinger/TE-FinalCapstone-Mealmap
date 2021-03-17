@@ -45,11 +45,13 @@ public class MealPlanController
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(path = "/mealPlan", method = RequestMethod.POST)
+	@RequestMapping(path = "/addMealPlan", method = RequestMethod.POST)
 	public MealPlan createMealPlan(@RequestBody MealPlan mealPlan)
 	{
 		return mealPlanDAO.create(mealPlan);
 	}
+	
+	
 	
 	
 }
