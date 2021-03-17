@@ -33,7 +33,8 @@ public class RecipeSqlDAO implements RecipeDAO
 //				", dietary_restriction_id" + 
 				", cooking_time" + 
 				", difficulty" + 
-				" FROM recipes;";
+				" FROM recipes" + 
+				" ORDER BY recipe_name;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while(results.next())
