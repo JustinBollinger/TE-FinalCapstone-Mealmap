@@ -6,7 +6,6 @@ DROP TABLE IF EXISTS recipes;
 DROP TABLE IF EXISTS ingredients;
 DROP TABLE IF EXISTS recipes_ingredients;
 DROP TABLE IF EXISTS meal_plan;
-DROP TABLE IF EXISTS meal_recipes;
 
 
 -- drop sequences
@@ -14,7 +13,6 @@ DROP SEQUENCE IF EXISTS seq_user_id;
 DROP SEQUENCE IF EXISTS seq_ingredient_id;
 DROP SEQUENCE IF EXISTS seq_recipe_id;
 DROP SEQUENCE IF EXISTS seq_meal_plan_id;
-DROP SEQUENCE IF EXISTS seq_meal_id;
 
 
 
