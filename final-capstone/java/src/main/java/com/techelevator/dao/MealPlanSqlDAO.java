@@ -42,13 +42,14 @@ public class MealPlanSqlDAO implements MealPlanDAO
 	
 	public MealPlan getById(int mealPlanId)
 	{
-		String sql = "SELECT user_id" + 
-					", meal_plan_id" + 
-					", meal_plan_name" + 
-					", start_date" + 
-					", end_date" + 
-					" FROM meal_plan" + 
-					" WHERE meal_plan_id = ?;";
+		String sql = "SELECT meal_plan_id" + 
+					", meal_id" + 
+					", recipe_id" + 
+					", recipe_name" + 
+					", meal_category" + 
+					", day_of_week" + 
+					" FROM meal_recipes" + 
+					" WHERE meal_id = ?;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, mealPlanId);
 		if(results.next())
@@ -90,4 +91,6 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		mealPlan.setEndDate(rowSet.getDate("end_date").toLocalDate());
 		return mealPlan;
 	}
+	
+	
 }
