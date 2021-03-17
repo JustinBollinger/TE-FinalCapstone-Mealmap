@@ -9,10 +9,17 @@
           </li>
         </ul>
       </div>
-      <a href="#" v-on:click.prevent="isAdding = true">Add menu</a>
+      <a href="#" v-on:click.prevent="isUpdating = true"></a>
       <form v-on:submit.prevent="addMeal" v-if="isAdding">
         <select>
-          <option value="1">Choose meal to add</option>
+          <option value="1">Choose recipe</option>
+        </select>
+        <button>Add</button>
+      </form>
+      <a href="#" v-on:click.prevent="isAdding = true">Add Recipe to Meal</a>
+      <form v-on:submit.prevent="addMeal" v-if="isAdding">
+        <select>
+          <option value="1">Choose recipe</option>
         </select>
         <button>Add</button>
       </form>
