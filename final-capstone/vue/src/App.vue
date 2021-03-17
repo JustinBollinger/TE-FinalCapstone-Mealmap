@@ -3,8 +3,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="#">
-        <router-link class="nav-link" href="#" v-bind:to="{ name: 'home'}">
-          <img class="head-logo" :src="require('../public/Artboard 4 copy.png')"/>
+        <router-link href="#" v-bind:to="{ name: 'home'}">
+          <img class="head-logo" :src="require('../public/assets/Artboard 4 copy.png')"/>
         </router-link>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -15,6 +15,9 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
+            <router-link class="nav-link" href="#" v-bind:to="{ name: 'home'}">HOME</router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" href="#" v-bind:to="{ name: 'ingredient-list'}">INGREDIENTS</router-link>
           </li>
           <li class="nav-item">
@@ -23,30 +26,9 @@
           <li class="nav-item">
             <router-link class="nav-link" href="#" v-bind:to="{ name: 'meal-plan' }">MEAL PLANS</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" href="#" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>
-          </li>
-
-<!--          DROPDOWN MENU CODE IF NEEDED LATER  -->
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle"-->
-<!--               data-toggle="dropdown"-->
-<!--               href="#"-->
-<!--               role="button"-->
-<!--               aria-haspopup="true"-->
-<!--               aria-expanded="false">-->
-<!--              RECIPES-->
-<!--            </a>-->
-<!--            <div class="dropdown-menu">-->
-<!--              <a class="dropdown-item" href="#" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</a>-->
-<!--              <a class="dropdown-item">-->
-<!--                <router-link class="nav-link" href="#" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>-->
-<!--              </a>-->
-<!--              <a class="dropdown-item" href="#" v-bind:to="{ name: 'modify-recipe' }">MODIFY RECIPE</a>-->
-<!--              <a class="dropdown-item" href="#" v-bind:to="{ name: 'recipe-detail' }">Something else here</a>-->
-<!--              <div class="dropdown-divider"></div>-->
-<!--              <a class="dropdown-item" href="#">Separated link</a>-->
-<!--            </div>-->
+<!--          GROCERY LIST LINK IF EVER NEEDED     -->
+<!--          <li class="nav-item">-->
+<!--            <router-link class="nav-link" href="#" v-bind:to="{ name: 'grocery-list' }">GROCERY LIST</router-link>-->
 <!--          </li>-->
         </ul>
 
@@ -71,7 +53,7 @@
 
     <footer class="fixed-bottom">
       <div>mealmap© Copyright 2021 &nbsp</div>
-      <div><img class="footer-logo" :src="require('../public/DC hori v2111.png')"/></div>
+      <div><img class="footer-logo" :src="require('../public/assets/DC hori v2111.png')"/></div>
       <div>&nbsp inc.</div>
     </footer>
   </div>
@@ -79,19 +61,6 @@
 
 <script>
 
-// import Burger from './components/Menu/Burger.vue';
-// import Sidebar from './components/Menu/Sidebar.vue';
-//
-// export default {
-//   name: 'app',
-//   components: {
-//     Burger,
-//     Sidebar
-//   }
-// }
-
-// import { NavbarPlugin } from 'bootstrap-vue'
-// Vue.use(NavbarPlugin)
 
 </script>
 
@@ -114,7 +83,7 @@ body {
 .navbar {
   /*background: rgba(0, 0, 0, 0.25) !important;*/
   border-bottom: white solid .10rem;
-  height: 60px;
+  /*height: 60px;*/
   background: linear-gradient(45deg, rgba(237, 28, 36, 1) 0%, rgba(0, 113, 188, 1) 48%, rgba(27, 20, 100, 1) 100%);
 }
 
@@ -141,7 +110,7 @@ footer {
 .head-logo {
   /*position: fixed;*/
   color: #fff;
-  height: 2.5rem;
+  height:2.5rem;
 }
 
 </style>

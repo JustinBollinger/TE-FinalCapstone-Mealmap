@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron" id="main-contain">
+  <div class="jumbotron main-contain" >
       <div class="h1-contain">
           <h1 class="display-4-custom"></h1>
       </div>

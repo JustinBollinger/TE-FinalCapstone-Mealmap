@@ -2,12 +2,12 @@
 
   <div class="jumbotron" id="main-contain">
     <div class="h1-contain">
-      <h1 class="display-4-custom">please Sign-in</h1>
+      <h1 class="display-4-custom">Sign-in</h1>
     </div>
 
 
-    <div class="h2-contain">
-        <div class="home-image"> <img class="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
+    <div class="h2-contain signin-container">
+        <div id="home-image2"> <img class="signin-logo" src="../../public/assets/Artboard 4.png" alt="Meal Map logo"/></div>
 <!--      <p id="instructions"> Please sign-in to access your account</p>-->
 
       <form class="form-signin" @submit.prevent="login">
@@ -51,18 +51,22 @@
           />
         </div>
 
-        <div id="landing-buttons">
-          <menu>
-            <button id="btnsignin" class="btn btn-secondary" v-on:click="login(user.id)">Sign in</button>
 
-            <router-link id="btnsignin" class="btn btn-secondary" v-bind:to="{ name: 'register' }">Need an
-              account?
-            </router-link>
-          </menu>
-        </div>
       </form>
 
     </div>
+
+    <div class="button-separator form-signin">
+
+      <button id="btnsignin" class="btn btn-secondary" v-on:click="login(user.id)">Sign in</button>
+    </div>
+      <div class="button-separator form-signin">
+      <router-link id="btnsignin" class="btn btn-secondary" v-bind:to="{ name: 'register' }">Need an
+        account?
+      </router-link>
+
+    </div>
+
   </div>
 
 </template>
@@ -108,5 +112,11 @@ export default {
 
 <style>
 
+#home-image2{
+  display: flex;
+  justify-content: left;
+  margin-bottom: 25px;
+
+}
 
 </style>

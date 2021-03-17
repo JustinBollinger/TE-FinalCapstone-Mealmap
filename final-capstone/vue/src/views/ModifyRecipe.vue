@@ -11,7 +11,6 @@
       <form v-on:submit.prevent>
 
         <fieldset>
-
           <div class="form-group">
             <label class="col-form-label" for="inputDefault">Recipe Name&nbsp;</label>
             <input type="text" class="form-control" placeholder="What do you call this recipe?" id="inputDefault"

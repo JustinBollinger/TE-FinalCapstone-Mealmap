@@ -64,6 +64,32 @@ body {
 
 .button-separator{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: left;
+    flex-grow: 1;
+    margin-top: 15px;
+    margin-left: 70px;
+    margin-right: 25px;
 }
 
+.form-signin{
+    max-width: 500px;
+}
+
+#signin-container{
+    background-image: url("/assets/rainbow-produce.jpg"),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255,.5));
+
+
+    background-size: cover;
+
+
+}
+
+.signin-container{
+    background-image: url("/assets/rainbow-produce.jpg"),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255,.5));
+
+
+    background-size: cover;
+
+
+}

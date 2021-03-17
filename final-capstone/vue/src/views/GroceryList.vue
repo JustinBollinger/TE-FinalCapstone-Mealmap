@@ -6,7 +6,7 @@
     </div>
 
     <div class="h2-contain">
-      <div class="home-image"><img class="signin-logo" src="../assets/Artboard 4.png" alt="Meal Map logo"/></div>
+      <div class="home-image"><img class="signin-logo" src="../../public/assets/Artboard 4.png" alt="Meal Map logo"/></div>
     </div>
 
   </div>
