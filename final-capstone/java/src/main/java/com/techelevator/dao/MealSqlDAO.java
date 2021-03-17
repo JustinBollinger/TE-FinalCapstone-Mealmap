@@ -55,6 +55,12 @@ public class MealSqlDAO implements MealDAO
 		return null;
 	}
 	
+//	public Meal add(Meal newMeal)
+//	{
+//		
+//		
+//	}
+	
 	private Meal mapRowToMeal(SqlRowSet rowSet)
 	{
 		Meal meal = new Meal();
