@@ -59,7 +59,7 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		return null;		
 	}
 	
-	public MealPlan create(MealPlan newMealPlan)
+	public MealPlan add(MealPlan newMealPlan)
 	{
 		String sql = "INSERT INTO meal_plan" + 
 					"(" + 

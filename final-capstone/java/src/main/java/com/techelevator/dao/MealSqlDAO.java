@@ -55,6 +55,22 @@ public class MealSqlDAO implements MealDAO
 		return null;
 	}
 	
+	public Meal add(Meal newMeal)
+	{
+		// determine SQL statement
+		String sql = "";
+		
+		// determine if I need to update the queryForObject parameters below at all
+		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
+												newMeal.getMealPlanId(),
+												newMeal.getRecipeId(),
+												newMeal.getRecipeName(),
+												newMeal.getMealCategory(),
+												newMeal.getDayOfWeek());
+		return getById(id);
+		
+	}
+	
 	private Meal mapRowToMeal(SqlRowSet rowSet)
 	{
 		Meal meal = new Meal();

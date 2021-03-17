@@ -48,7 +48,7 @@ public class MealPlanController
 	@RequestMapping(path = "/addMealPlan", method = RequestMethod.POST)
 	public MealPlan createMealPlan(@RequestBody MealPlan mealPlan)
 	{
-		return mealPlanDAO.create(mealPlan);
+		return mealPlanDAO.add(mealPlan);
 	}
 	
 	
