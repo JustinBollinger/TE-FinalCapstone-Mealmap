@@ -17,4 +17,4 @@ SELECT *
 FROM meal_recipes;
 
 DELETE FROM ingredients
-WHERE ingredient_id >= 22;
+WHERE ingredient_id >= 43;
