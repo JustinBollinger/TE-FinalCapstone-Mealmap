@@ -66,16 +66,11 @@ import mealPlanService from "../services/MealPlanService";
 export default {
 data() {
     return {
-      mealPlan: {
+      mealPlanId: {
         userId: this.$store.state.user.id,
-        recipeId: "",
-        recipeName: "",
-        directions: "",
-        numberOfServings: "",
-        // recipeCategoryId: "",
-        // dietaryRestrictionId: "",
-        cookingTime: "",
-        difficulty: "",
+        mealPlanName: "",
+        startDate: "",
+        endDate: "",
         isCreated: false
       }
     };
