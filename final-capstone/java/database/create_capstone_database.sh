@@ -8,4 +8,6 @@ psql -U postgres -d $DATABASE -f "$BASEDIR/03_create_table_schema.sql" &&
 psql -U postgres -d $DATABASE -f "$BASEDIR/04_insert_seed_data.sql" &&
 psql -U postgres -d $DATABASE -f "$BASEDIR/05_create_database_users.sql" &&
 psql -U postgres -d $DATABASE -f "$BASEDIR/insert_recipe_seed_data.sql" &&
+psql -U postgres -d $DATABASE -f "$BASEDIR/insert_ingredient_seed_data.sql" &&
 psql -U postgres -d $DATABASE -f "$BASEDIR/insert_meal_plan_seed_data.sql"
+
