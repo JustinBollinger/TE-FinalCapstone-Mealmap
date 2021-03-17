@@ -21,175 +21,22 @@
         </thead>
         <tbody>
         <tr class="table-light">
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Breakfast</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Lunch</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Dinner</h4>
-                <a href="#" class="card-link">Link to Recipe 1</a>
-                <a href="#" class="card-link">Link to Recipe 2</a>
-              </div>
-            </div>
+          <td v-for="date in dates" v-bind:key="date.id">
+            <meal-card v-bind:date="date" meal-name="Breakfast" v-bind:meal="mealByDate(date, 'Breakfast')" />
+            <meal-card v-bind:date="date" meal-name="Lunch" v-bind:meal="mealByDate(date,'Lunch')"  />
+            <meal-card v-bind:date="date" meal-name="Dinner" v-bind:meal="mealByDate(date,'Dinner')"  />
           </td>
         </tr>
 
         </tbody>
       </table>
-      <div class="button-separator"><router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">Back to Meal Plans
-      </router-link>
-        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">Modify Meal Plan
+      <div class="button-separator">
+        <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">
+          Back to Meal Plans
         </router-link>
+<!--        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">-->
+<!--          Modify Meal Plan-->
+<!--        </router-link>-->
       </div>
 
     </div>
@@ -198,17 +45,37 @@
 
 <script>
 import mealPlanService from "../services/MealPlanService"
+import MealCard from "@/components/MealCard";
 
 export default {
+  components: {MealCard},
   data() {
     return {
       mealPlan: {
         userId: "",
         mealPlanId: "",
         mealPlanName: "",
-        startDate: "",
-        endDate: ""
-      }
+        startDate: "3/14/2021",
+        endDate: "3/20/2021"
+      },
+      meals: [
+        {
+          date: new Date('3/14/2021'),
+          mealName: "Breakfast",
+          recipes: [
+            { id: 1, name: "pancakes"},
+            { id: 2, name: "french toast"},
+          ]
+        },
+        {
+          date: new Date('3/16/2021'),
+          mealName: "Lunch",
+          recipes: [
+            { id: 3, name: "Burger"},
+            { id: 4, name: "French Fries"},
+          ]
+        }
+      ]
     };
   },
   methods: {
@@ -224,13 +91,30 @@ export default {
       mealPlanService.updateMealPlan(mealPlan.id, mealPlan).then(() => {
         this.$router.push();
       })
+    },
+    mealByDate(date, mealName){
+      return this.meals.filter(meal => meal.date.getDate() == date.getDate() && meal.mealName == mealName)[0];
     }
   },
   created() {
     const mealPlanId = this.$route.params.id;
     mealPlanService.getMealPlanById(mealPlanId).then((response) => {
-      this.mealPlan = response.data;
+      console.log(response);
+      // i'm just commenting this out so that I can use sample data
+      //this.mealPlan = response.data;
     });
+  },
+  computed: {
+    dates() {
+      const dates = [];
+      let date = new Date(this.mealPlan.startDate);
+      for (let i = 0; i < 7; i++) {
+        const newDate = new Date(this.mealPlan.startDate);
+        newDate.setDate(date.getDate() + i)
+        dates.push(newDate);
+      }
+      return dates;
+    },
   }
 }
 </script>
