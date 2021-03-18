@@ -102,16 +102,32 @@ public class MealSqlDAO implements MealDAO
 
 	public Meal add(Meal newMeal)
 	{
-		// determine SQL statement
-		String sql = "INSERT INTO ";
+//		List<Meal> recipes = new ArrayList<>();
+		
+		String sql = "INSERT INTO meal_plan_recipes" + 
+				"(" + 
+				"meal_plan_id" + 
+				", recipe_id" + 
+				", meal_category" + 
+				", day_of_week" + 
+				", meal_date" + 
+				")" + 
+				" VALUES (1, ?, ?, ?, ?)" + 
+				" RETURNING meal_plan_id;";
 
-		// determine if I need to update the queryForObject parameters below at all
-		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
+		SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, Integer.class,
 												newMeal.getMealPlanId(),
 												newMeal.getRecipeId(),
 												newMeal.getMealCategory(),
-												newMeal.getDayOfWeek());
-		return null;
+												newMeal.getDayOfWeek(),
+												newMeal.getMealDate());
+//		while(rows.next())
+//		{
+//			Meal meal = new Meal();
+//			mapRowToMeal(meal);
+//		}
+		
+		return mapRowToMeal(rows);
 
 	}
 
@@ -119,6 +135,7 @@ public class MealSqlDAO implements MealDAO
 	{
 		Meal meal = new Meal();
 		meal.setMealPlanId(rowSet.getInt("meal_plan_id"));
+		meal.setRecipeId(rowSet.getInt("recipe_id"));
 		meal.setMealCategory(rowSet.getString("meal_category"));
 		meal.setDayOfWeek(rowSet.getString("day_of_week"));
 		meal.setMealDate(rowSet.getDate("meal_date").toLocalDate());

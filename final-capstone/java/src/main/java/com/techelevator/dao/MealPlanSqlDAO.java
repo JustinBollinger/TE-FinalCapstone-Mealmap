@@ -82,9 +82,6 @@ public class MealPlanSqlDAO implements MealPlanDAO
 	}
 	
 	
-	// add recipe to meal_plan_recipes table INSERT
-	
-	
 	private MealPlan mapRowToMealPlan(SqlRowSet rowSet)
 	{
 		MealPlan mealPlan = new MealPlan();
