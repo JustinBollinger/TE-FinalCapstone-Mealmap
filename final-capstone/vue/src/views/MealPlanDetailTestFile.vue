@@ -1,4 +1,5 @@
 <template>
+
   <div class="jumbotron" id="main-contain">
 
     <div class="h1-contain">
@@ -33,13 +34,13 @@
         </tr>
         <tr>
           <th></th>
-          <td>meal 1</td>
-          <td>meal 1</td>
-          <td>meal 1</td>
-          <td>meal 1</td>
-          <td>meal 1</td>
-          <td>meal 1</td>
-          <td>meal 1</td>
+          <td>meal 2</td>
+          <td>meal 2</td>
+          <td>meal 2</td>
+          <td>meal 2</td>
+          <td>meal 2</td>
+          <td>meal 2</td>
+          <td>meal 2</td>
         </tr>
         <tr>
           <th></th>

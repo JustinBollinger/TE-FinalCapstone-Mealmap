@@ -65,11 +65,11 @@
         </fieldset>
 
         <div class="button-separator">
-          <button type="submit" class="btn btn-secondary" v-on:click="updateRecipe">Save Modified
+          <button type="submit" class="btn btn-secondary button-properties" v-on:click="updateRecipe">Save Modified
             Recipe
           </button>
 
-          <router-link class="btn btn-secondary" v-bind:to="{name: 'recipes'}">Back to Recipe Library
+          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'recipes'}">Back to Recipe Library
           </router-link>
         </div>
 
