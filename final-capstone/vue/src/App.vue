@@ -24,7 +24,7 @@
             <router-link class="nav-link" href="#" v-bind:to="{ name: 'recipes' }">RECIPES</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" href="#" v-bind:to="{ name: 'meal-plan-detail' }">MEAL PLAN</router-link>
+            <router-link class="nav-link" href="#" v-bind:to="{ name: 'meal-plan-detail',params:{id:1} }">MEAL PLAN</router-link>
           </li>
 <!--          GROCERY LIST LINK IF EVER NEEDED     -->
 <!--          <li class="nav-item">-->
