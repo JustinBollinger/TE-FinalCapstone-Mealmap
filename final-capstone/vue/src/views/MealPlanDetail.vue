@@ -82,6 +82,10 @@ export default {
         this.mealPlan = response.data;
         this.loadMeals();
       });
+    },
+    dayName(index) {
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      return days[index];
     }
   },
   created() {
