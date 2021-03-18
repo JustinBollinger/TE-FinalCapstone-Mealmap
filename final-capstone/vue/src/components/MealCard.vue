@@ -46,7 +46,7 @@ export default {
     addMeal() {
       // add meal to database
       const meal = {
-        mealPlanId: this.meal().mealPlanId,
+        mealPlanId: this.$route.params.id,
         mealDate: this.date,
         mealCategory: this.mealName,
         recipeId: this.recipeId

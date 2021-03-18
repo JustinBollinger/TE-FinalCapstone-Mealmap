@@ -41,6 +41,7 @@ public class MealSqlDAO implements MealDAO
         List<Meal> meals = new ArrayList<>();
 
 		String sql = "SELECT meal_plan_id" +
+					", 0 as recipe_id" +
 					", meal_category" +
 					", day_of_week" +
 					", meal_date" +

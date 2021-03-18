@@ -31,7 +31,7 @@
         </tbody>
       </table>
       <div class="button-separator">
-        <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">
+        <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan-detail'}">
           Back to Meal Plans
         </router-link>
 <!--        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">-->
