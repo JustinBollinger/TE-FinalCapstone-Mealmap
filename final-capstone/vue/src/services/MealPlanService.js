@@ -24,4 +24,13 @@ export default {
   //   return axios.delete(`/recipeList/recipeDetail/${id}`);
   // }
 
+
+  getMealsByMealPlanId(id) {
+    return axios.get(`/mealDetail/${id}`)
+  },
+
+  addRecipe(meal) {
+    return axios.post(`/mealDetail/`, meal);
+  },
+
 }

@@ -19,6 +19,7 @@ INSERT INTO meal_plan_recipes
 	, recipe_id
 	, meal_category
 	, day_of_week
+    , meal_date
 )
 VALUES
 (
@@ -26,6 +27,7 @@ VALUES
     , 4
     , 'Breakfast'
     , 'Sunday'
+    , '2021-03-14'
 ),
 
 (
@@ -33,6 +35,7 @@ VALUES
     , 5
     , 'Breakfast'
     , 'Monday'
+    , '2021-03-15'
 ),
 
 (
@@ -40,6 +43,7 @@ VALUES
     , 6
     , 'Breakfast'
     , 'Tuesday'
+    , '2021-03-16'
 ),
 
 (
@@ -47,6 +51,7 @@ VALUES
     , 7
     , 'Breakfast'
     , 'Wednesday'
+    , '2021-03-17'
 ),
 
 (
@@ -54,6 +59,7 @@ VALUES
     , 4
     , 'Breakfast'
     , 'Thursday'
+    , '2021-03-18'
 ),
 
 (
@@ -61,6 +67,7 @@ VALUES
     , 5
     , 'Breakfast'
     , 'Friday'
+    , '2021-03-19'
 ),
 
 (
@@ -68,6 +75,7 @@ VALUES
     , 6
     , 'Breakfast'
     , 'Saturday'
+    , '2021-03-20'
 ),
 
 (
@@ -75,6 +83,7 @@ VALUES
     , 15
     , 'Lunch'
     , 'Sunday'
+    , '2021-03-14'
 ),
 
 (
@@ -82,6 +91,7 @@ VALUES
     , 16
     , 'Lunch'
     , 'Monday'
+    , '2021-03-15'
 ),
 
 (
@@ -89,6 +99,7 @@ VALUES
     , 17
     , 'Lunch'
     , 'Tuesday'
+    , '2021-03-16'
 ),
 
 (
@@ -96,6 +107,7 @@ VALUES
     , 24
     , 'Lunch'
     , 'Tuesday'
+    , '2021-03-16'
 ),
 
 (
@@ -103,6 +115,7 @@ VALUES
     , 21
     , 'Lunch'
     , 'Wednesday'
+    , '2021-03-17'
 ),
 
 (
@@ -110,6 +123,7 @@ VALUES
     , 22
     , 'Lunch'
     , 'Wednesday'
+    , '2021-03-17'
 ),
 
 
@@ -118,6 +132,7 @@ VALUES
     , 19
     , 'Lunch'
     , 'Thursday'
+    , '2021-03-18'
 ),
 
 (
@@ -125,6 +140,7 @@ VALUES
     , 20
     , 'Lunch'
     , 'Friday'
+    , '2021-03-19'
 ),
 
 (
@@ -132,6 +148,7 @@ VALUES
     , 18
     , 'Lunch'
     , 'Saturday'
+    , '2021-03-20'
 ),
 
 (
@@ -139,6 +156,7 @@ VALUES
     , 11
     , 'Dinner'
     , 'Sunday'
+    , '2021-03-14'
 ),
 
 (
@@ -146,6 +164,7 @@ VALUES
     , 13
     , 'Dinner'
     , 'Sunday'
+    , '2021-03-14'
 ),
 
 (
@@ -153,6 +172,7 @@ VALUES
     , 25
     , 'Dinner'
     , 'Sunday'
+    , '2021-03-14'
 ),
 
 (
@@ -160,6 +180,7 @@ VALUES
     , 8
     , 'Dinner'
     , 'Monday'
+    , '2021-03-15'
 ),
 
 (
@@ -167,6 +188,7 @@ VALUES
     , 9
     , 'Dinner'
     , 'Tuesday'
+    , '2021-03-16'
 ),
 
 (
@@ -174,6 +196,7 @@ VALUES
     , 14
     , 'Dinner'
     , 'Tuesday'
+    , '2021-03-16'
 ),
 
 
@@ -182,6 +205,7 @@ VALUES
     , 1
     , 'Dinner'
     , 'Wednesday'
+    , '2021-03-17'
 ),
 
 (
@@ -189,6 +213,7 @@ VALUES
     , 10
     , 'Dinner'
     , 'Thursday'
+    , '2021-03-18'
 ),
 
 (
@@ -196,6 +221,7 @@ VALUES
     , 12
     ,'Dinner'
     , 'Friday'
+    , '2021-03-19'
 ),
 
 (
@@ -203,6 +229,7 @@ VALUES
     , 2
     , 'Dinner'
     , 'Saturday'
+    , '2021-03-20'
 ),
 
 (
@@ -210,6 +237,7 @@ VALUES
     , 3
     , 'Dinner'
     , 'Saturday'
+    , '2021-03-20'
 ),
 
 (
@@ -217,6 +245,7 @@ VALUES
     , 23
     , 'Dinner'
     , 'Saturday'
+    , '2021-03-20'
 );
 
 

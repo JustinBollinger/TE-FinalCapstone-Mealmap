@@ -8,6 +8,7 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Service;
 
 import com.techelevator.model.MealPlan;
+import com.techelevator.model.Recipe;
 
 @Service
 public class MealPlanSqlDAO implements MealPlanDAO
@@ -19,6 +20,7 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
+	// no JOIN
 	public List<MealPlan> getAll()
 	{
 		List<MealPlan> mealPlans = new ArrayList<>();
@@ -27,10 +29,6 @@ public class MealPlanSqlDAO implements MealPlanDAO
 				", meal_plan_id" + 
 				", meal_plan_name" + 
 				", start_date" + 
-				", recipe_id" + 
-				", recipe_name" + 
-				", meal_category" + 
-				", day_of_week" + 
 				" FROM meal_plan" + 
 				" ORDER BY start_date;";
 		
@@ -44,18 +42,16 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		return mealPlans;
 	}
 	
+	// need a JOIN between meal_plan_recipes AND recipes
+	// WHERE meal_plan_id = ?;
 	public MealPlan getById(int mealPlanId)
 	{
-		String sql = "SELECT user_id" + 
-				", meal_plan_id" + 
-				", meal_plan_name" + 
-				", start_date" + 
-				", recipe_id" + 
-				", recipe_name" + 
-				", meal_category" + 
-				", day_of_week" + 
-				" FROM meal_plan" + 
-				" WHERE meal_plan_id = ?;";
+		String sql = "SELECT user_id" +
+					", meal_plan_id" +
+					", meal_plan_name" +
+					", start_date" +
+					" FROM meal_plan" +
+					" WHERE meal_plan_id = ?;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, mealPlanId);
 		if(results.next())
@@ -72,28 +68,21 @@ public class MealPlanSqlDAO implements MealPlanDAO
 					"(" + 
 					"user_id" + 
 					", meal_plan_name" + 
-					", start_date" + 
-					", recipe_id" + 
-					", recipe_name" + 
-					", meal_category" + 
-					", day_of_week" + 
+					", start_date" +
 					")" + 
 					" VALUES" + 
-					"(?, ?, ?, ?, ?, ?, ?) " + 
-					", (?, ?, ?, ?, ?, ?, ?)" + 
-					", (?, ?, ?, ?, ?, ?, ?)" + 
+					"(?, ?, ?) " +
 					" RETURNING meal_plan_id;";
 		
 		Integer id = jdbcTemplate.queryForObject(sql, Integer.class,
 												newMealPlan.getUserId(),
 												newMealPlan.getMealPlanName(),
-												newMealPlan.getStartDate(),
-												newMealPlan.getRecipeId(),
-												newMealPlan.getRecipeName(),
-												newMealPlan.getMealCategory(),
-												newMealPlan.getDayOfWeek());
+												newMealPlan.getStartDate());
 		return getById(id);
 	}
+	
+	
+	// add recipe to meal_plan_recipes table INSERT
 	
 	
 	private MealPlan mapRowToMealPlan(SqlRowSet rowSet)
@@ -103,12 +92,23 @@ public class MealPlanSqlDAO implements MealPlanDAO
 		mealPlan.setMealPlanId(rowSet.getInt("meal_plan_id"));
 		mealPlan.setMealPlanName(rowSet.getString("meal_plan_name"));
 		mealPlan.setStartDate(rowSet.getDate("start_date").toLocalDate());
-		mealPlan.setRecipeId(rowSet.getInt("recipe_id"));
-		mealPlan.setRecipeName(rowSet.getString("recipe_name"));
-		mealPlan.setMealCategory(rowSet.getString("meal_category"));
-		mealPlan.setDayOfWeek(rowSet.getString("day_of_week"));
 		return mealPlan;
 	}
+	
+//	private Recipe mapRowToRecipe(SqlRowSet rowSet)
+//	{
+//		Recipe recipe = new Recipe();
+//		recipe.setUserId(rowSet.getInt("user_id"));
+//		recipe.setRecipeId(rowSet.getInt("recipe_id"));
+//		recipe.setRecipeName(rowSet.getString("recipe_name"));
+//		recipe.setDirections(rowSet.getString("directions"));
+//		recipe.setNumberOfServings(rowSet.getInt("number_of_servings"));
+////		recipe.setRecipeCategoryId(rowSet.getInt("recipe_category_id"));
+////		recipe.setRestrictionId(rowSet.getInt("dietary_restriction_id"));
+//		recipe.setCookingTime(rowSet.getInt("cooking_time"));
+//		recipe.setDifficulty(rowSet.getString("difficulty"));
+//		return recipe;
+//	}
 	
 	
 }
