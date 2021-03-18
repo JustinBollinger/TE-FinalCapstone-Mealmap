@@ -5,41 +5,139 @@
       <h1 class="display-4-custom">Meal Plan Details</h1>
     </div>
 
-    <div class="h2-contain">
-      <h2>Use the drop-down menus to select different recipes for this meal plan.</h2>
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">Sunday</th>
-          <th scope="col">Monday</th>
-          <th scope="col">Tuesday</th>
-          <th scope="col">Wednesday</th>
-          <th scope="col">Thursday</th>
-          <th scope="col">Friday</th>
-          <th scope="col">Saturday</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="table-light">
-          <td v-for="date in dates" v-bind:key="date.id">
-            <meal-card v-bind:date="date" meal-name="Breakfast"  />
-            <meal-card v-bind:date="date" meal-name="Lunch"  />
-            <meal-card v-bind:date="date" meal-name="Dinner"  />
-          </td>
-        </tr>
+    <div class="h2-contain signin-container">
 
-        </tbody>
-      </table>
-      <div class="button-separator">
-        <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">
-          Back to Meal Plans
-        </router-link>
-<!--        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">-->
-<!--          Modify Meal Plan-->
-<!--        </router-link>-->
+     <h4><p>Use the drop-down menus to select different recipes for this meal plan.</p></h4>
+
+      <div id="table-contain">
+
+        <div class="meal-plan-card form-signin2">
+          <tr>
+            <td>
+              <div class="table-header">
+            <th class="table" id="meal-plan-header" scope="col">Sunday</th>
+        </div>
+        <meal-card v-bind:date="date" meal-name="Breakfast"/>
+        <meal-card v-bind:date="date" meal-name="Lunch"/>
+        <meal-card v-bind:date="date" meal-name="Dinner"/>
+        </td>
+        </tr>
       </div>
 
+      <div class="meal-plan-card form-signin2">
+        <tr>
+          <td>
+            <div class="table-header">
+          <th class="table" id="meal-plan-header" scope="col">Monday</th>
+      </div>
+      <meal-card v-bind:date="date" meal-name="Breakfast"/>
+      <meal-card v-bind:date="date" meal-name="Lunch"/>
+      <meal-card v-bind:date="date" meal-name="Dinner"/>
+      </td>
+      </tr>
     </div>
+
+    <div class="meal-plan-card form-signin2">
+      <tr>
+        <td>
+          <div class="table-header">
+        <th class="table" id="meal-plan-header" scope="col">Tuesday</th>
+    </div>
+    <meal-card v-bind:date="date" meal-name="Breakfast"/>
+    <meal-card v-bind:date="date" meal-name="Lunch"/>
+    <meal-card v-bind:date="date" meal-name="Dinner"/>
+    </td>
+    </tr>
+  </div>
+
+  <div class="meal-plan-card form-signin2">
+    <tr>
+      <td>
+        <div class="table-header">
+      <th class="table" id="meal-plan-header" scope="col">Wednesday</th>
+  </div>
+  <meal-card v-bind:date="date" meal-name="Breakfast"/>
+  <meal-card v-bind:date="date" meal-name="Lunch"/>
+  <meal-card v-bind:date="date" meal-name="Dinner"/>
+  </td>
+  </tr>
+  </div>
+
+  <div class="meal-plan-card form-signin2">
+    <tr>
+      <td>
+        <div class="table-header">
+      <th class="table" id="meal-plan-header" scope="col">Thursday</th>
+  </div>
+  <meal-card v-bind:date="date" meal-name="Breakfast"/>
+  <meal-card v-bind:date="date" meal-name="Lunch"/>
+  <meal-card v-bind:date="date" meal-name="Dinner"/>
+  </td>
+  </tr>
+  </div>
+
+  <div class="meal-plan-card form-signin2">
+    <tr>
+      <td>
+        <div class="table-header">
+      <th class="table" id="meal-plan-header" scope="col">Friday</th>
+  </div>
+  <meal-card v-bind:date="date" meal-name="Breakfast"/>
+  <meal-card v-bind:date="date" meal-name="Lunch"/>
+  <meal-card v-bind:date="date" meal-name="Dinner"/>
+  </td>
+  </tr>
+  </div>
+
+  <div class="meal-plan-card form-signin2">
+    <tr>
+      <td>
+        <div class="table-header">
+      <th class="table" id="meal-plan-header" scope="col">Saturday</th>
+  </div>
+  <meal-card v-bind:date="date" meal-name="Breakfast"/>
+  <meal-card v-bind:date="date" meal-name="Lunch"/>
+  <meal-card v-bind:date="date" meal-name="Dinner"/>
+  </td>
+  </tr>
+  </div>
+
+  </div>
+
+
+  <!--      <table id="meal-plan-table" class="table">-->
+  <!--        <thead>-->
+  <!--        <tr id="days-of-the-week">-->
+  <!--          <th scope="col">Sunday</th>-->
+  <!--          <th scope="col">Monday</th>-->
+  <!--          <th scope="col">Tuesday</th>-->
+  <!--          <th scope="col">Wednesday</th>-->
+  <!--          <th scope="col">Thursday</th>-->
+  <!--          <th scope="col">Friday</th>-->
+  <!--          <th scope="col">Saturday</th>-->
+  <!--        </tr>-->
+  <!--        </thead>-->
+  <!--        <tbody>-->
+  <!--        <tr class="table-light">-->
+  <!--          <td v-for="date in dates" v-bind:key="date.id">-->
+  <!--            <meal-card v-bind:date="date" meal-name="Breakfast"  />-->
+  <!--            <meal-card v-bind:date="date" meal-name="Lunch"  />-->
+  <!--            <meal-card v-bind:date="date" meal-name="Dinner"  />-->
+  <!--          </td>-->
+  <!--        </tr>-->
+
+  <!--        </tbody>-->
+  <!--      </table>-->
+  <div class="button-separator">
+    <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'meal-plan'}">
+      Back to Meal Plans
+    </router-link>
+    <!--        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">-->
+    <!--          Modify Meal Plan-->
+    <!--        </router-link>-->
+  </div>
+
+  </div>
   </div>
 </template>
 
@@ -115,5 +213,30 @@ export default {
 </script>
 
 <style>
+
+#table-contain {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  /*flex-grow: 1;*/
+}
+
+#days-of-the-week {
+  text-align: center;
+}
+
+.table-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.meal-plan-card {
+  /*margin: 20px;*/
+  background: rgba(255, 255, 255, 0.95);
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
 
 </style>
