@@ -90,7 +90,8 @@ CREATE TABLE meal_plan_recipes
 	meal_plan_id INT,
 	recipe_id INT,
 	meal_category VARCHAR(50),
-	day_of_week VARCHAR(50)
+	day_of_week VARCHAR(50),
+	meal_date DATE
 );
 
 

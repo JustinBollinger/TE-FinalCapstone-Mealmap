@@ -18,7 +18,7 @@ import com.techelevator.model.MealPlan;
 
 @CrossOrigin
 @RestController
-@PreAuthorize("isAuthenticated()")
+//@PreAuthorize("isAuthenticated()")
 public class MealPlanController
 {
 	@Autowired

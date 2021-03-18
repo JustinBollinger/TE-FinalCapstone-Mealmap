@@ -1,30 +1,31 @@
 package com.techelevator.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Meal
 {
 	private int mealPlanId;
-	private int mealId;
 	private int recipeId;
 	private List<Recipe> recipes;
 	private String mealCategory;
 	private String dayOfWeek;
+	private LocalDate mealDate;
 	
 	public Meal()
 	{
-		
+		this.recipes = new ArrayList<>();
 	}
 	
-	public Meal(int mealplanId, int mealId, int recipeId, List<Recipe> recipes, String mealCategory, String dayOfWeek)
+	public Meal(int mealplanId, int recipeId, List<Recipe> recipes, String mealCategory, String dayOfWeek, LocalDate mealDate)
 	{
 		this.mealPlanId = mealplanId;
-		this.mealId = mealId;
 		this.recipeId = recipeId;
 		this.recipes = recipes;
 		this.mealCategory = mealCategory;
 		this.dayOfWeek = dayOfWeek;
+		this.mealDate = mealDate;
 	}
 	
 	public int getMealPlanId()
@@ -36,17 +37,7 @@ public class Meal
 	{
 		this.mealPlanId = mealPlanId;
 	}
-	
-	public int getMealId()
-	{
-		return mealId;
-	}
-	
-	public void setMealId(int mealId)
-	{
-		this.mealId = mealId;
-	}
-	
+
 	public int getRecipeId()
 	{
 		return recipeId;
@@ -62,7 +53,7 @@ public class Meal
 		return recipes;
 	}
 	
-	public void setRecipeName(List<Recipe> recipes)
+	public void setRecipes(List<Recipe> recipes)
 	{
 		this.recipes = recipes;
 	}
@@ -86,13 +77,22 @@ public class Meal
 	{
 		this.dayOfWeek = dayOfWeek;
 	}
-	
+
+	public LocalDate getMealDate()
+	{
+		return mealDate;
+	}
+
+	public void setMealDate(LocalDate mealDate)
+	{
+		this.mealDate = mealDate;
+	}
+
 	@Override
 	public String toString()
 	{
 		return "Meal{" +
 				"mealPlanId = " + mealPlanId +
-				"mealId" + mealId +
 				"recipeId" + recipeId +
 				"recipes" + recipes +
 				"mealCategory" + mealCategory +

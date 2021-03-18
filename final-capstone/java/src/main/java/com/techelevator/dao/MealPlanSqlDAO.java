@@ -46,16 +46,12 @@ public class MealPlanSqlDAO implements MealPlanDAO
 	// WHERE meal_plan_id = ?;
 	public MealPlan getById(int mealPlanId)
 	{
-		String sql = "SELECT r.recipe_name" + 
-//					", r.recipe_id" + 
-//					", r.directions" + 
-//					", r.number_of_servings" + 
-//					", r.cooking_time" + 
-//					", r.difficulty" + 
-					" FROM recipes AS r" + 
-					" INNER JOIN meal_plan_recipes AS mpr" + 
-					"         ON r.recipe_id = mpr.recipe_id" + 
-					" WHERE mpr.meal_plan_id = ?;";
+		String sql = "SELECT user_id" +
+					", meal_plan_id" +
+					", meal_plan_name" +
+					", start_date" +
+					" FROM meal_plan" +
+					" WHERE meal_plan_id = ?;";
 		
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql, mealPlanId);
 		if(results.next())
