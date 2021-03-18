@@ -18,8 +18,8 @@ import com.techelevator.model.Meal;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/mealDetail") // confirm path
-//@PreAuthorize("isAuthenticated()")
+@RequestMapping("/mealPlanDetail") // confirm path
+@PreAuthorize("isAuthenticated()")
 public class MealController
 {
 	@Autowired
@@ -38,14 +38,14 @@ public class MealController
 	}
 
 	// change path later
-	@RequestMapping(path = "/{mealPlanId}", method = RequestMethod.GET)
+	@RequestMapping(path = "", method = RequestMethod.GET)
 	public List<Meal> getMealsById(@PathVariable int mealPlanId)
 	{
 		return mealDAO.getById(mealPlanId);
 	}
 
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(path = "", method = RequestMethod.POST)
+	@RequestMapping(path = "/", method = RequestMethod.POST)
 	public Meal addMealToPlan(@RequestBody Meal meal)
 	{
 		return mealDAO.add(meal);
