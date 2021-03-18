@@ -6,7 +6,8 @@ DROP TABLE IF EXISTS recipes;
 DROP TABLE IF EXISTS ingredients;
 DROP TABLE IF EXISTS recipes_ingredients;
 DROP TABLE IF EXISTS meal_plan;
-DROP TABLE IF EXISTS meal_recipes;
+DROP TABLE IF EXISTS meal_plan_recipes;
+
 
 
 -- drop sequences
@@ -14,7 +15,6 @@ DROP SEQUENCE IF EXISTS seq_user_id;
 DROP SEQUENCE IF EXISTS seq_ingredient_id;
 DROP SEQUENCE IF EXISTS seq_recipe_id;
 DROP SEQUENCE IF EXISTS seq_meal_plan_id;
-DROP SEQUENCE IF EXISTS seq_meal_id;
 
 
 
@@ -36,10 +36,8 @@ CREATE SEQUENCE seq_user_id
   CREATE SEQUENCE seq_meal_plan_id
   START 1
   INCREMENT BY 1;
+  
 
-  CREATE SEQUENCE seq_meal_id
-  START 1
-  INCREMENT BY 1;
   
 -- create tables
 CREATE TABLE users (
@@ -82,20 +80,18 @@ CREATE TABLE recipes_ingredients
 CREATE TABLE meal_plan
 (
 	user_id INT,
-	meal_plan_id INT DEFAULT nextval('seq_meal_plan_id') NOT NULL PRIMARY KEY,
+	meal_plan_id INT DEFAULT nextval ('seq_meal_plan_id') NOT NULL PRIMARY KEY,
 	meal_plan_name VARCHAR(100),
-	start_date date,
-	end_date date
+	start_date date
 );
 
-CREATE TABLE meal_recipes
+CREATE TABLE meal_plan_recipes
 (
 	meal_plan_id INT,
-	meal_id INT DEFAULT nextval('seq_meal_id') NOT NULL PRIMARY KEY,
 	recipe_id INT,
-	recipe_name VARCHAR(200),
 	meal_category VARCHAR(50),
-	day_of_week VARCHAR(50)
+	day_of_week VARCHAR(50),
+	meal_date DATE
 );
 
 
@@ -116,16 +112,20 @@ ADD CONSTRAINT fk_user_id
 FOREIGN KEY (user_id)
 REFERENCES users (user_id);
 
-ALTER TABLE meal_recipes
-ADD CONSTRAINT fk_meal_plan_id
-FOREIGN KEY (meal_plan_id)
-REFERENCES meal_plan (meal_plan_id);
-
 ALTER TABLE meal_plan
 ADD CONSTRAINT fk_user_id
 FOREIGN KEY (user_id)
 REFERENCES users (user_id);
 
+ALTER TABLE meal_plan_recipes
+ADD CONSTRAINT fk_meal_plan_id
+FOREIGN KEY (meal_plan_id)
+REFERENCES meal_plan (meal_plan_id);
+
+ALTER TABLE meal_plan_recipes
+ADD CONSTRAINT fk_recipe_id
+FOREIGN KEY (recipe_id)
+REFERENCES recipes (recipe_id);
 
 
 COMMIT TRANSACTION;

@@ -6,7 +6,7 @@
     </div>
 
     <div class="h2-contain">
-
+      <h2>Use the drop-down menus to select different recipes for this meal plan.</h2>
       <table class="table">
         <thead>
         <tr>
@@ -22,16 +22,16 @@
         <tbody>
         <tr class="table-light">
           <td v-for="date in dates" v-bind:key="date.id">
-            <meal-card v-bind:date="date" meal-name="Breakfast" v-bind:meal="mealByDate(date, 'Breakfast')" />
-            <meal-card v-bind:date="date" meal-name="Lunch" v-bind:meal="mealByDate(date,'Lunch')"  />
-            <meal-card v-bind:date="date" meal-name="Dinner" v-bind:meal="mealByDate(date,'Dinner')"  />
+            <meal-card v-bind:date="date" meal-name="Breakfast"  />
+            <meal-card v-bind:date="date" meal-name="Lunch"  />
+            <meal-card v-bind:date="date" meal-name="Dinner"  />
           </td>
         </tr>
 
         </tbody>
       </table>
       <div class="button-separator">
-        <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan'}">
+        <router-link class="btn btn-secondary" v-bind:to="{name: 'meal-plan-detail'}">
           Back to Meal Plans
         </router-link>
 <!--        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">-->
@@ -44,7 +44,8 @@
 </template>
 
 <script>
-import mealPlanService from "../services/MealPlanService"
+import mealPlanService from "../services/MealPlanService";
+import recipeService from "../services/RecipeService";
 import MealCard from "@/components/MealCard";
 
 export default {
@@ -55,27 +56,8 @@ export default {
         userId: "",
         mealPlanId: "",
         mealPlanName: "",
-        startDate: "3/14/2021",
-        endDate: "3/20/2021"
-      },
-      meals: [
-        {
-          date: new Date('3/14/2021'),
-          mealName: "Breakfast",
-          recipes: [
-            { id: 1, name: "pancakes"},
-            { id: 2, name: "french toast"},
-          ]
-        },
-        {
-          date: new Date('3/16/2021'),
-          mealName: "Lunch",
-          recipes: [
-            { id: 3, name: "Burger"},
-            { id: 4, name: "French Fries"},
-          ]
-        }
-      ]
+        startDate: ""
+      }
     };
   },
   methods: {
@@ -92,17 +74,30 @@ export default {
         this.$router.push();
       })
     },
-    mealByDate(date, mealName){
-      return this.meals.filter(meal => meal.date.getDate() == date.getDate() && meal.mealName == mealName)[0];
+    loadRecipes() {
+      recipeService.getRecipes().then((response) => {
+        // this.meals = response.data;
+        this.$store.commit("SET_RECIPES", response.data);
+      });
+    },
+    loadMeals() {
+      const mealPlanId = this.$route.params.id;
+      mealPlanService.getMealsByMealPlanId(mealPlanId).then((response) => {
+        // this.meals = response.data;
+        this.$store.commit("SET_MEALS", response.data);
+      });
+    },
+    loadMealPlan() {
+      const mealPlanId = this.$route.params.id;
+      mealPlanService.getMealPlanById(mealPlanId).then((response) => {
+        this.mealPlan = response.data;
+        this.loadMeals();
+      });
     }
   },
   created() {
-    const mealPlanId = this.$route.params.id;
-    mealPlanService.getMealPlanById(mealPlanId).then((response) => {
-      console.log(response);
-      // i'm just commenting this out so that I can use sample data
-      //this.mealPlan = response.data;
-    });
+    this.loadMealPlan();
+    this.loadRecipes();
   },
   computed: {
     dates() {
@@ -114,7 +109,7 @@ export default {
         dates.push(newDate);
       }
       return dates;
-    },
+    }
   }
 }
 </script>

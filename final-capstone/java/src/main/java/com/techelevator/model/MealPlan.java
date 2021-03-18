@@ -8,20 +8,18 @@ public class MealPlan
 	private int mealPlanId;
 	private String mealPlanName;
 	private LocalDate startDate;
-	private LocalDate endDate;
 	
 	public MealPlan()
 	{
 		
 	}
 	
-	public MealPlan(int userId, int mealPlanId, String mealPlanName, LocalDate startDate, LocalDate endDate)
+	public MealPlan(int userId, int mealPlanId, String mealPlanName, LocalDate startDate)
 	{
 		this.userId = userId;
 		this.mealPlanId = mealPlanId;
 		this.mealPlanName = mealPlanName;
 		this.startDate = startDate;
-		this.endDate = endDate;
 	}
 	
 	public int getUserId()
@@ -61,17 +59,9 @@ public class MealPlan
 	public void setStartDate(LocalDate startDate)
 	{
 		this.startDate = startDate;
-	}	
-	public LocalDate getEndDate()
-	{
-		return endDate;
 	}
 	
-	public void setEndDate(LocalDate endDate)
-	{
-		this.endDate = endDate;
-	}
-	
+
 	@Override
 	public String toString()
 	{
@@ -80,7 +70,6 @@ public class MealPlan
 				"mealPlanId = " + mealPlanId +
 				"mealPlanName = " + mealPlanName +
 				"startDate = " + startDate +
-				"endDate = " + endDate +
 				"}";
 	}
 	

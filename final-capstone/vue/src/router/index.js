@@ -9,12 +9,12 @@ import GroceryList from '../views/GroceryList.vue'
 import IngredientList from '../views/IngredientList.vue'
 import MealPlanList from '../views/MealPlanList.vue'
 import MealPlanDetail from '../views/MealPlanDetail.vue'
-import ModifyMealPlan from "../views/ModifyMealPlan.vue"
 import AddMealPlan from "../views/AddMealPlan.vue"
 import RecipeDetail from '../views/RecipeDetail.vue'
 import RecipeList from '../views/RecipeList.vue'
 import AddNewRecipe from '../views/AddNewRecipe.vue'
 import ModifyRecipe from '../views/ModifyRecipe.vue'
+import MealPlanDetailTestFile from "@/views/MealPlanDetailTestFile";
 
 Vue.use(Router)
 
@@ -97,9 +97,9 @@ const router = new Router({
       }
     },
     {
-      path: "/mealPlanDetail/modify/:id",
-      name: "modify-meal-plan",
-      component: ModifyMealPlan,
+      path: "/mealPlanDetailTestFile/:id",
+      name: "meal-plan-test",
+      component: MealPlanDetailTestFile,
       meta: {
         requiresAuth: true
       }

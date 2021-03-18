@@ -6,12 +6,11 @@
       <h1 class="display-4-custom">Modify Recipe</h1>
     </div>
 
-    <div class="h2-contain">
+    <div class="h2-contain signin-container">
 
-      <form v-on:submit.prevent>
+      <form v-on:submit.prevent class="form-signin">
 
         <fieldset>
-
           <div class="form-group">
             <label class="col-form-label" for="inputDefault">Recipe Name&nbsp;</label>
             <input type="text" class="form-control" placeholder="What do you call this recipe?" id="inputDefault"
@@ -66,11 +65,11 @@
         </fieldset>
 
         <div class="button-separator">
-          <button type="submit" class="btn btn-secondary" v-on:click="updateRecipe">Save Modified
+          <button type="submit" class="btn btn-secondary button-properties" v-on:click="updateRecipe">Save Modified
             Recipe
           </button>
 
-          <router-link class="btn btn-secondary" v-bind:to="{name: 'recipes'}">Back to Recipe Library
+          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'recipes'}">Back to Recipe Library
           </router-link>
         </div>
 
