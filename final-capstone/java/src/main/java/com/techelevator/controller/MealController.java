@@ -18,7 +18,7 @@ import com.techelevator.model.Meal;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/mealPlanDetail") // confirm path
+@RequestMapping("/mealDetail") // confirm path
 @PreAuthorize("isAuthenticated()")
 public class MealController
 {
@@ -38,7 +38,7 @@ public class MealController
 	}
 
 	// change path later
-	@RequestMapping(path = "", method = RequestMethod.GET)
+	@RequestMapping(path = "/{mealPlanId}", method = RequestMethod.GET)
 	public List<Meal> getMealsById(@PathVariable int mealPlanId)
 	{
 		return mealDAO.getById(mealPlanId);

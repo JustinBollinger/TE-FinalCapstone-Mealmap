@@ -1,7 +1,10 @@
 package com.techelevator.dao;
 
+import java.time.DayOfWeek;
+import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.techelevator.model.Recipe;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -41,6 +44,7 @@ public class MealSqlDAO implements MealDAO
         List<Meal> meals = new ArrayList<>();
 
 		String sql = "SELECT meal_plan_id" +
+					", 0 as recipe_id" +
 					", meal_category" +
 					", day_of_week" +
 					", meal_date" +
@@ -102,8 +106,10 @@ public class MealSqlDAO implements MealDAO
 
 	public Meal add(Meal newMeal)
 	{
-//		List<Meal> recipes = new ArrayList<>();
-		
+		DayOfWeek dayOfWeek = newMeal.getMealDate().getDayOfWeek();
+		String dayOfWeekName = dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ENGLISH);
+		newMeal.setDayOfWeek(dayOfWeekName);
+
 		String sql = "INSERT INTO meal_plan_recipes" + 
 				"(" + 
 				"meal_plan_id" + 
@@ -112,22 +118,23 @@ public class MealSqlDAO implements MealDAO
 				", day_of_week" + 
 				", meal_date" + 
 				")" + 
-				" VALUES (1, ?, ?, ?, ?)" + 
-				" RETURNING meal_plan_id;";
+				" VALUES (?, ?, ?, ?, ?);";
 
-		SqlRowSet rows = jdbcTemplate.queryForRowSet(sql, Integer.class,
-												newMeal.getMealPlanId(),
-												newMeal.getRecipeId(),
-												newMeal.getMealCategory(),
-												newMeal.getDayOfWeek(),
-												newMeal.getMealDate());
-//		while(rows.next())
-//		{
-//			Meal meal = new Meal();
-//			mapRowToMeal(meal);
-//		}
+		try
+		{
+			jdbcTemplate.update(sql,
+					newMeal.getMealPlanId(),
+					newMeal.getRecipeId(),
+					newMeal.getMealCategory(),
+					newMeal.getDayOfWeek(),
+					newMeal.getMealDate());
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex.getMessage());
+		}
 		
-		return mapRowToMeal(rows);
+		return newMeal;
 
 	}
 
