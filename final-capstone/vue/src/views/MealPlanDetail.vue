@@ -7,137 +7,28 @@
 
     <div class="h2-contain signin-container">
 
-     <h4><p>Use the drop-down menus to select different recipes for this meal plan.</p></h4>
+      <h4><p>Use the drop-down menus to select different recipes for this meal plan.</p></h4>
 
       <div id="table-contain">
 
-        <div class="meal-plan-card form-signin2">
-          <tr>
-            <td>
-              <div class="table-header">
-            <th class="table" id="meal-plan-header" scope="col">Sunday</th>
-        </div>
-        <meal-card v-bind:date="date" meal-name="Breakfast"/>
-        <meal-card v-bind:date="date" meal-name="Lunch"/>
-        <meal-card v-bind:date="date" meal-name="Dinner"/>
-        </td>
-        </tr>
-      </div>
-
-      <div class="meal-plan-card form-signin2">
-        <tr>
-          <td>
-            <div class="table-header">
-          <th class="table" id="meal-plan-header" scope="col">Monday</th>
-      </div>
-      <meal-card v-bind:date="date" meal-name="Breakfast"/>
-      <meal-card v-bind:date="date" meal-name="Lunch"/>
-      <meal-card v-bind:date="date" meal-name="Dinner"/>
-      </td>
-      </tr>
-    </div>
-
-    <div class="meal-plan-card form-signin2">
-      <tr>
-        <td>
+        <div v-for="(date, index) in dates" v-bind:key="date" class="meal-plan-card form-signin2">
           <div class="table-header">
-        <th class="table" id="meal-plan-header" scope="col">Tuesday</th>
+            <div class="table" id="meal-plan-header" scope="col">{{ dayName(index) }}</div>
+          </div>
+          <meal-card v-bind:date="date" meal-name="Breakfast"/>
+          <meal-card v-bind:date="date" meal-name="Lunch"/>
+          <meal-card v-bind:date="date" meal-name="Dinner"/>
+        </div>
+      </div>
+
+      <div class="button-separator">
+        <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'meal-plan'}">
+          Back to Meal Plans
+        </router-link>
+
+      </div>
+
     </div>
-    <meal-card v-bind:date="date" meal-name="Breakfast"/>
-    <meal-card v-bind:date="date" meal-name="Lunch"/>
-    <meal-card v-bind:date="date" meal-name="Dinner"/>
-    </td>
-    </tr>
-  </div>
-
-  <div class="meal-plan-card form-signin2">
-    <tr>
-      <td>
-        <div class="table-header">
-      <th class="table" id="meal-plan-header" scope="col">Wednesday</th>
-  </div>
-  <meal-card v-bind:date="date" meal-name="Breakfast"/>
-  <meal-card v-bind:date="date" meal-name="Lunch"/>
-  <meal-card v-bind:date="date" meal-name="Dinner"/>
-  </td>
-  </tr>
-  </div>
-
-  <div class="meal-plan-card form-signin2">
-    <tr>
-      <td>
-        <div class="table-header">
-      <th class="table" id="meal-plan-header" scope="col">Thursday</th>
-  </div>
-  <meal-card v-bind:date="date" meal-name="Breakfast"/>
-  <meal-card v-bind:date="date" meal-name="Lunch"/>
-  <meal-card v-bind:date="date" meal-name="Dinner"/>
-  </td>
-  </tr>
-  </div>
-
-  <div class="meal-plan-card form-signin2">
-    <tr>
-      <td>
-        <div class="table-header">
-      <th class="table" id="meal-plan-header" scope="col">Friday</th>
-  </div>
-  <meal-card v-bind:date="date" meal-name="Breakfast"/>
-  <meal-card v-bind:date="date" meal-name="Lunch"/>
-  <meal-card v-bind:date="date" meal-name="Dinner"/>
-  </td>
-  </tr>
-  </div>
-
-  <div class="meal-plan-card form-signin2">
-    <tr>
-      <td>
-        <div class="table-header">
-      <th class="table" id="meal-plan-header" scope="col">Saturday</th>
-  </div>
-  <meal-card v-bind:date="date" meal-name="Breakfast"/>
-  <meal-card v-bind:date="date" meal-name="Lunch"/>
-  <meal-card v-bind:date="date" meal-name="Dinner"/>
-  </td>
-  </tr>
-  </div>
-
-  </div>
-
-
-  <!--      <table id="meal-plan-table" class="table">-->
-  <!--        <thead>-->
-  <!--        <tr id="days-of-the-week">-->
-  <!--          <th scope="col">Sunday</th>-->
-  <!--          <th scope="col">Monday</th>-->
-  <!--          <th scope="col">Tuesday</th>-->
-  <!--          <th scope="col">Wednesday</th>-->
-  <!--          <th scope="col">Thursday</th>-->
-  <!--          <th scope="col">Friday</th>-->
-  <!--          <th scope="col">Saturday</th>-->
-  <!--        </tr>-->
-  <!--        </thead>-->
-  <!--        <tbody>-->
-  <!--        <tr class="table-light">-->
-  <!--          <td v-for="date in dates" v-bind:key="date.id">-->
-  <!--            <meal-card v-bind:date="date" meal-name="Breakfast"  />-->
-  <!--            <meal-card v-bind:date="date" meal-name="Lunch"  />-->
-  <!--            <meal-card v-bind:date="date" meal-name="Dinner"  />-->
-  <!--          </td>-->
-  <!--        </tr>-->
-
-  <!--        </tbody>-->
-  <!--      </table>-->
-  <div class="button-separator">
-    <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'meal-plan'}">
-      Back to Meal Plans
-    </router-link>
-    <!--        <router-link class="btn btn-secondary" v-bind:to="{name: 'modify-meal-plan'}">-->
-    <!--          Modify Meal Plan-->
-    <!--        </router-link>-->
-  </div>
-
-  </div>
   </div>
 </template>
 
@@ -191,6 +82,10 @@ export default {
         this.mealPlan = response.data;
         this.loadMeals();
       });
+    },
+    dayName(index) {
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      return days[index];
     }
   },
   created() {
