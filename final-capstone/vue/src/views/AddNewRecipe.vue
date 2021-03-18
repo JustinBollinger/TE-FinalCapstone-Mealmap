@@ -6,7 +6,7 @@
       <h1 class="display-4-custom">Add New Recipe</h1>
     </div>
 
-    <div id="add-new-recipe-container" class="h2-contain signin-container">
+    <div class="h2-contain signin-container">
 
       <form v-on:submit.prevent class="form-signin">
 
