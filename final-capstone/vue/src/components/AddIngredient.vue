@@ -4,7 +4,7 @@
 
     <div class="input-group mb-3">
 
-      <input type="text" class="form-control" placeholder="Add New Ingredient Name" id="inputDefault" v-model="ingredient.ingredientName">
+      <input type="text" class="form-control" placeholder="Add New Ingredient" id="inputDefault" v-model="ingredient.ingredientName">
       <div>
         <span type="button" class="btn btn-secondary" v-on:click="saveIngredient()">Add</span>
       </div>
