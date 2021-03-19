@@ -8,18 +8,21 @@
     <div class="h2-contain">
 
       <div class="mealplan-list">
-        <ul>
-          <li v-for="mealPlan in mealPlans" v-bind:key="mealPlan.mealPlanId">
-            <router-link v-bind:to="'mealPlanDetail/' + mealPlan.mealPlanId">
-              {{ mealPlan.mealPlanName }}&nbsp;|&nbsp;
-              {{ mealPlan.startDate }} -&nbsp;
-            </router-link>
-          </li>
-        </ul>
-      </div>
-        <div class="button-separator">
-          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'add-meal-plan'}">Add New Meal Plan</router-link>
+        <div id="baby">
+          <img id="baby2" src="../../public/assets/babygif.gif">
         </div>
+<!--        <ul>-->
+<!--          <li v-for="mealPlan in mealPlans" v-bind:key="mealPlan.mealPlanId">-->
+<!--            <router-link v-bind:to="'mealPlanDetail/' + mealPlan.mealPlanId">-->
+<!--              {{ mealPlan.mealPlanName }}&nbsp;|&nbsp;-->
+<!--              {{ mealPlan.startDate }} -&nbsp;-->
+<!--            </router-link>-->
+<!--          </li>-->
+<!--        </ul>-->
+      </div>
+<!--        <div class="button-separator">-->
+<!--          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'add-meal-plan'}">Add New Meal Plan</router-link>-->
+<!--        </div>-->
 
     </div>
   </div>
@@ -47,6 +50,16 @@ export default {
 
 ul {
   color: white
+}
+
+#baby{
+  display: flex;
+  justify-content: center;
+
+}
+
+#baby2{
+  border-radius: 15rem;
 }
 
 </style>

@@ -1,14 +1,15 @@
 <template>
+
   <div class="jumbotron" id="main-contain">
 
     <div class="h1-contain">
       <h1 class="display-4-custom">Recipe Detail</h1>
     </div>
 
-    <div class="h2-contain">
+    <div class="h2-contain signin-container">
 
 
-      <div>
+      <div class="form-signin max-width800">
         <h3 v-bind:id="recipe.recipeId">{{ recipe.recipeName }}<small class="text-muted" v-bind:id="recipe.recipeId">
           <br>
           <hr>

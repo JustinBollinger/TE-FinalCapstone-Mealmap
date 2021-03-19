@@ -179,3 +179,24 @@ body {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.max-width800{
+    max-width: 800px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-white{
+    color: white;
+    text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.meal-plan-card-section{
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /*background-color: rgb(95, 110, 122);*/
+    color: white;
+}

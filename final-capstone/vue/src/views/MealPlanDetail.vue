@@ -15,18 +15,19 @@
           <div class="table-header">
             <div class="table" id="meal-plan-header" scope="col">{{ dayName(index) }}</div>
           </div>
-          <meal-card v-bind:date="date" meal-name="Breakfast"/>
-          <meal-card v-bind:date="date" meal-name="Lunch"/>
-          <meal-card v-bind:date="date" meal-name="Dinner"/>
+          <meal-card class="breakfast-card meal-plan-card-section text-white" v-bind:date="date" meal-name="Breakfast"/>
+          <br>
+          <meal-card class="lunch-card meal-plan-card-section" v-bind:date="date" meal-name="Lunch"/>
+          <br>
+          <meal-card class="dinner-card meal-plan-card-section" v-bind:date="date" meal-name="Dinner"/>
         </div>
       </div>
 
-      <div class="button-separator">
-        <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'meal-plan'}">
-          Back to Meal Plans
-        </router-link>
-
-      </div>
+<!--      <div class="button-separator">-->
+<!--        <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'meal-plan'}">-->
+<!--          Back to Meal Plans-->
+<!--        </router-link>-->
+<!--      </div>-->
 
     </div>
   </div>
@@ -113,7 +114,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
+
+
   /*flex-grow: 1;*/
 }
 
@@ -125,13 +128,35 @@ export default {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-weight: 800;
+  color: #252629;
+  font-size: 18pt;
 }
 
 .meal-plan-card {
   /*margin: 20px;*/
-  background: rgba(255, 255, 255, 0.95);
+  /*background: rgba(251, 80, 48, .50);*/
+  /*background: #242528;*/
+  /*background: rgba(36, 37, 40, 0.5);*/
+  background: rgb(245, 245, 245);
+  max-width: 250px;
+
   /*display: flex;*/
   /*justify-content: center;*/
+}
+
+.breakfast-card{
+  /*color: white!important;*/
+
+  /*background-color: rgba(63, 227, 43, 0.95);*/
+}
+
+.lunch-card{
+  /*background: rgba(61, 203, 250, .95);*/
+}
+
+.dinner-card{
+  /*background: rgba(255, 208, 48, .95);*/
 }
 
 </style>

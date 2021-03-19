@@ -2,20 +2,23 @@
 
   <div class="jumbotron" id="main-contain">
 
-
     <div class="h1-contain">
       <h1 class="display-4-custom">Ingredient Library</h1>
     </div>
 
-    <div id="ingred-table" class="h2-contain">
-      <add-ingredient></add-ingredient>
-      <table class="table">
-        <tbody>
-        <tr v-for="ingredient in ingredients" v-bind:key="ingredient.id" class="table table-hover">
-          <th scope="row">{{ ingredient.ingredientName }}</th>
-        </tr>
-        </tbody>
-      </table>
+    <div  class="h2-contain signin-container">
+
+      <div id="ingred-table" class="form-signin max-width800">
+        <add-ingredient></add-ingredient>
+        <table class="table">
+          <tbody>
+          <tr v-for="ingredient in ingredients" v-bind:key="ingredient.id" class="table table-hover">
+            <th scope="row">{{ ingredient.ingredientName }}</th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
 
   </div>

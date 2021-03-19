@@ -1,40 +1,44 @@
 <template>
+
   <div class="jumbotron" id="main-contain">
 
     <div class="h1-contain">
       <h1 class="display-4-custom">Recipe Library</h1>
     </div>
 
+    <div class="h2-contain signin-container">
 
-    <div id="ingred-table" class="h2-contain">
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">Recipe Name</th>
-          <th scope="col">Preparation Time</th>
-          <th scope="col">Number Of Servings</th>
-          <th scope="col">Difficulty</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="recipe in recipes" v-bind:key="recipe.id" class="table table-hover">
-          <th scope="row">
-            <router-link v-bind:to="'recipeList/recipeDetail/' + recipe.recipeId"> {{ recipe.recipeName }}
-              &nbsp;&nbsp;
-            </router-link>
-          </th>
-          <td>{{ recipe.cookingTime }} minutes</td>
-          <td>{{ recipe.numberOfServings }}</td>
-          <td>{{ recipe.difficulty }}</td>
-        </tr>
-        </tbody>
+      <div class="form-signin max-width800">
+        <table class="table">
+          <thead >
+          <tr>
+            <th scope="col">Recipe Name</th>
+            <th class="text-center" scope="col">Prep Time</th>
+            <th class="text-center" scope="col" >Servings</th>
+            <th class="text-center" scope="col">Difficulty</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="recipe in recipes" v-bind:key="recipe.id" class="table table-hover">
+            <th scope="row">
+              <router-link v-bind:to="'recipeList/recipeDetail/' + recipe.recipeId"> {{ recipe.recipeName }}
+                &nbsp;&nbsp;
+              </router-link>
+            </th>
+            <td class="text-center">{{ recipe.cookingTime }} minutes</td>
+            <td class="text-center">{{ recipe.numberOfServings }}</td>
+            <td class="text-center">{{ recipe.difficulty }}</td>
+          </tr>
+          </tbody>
 
-      </table>
+        </table>
 
-      <div class="button-separator">
-      <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe
-      </router-link>
+        <div class="button-separator">
+          <router-link class="btn btn-secondary button-properties" v-bind:to="{name: 'add-new-recipe'}">Add New Recipe
+          </router-link>
+        </div>
       </div>
+
     </div>
   </div>
 
@@ -60,5 +64,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>
