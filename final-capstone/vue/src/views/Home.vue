@@ -7,7 +7,7 @@
     </div>
 
 
-    <div class="h2-contain signin-container max">
+    <div class="h2-contain signin-container">
       <div id="home-image"> <img class="signin-logo" src="../../public/assets/Artboard 4.png" alt="Meal Map logo"/></div>
       <p id="home-text" class="lead home-text max-width800">Do you have a favorite recipe? <br>
         Do you need help planning for "Taco Tuesday" or "Meatless Monday" ? <br>
