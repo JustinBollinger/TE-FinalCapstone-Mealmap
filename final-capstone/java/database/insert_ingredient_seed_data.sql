@@ -61,11 +61,6 @@ VALUES
 
 (
     nextval ('seq_ingredient_id')
-    , 'olive oil'
-),
-
-(
-    nextval ('seq_ingredient_id')
     , 'green beans'
 ),
 
@@ -79,10 +74,6 @@ VALUES
     , 'capers'
 ),
 
-(
-    nextval ('seq_ingredient_id')
-    , 'red pepper flakes'
-),
 
 (
     nextval ('seq_ingredient_id')

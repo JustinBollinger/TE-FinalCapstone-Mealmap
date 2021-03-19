@@ -22,13 +22,6 @@ INSERT INTO meal_plan_recipes
     , meal_date
 )
 VALUES
-(
-    1
-    , 4
-    , 'Breakfast'
-    , 'Sunday'
-    , '2021-03-14'
-),
 
 (
     1
@@ -76,14 +69,6 @@ VALUES
     , 'Breakfast'
     , 'Saturday'
     , '2021-03-20'
-),
-
-(
-    1
-    , 15
-    , 'Lunch'
-    , 'Sunday'
-    , '2021-03-14'
 ),
 
 (
@@ -154,22 +139,6 @@ VALUES
 (
     1
     , 11
-    , 'Dinner'
-    , 'Sunday'
-    , '2021-03-14'
-),
-
-(
-    1
-    , 13
-    , 'Dinner'
-    , 'Sunday'
-    , '2021-03-14'
-),
-
-(
-    1
-    , 25
     , 'Dinner'
     , 'Sunday'
     , '2021-03-14'

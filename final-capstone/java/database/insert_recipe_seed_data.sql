@@ -22,7 +22,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
 '
     , 4
     , 45 
-    , 'intermediate'
+    , 'Intermediate'
 ),
 
 (
@@ -33,7 +33,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Transfer beans to a platter. Spoon caper-garlic mixture over and pour some oil over too; season with salt.'
     , 4
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -44,7 +44,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Arrange the cooked bacon, lettuce, and tomato slices on one slice of bread. Spread one side of remaining bread slice with the mayonnaise. Bring the two pieces together to make a sandwich.'
     , 1
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -55,7 +55,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     As eggs set, push cooked edges toward the center, letting uncooked portion flow underneath. When the eggs are set, place ham on one side and sprinkle with cheese; fold other side over filling. Slide omelet onto a plate.'
     , 1
     , 20
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -65,7 +65,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'In a small saucepan, bring water and salt to a boil. Stir in oats; cook 5 minutes over medium heat, stirring occasionally. Transfer oatmeal to 2 bowls; in each bowl, stir half each peanut butter, honey, flaxseed, cinnamon and, if desired, apple. Serve immediately.'
     , 2
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -75,7 +75,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Prepare pancake batter according to package directions. Stir in the banana, oats and walnuts. Pour batter by 1/4 cupfuls onto a hot griddle coated with cooking spray; turn when bubbles form on top. Cook until the second side is golden brown.'
     , 8
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -85,7 +85,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Layer half the yogurt, peaches, blackberries and granola into 4 parfait glasses. Repeat layers.'
     , 4
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -95,7 +95,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Preheat oven to 350 degrees F (175 degrees C). In a 9x13-inch baking dish, combine the macaroni, tuna, and soup. Mix well, and then top with cheese. Bake at 350 degrees F (175 degrees C) for about 25 minutes, or until bubbly. Sprinkle with fried onions, and bake for another 5 minutes. Serve hot.'
     , 8
     , 45
-    , 'intermediate'
+    , 'Intermediate'
 ),
 
 (
@@ -105,7 +105,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Heat the oil in a saucepan over medium heat. Place kielbasa and potatoes in the saucepan. Cover, and cook 25 minutes, stirring occasionally, until potatoes are tender. Mix red bell pepper and yellow bell pepper into the saucepan, and continue cooking 5 minutes, until peppers are just tender.'
     , 6
     , 40
-    , 'intermediate'
+    , 'Intermediate'
 ),
 
 (
@@ -118,7 +118,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Bake until the cheese is melted, approximately 15 to 20 minutes.'
     , 4
     , 30
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -130,7 +130,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Transfer to a cutting board; shred with a fork and knife.'
     , 6
     , 240
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -142,7 +142,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Bake until tater tots are golden brown and hot, 30 to 45 minutes.'
     , 8
     , 40
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -156,7 +156,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Place on a baking sheet and bake for 30-35 minutes until browned and tender.'
     , 6
     , 45
-    ,'easy'
+    ,'Easy'
 ),
 
 (
@@ -167,7 +167,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Mix steamed broccoli, bacon, butter, salt, and pepper together in a bowl.'
     , 2
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -182,7 +182,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Once your chicken salad is combined, serve with fresh homemade bread, mixed greens salad or whole-grain crackers. Store leftovers in a sealed container in the refrigerator right away.'
     , 4
     , 15
-    ,'easy'
+    ,'Easy'
 ),
 
 (
@@ -192,7 +192,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'In a large salad bowl, combine the first 7 ingredients. In a small bowl, whisk the remaining ingredients. Drizzle over salad; toss to coat.'
     , 2
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -204,7 +204,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     To serve, place spinach and chickpea mixture on tortillas. Top with raita and roll up.'
     , 4
     , 30
-    , 'intermediate'
+    , 'Intermediate'
 ),
 
 (
@@ -215,7 +215,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     In a small bowl, combine the ketchup, vinegar, chili powder, Worcestershire sauce, sugar and salt; stir into beef mixture. Simmer, uncovered, for 10 minutes, stirring occasionally. Serve on buns.'
     , 6
     , 20
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -226,7 +226,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Spread bean dip over tortillas to within 1/2 in. of edges. Layer with guacamole dip, cream cheese mixture, onion, pepper, cheese and olives. Roll up tightly and serve.'
     , 4
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -238,7 +238,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     In a large bowl, combine beans, tomato mixture, pancetta, vinegar and basil. Add arugula and cheese; toss to coat.'
     , 4
     , 30
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -248,7 +248,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'Place spinach, strawberries and almonds in a large bowl. Mix vinegar, honey and sugar until blended; toss with salad.'
     , 4
     , 10
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -259,7 +259,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     Butter the outsides of sandwiches. In a skillet over medium heat, toast sandwiches for 4-5 minutes on each side or until bread is lightly browned and cheese is melted.'
     , 5
     , 15
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -270,7 +270,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     In a small bowl, beat whipping cream until it begins to thicken. Add sugar; beat until soft peaks form. Fold into cooled chocolate mixture. Cover and refrigerate for at least 2 hours. If desired, garnish with whipped cream and raspberries.'
     , 2
     , 20
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -280,7 +280,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'In a small saucepan, combine peanut butter and honey. Cook and stir over medium-low heat until melted and blended. Remove from heat; stir in oats. Spread into a greased 9-in. square pan; press lightly. Cool to room temperature; cover and chill for 1 hour.'
     , 9
     , 10
-    , 'easy'
+    , 'Easy'
 ),
 
 (
@@ -290,7 +290,7 @@ Nestle stuffed shells into hot sauce in skillet. Cover and cook over medium heat
     , 'In a small bowl, beat cream cheese and sugar until smooth. Beat in half of the pie filling. Fold in the whipped topping. Spoon into crust. Spread remaining pie filling over cream cheese layer. Refrigerate for at least 15 minutes before serving.'
     , 8
     , 20
-    , 'intermediate'
+    , 'Intermediate'
 );
 
 
