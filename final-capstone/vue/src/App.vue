@@ -54,7 +54,7 @@
     <footer class="fixed-bottom">
       <div>mealmap© Copyright 2021 &nbsp</div>
       <div><img class="footer-logo" :src="require('../public/assets/DC hori v2111.png')"/></div>
-      <div>&nbsp inc.</div>
+      <div>&nbspsoftware solutions inc.</div>
     </footer>
   </div>
 </template>
